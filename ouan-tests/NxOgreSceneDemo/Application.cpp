@@ -77,7 +77,7 @@ bool Application::initialise()
 
 	m_NXOgreScene = m_NXOgreWorld->createScene(sceneDesc);
 	
-	m_NXOgreRenderSystem = new OGRE3DRenderSystem(m_NXOgreScene,m_sceneMgr);
+	m_NXOgreRenderSystem = new OGRE3DRenderSystem(m_NXOgreScene);
 
 	m_NXOgreTimeController = NxOgre::TimeController::getSingleton();
 
@@ -157,13 +157,7 @@ bool Application::createCharacter()
 	desc.mPosition.set(0,3,0);
 	desc.mCallback = this;
 
-	//try{
 	m_NXOgreControllerRenderable = m_NXOgreRenderSystem->createPointRenderable(m_character);
-	//}
-	//catch()
-	//{
-	//	int i;
-	//}
 	m_NXOgreController = m_NXOgreControllerManager->createCapsuleController(desc, NxOgre::Vec2(1,3), m_NXOgreScene, m_NXOgreControllerRenderable );
 	
 	return true;
