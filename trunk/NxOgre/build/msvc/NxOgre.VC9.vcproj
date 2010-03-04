@@ -65,7 +65,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="PhysXLoader.lib PhysXCooking.lib"
+				AdditionalDependencies="PhysXLoader.lib NxCooking.lib"
 				OutputFile="$(OutDir)\NxOgre_Debug.dll"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="&quot;$(PHYSX_DIR)\SDKs\lib\win32&quot;;&quot;$(PHYSX_DIR)\SDKs\Physics\lib\win32\Release&quot;;&quot;$(PHYSX_DIR)\SDKs\Cooking\lib\win32\Release&quot;"
