@@ -1,0 +1,4761 @@
+# NxOgre Allocations
+---
+Versions:
+    - NxOgre: 1.5.6 'Git'
+    - PhysX: 2.8.3 (283)
+Configuration:
+    - Compiler: Microsoft Visual C++ (1500)
+    - Accuracy: float
+    - Build: Debug Shared Library
+Allocations:
+    - Pointer: #075BF978
+      Type: ErrorStream
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogresingleton.h#68
+      Dump:  >
+           .....eT..F....W.( a.
+    - Pointer: #02100398
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ............P...
+    - Pointer: #07546588
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #0757F8D0
+      Type: SharedStringStream_Buffer
+      Size: 12 b
+      Source: c:\desarrollo\nxogre\build\source\nxogresharedstringstream.cpp#246
+      Dump:  >
+           0aT.0aT.PaT.
+    - Pointer: #07546130
+      Type: char
+      Size: 32 b
+      Source: c:\desarrollo\nxogre\build\source\nxogresharedstringstream.cpp#247
+      Dump:  >
+           ................................
+           
+    - Pointer: #07612028
+      Type: SharedStringStreamReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogresharedstringstream.cpp#134
+    - Pointer: #07624960
+      Type: ResourceSystem
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogresingleton.h#68
+      Dump:  >
+           ..`.h.....J.x5a.
+    - Pointer: #0760D6F0
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ..Y...Y...Y.P...
+    - Pointer: #0213B568
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #074AE3C8
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           €...........P...
+    - Pointer: #07613578
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #02116D60
+      Type: MemoryResourceProtocol
+      Size: 12 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           l@e.@@e.....
+    - User array: #0759F0C8
+      Pointer class Id: 50000
+      Size: 8 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#332
+      Dump:  >
+           dm....I.
+    - Pointer: #02120E28
+      Type: char
+      Size: 7 b
+      Source: c:\desarrollo\nxogre\build\source\nxogreuniformresourceidentifier.cpp#158
+      Dump:  >
+           memory.
+    - Pointer: #0752DC50
+      Type: BufferReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogreuniformresourceidentifier.cpp#98
+    - Pointer: #074E4D78
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ............P...
+    - Pointer: #074EEFC0
+      Type: char
+      Size: 3 b
+      Source: c:\desarrollo\nxogre\build\source\nxogreuniformresourceidentifier.cpp#197
+    - Pointer: #074D85D8
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - User array: #00C3AD80
+      Pointer class Id: 50000
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#332
+      Dump:  >
+           ..c.T...d.......
+    - Pointer: #075234A0
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.....8fK.........
+    - Pointer: #074B6638
+      Type: char
+      Size: 8 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+      Dump:  >
+           memory..
+    - Pointer: #02111B78
+      Type: URIHash
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .se.(.....N..pY.....
+    - Pointer: #07490AB0
+      Type: MSWindowsFileResourceProtocol
+      Size: 8 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           xFe.LFe.
+    - Pointer: #07511E88
+      Type: MeshManager
+      Size: 8 b
+      Source: c:\desarrollo\nxogre\build\source\nxogresingleton.h#68
+      Dump:  >
+           ......b.
+    - Pointer: #020ECBF0
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           .,O..,O..,O.P...
+    - Pointer: #076294C8
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #076002F8
+      Type: HeightFieldManager
+      Size: 8 b
+      Source: c:\desarrollo\nxogre\build\source\nxogresingleton.h#68
+      Dump:  >
+           ..Q.`.X.
+    - Pointer: #0751A2D8
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ............P...
+    - Pointer: #0758C460
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #020D4A08
+      Type: TimeController
+      Size: 60 b
+      Source: c:\desarrollo\nxogre\build\source\nxogresingleton.h#68
+      Dump:  >
+           .....*Z.....(.a.h{N.......a...U.
+           ..X...b.€........R......HUI.
+    - Pointer: #0761C028
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           H...L...L...P...
+    - Pointer: #074E7B68
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #0210F088
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ............P...
+    - Pointer: #0761D1E8
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #075507B8
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           .-L...L...L.P...
+    - Pointer: #07589AE8
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #07628E90
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           `...d...d...P...
+    - Pointer: #02100480
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #0213BD10
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ............P...
+    - Pointer: #020D52F0
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #02109AE0
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ............P...
+    - Pointer: #07495548
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #07523350
+      Type: URIHash
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .se.H_N.........%..|
+    - Pointer: #02147980
+      Type: BufferReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogreuniformresourceidentifier.cpp#98
+    - Pointer: #074E5F48
+      Type: char
+      Size: 5 b
+      Source: c:\desarrollo\nxogre\build\source\nxogreuniformresourceidentifier.cpp#158
+      Dump:  >
+           file.
+    - Pointer: #0211DF88
+      Type: char
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogreuniformresourceidentifier.cpp#197
+    - Pointer: #020BA550
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.....H...........
+    - Pointer: #020D0748
+      Type: char
+      Size: 14 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+      Dump:  >
+           internal-cwd..
+    - Pointer: #020D0350
+      Type: MSWindowsFileArchive
+      Size: 48 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .De..De.P....P....I.P3R.€y......
+           @.M...L.........
+    - Pointer: #020D03C0
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ............P...
+    - Pointer: #074D8440
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #074C89A0
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.......`.........
+    - Pointer: #07600F08
+      Type: char
+      Size: 1 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+    - Pointer: #02148A90
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ..W...W...W.P...
+    - Pointer: #021211E8
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #0753DD78
+      Type: URIHash
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           ..d..TI.€.W..P....e.
+    - Pointer: #075166C8
+      Type: ArchiveResourceIdentifierReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearchiveresourceidentifier.cpp#98
+    - Pointer: #074954A8
+      Type: char
+      Size: 13 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearchiveresourceidentifier.cpp#158
+      Dump:  >
+           internal-cwd.
+    - Pointer: #0757C980
+      Type: char
+      Size: 11 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearchiveresourceidentifier.cpp#197
+      Dump:  >
+           NxOgre.log.
+    - Pointer: #020D46F8
+      Type: MSWindowsFileResource
+      Size: 48 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .De.lCe.x.S..fQ.............T...
+           ........h$.h....
+    - User array: #0757CBE8
+      Pointer class Id: 50000
+      Size: 4 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#332
+    - PhysX memory: #08578C20
+      Type: NX_MEMORY_LowLevel
+      Size: 64 b
+      Dump:  >
+           (.F.i..;....]l#.(.F.x..;..s..gU.
+           (.F.m..<.x;;..G.(.F.€"q;..)86..:
+           
+    - PhysX memory: #0850B6A8
+      Type: NX_MEMORY_LowLevel
+      Size: 140 b
+      Dump:  >
+           <.F..BP.........(.W.<.F..BP.....
+           ......W.<.F..BP...........W.<.F.
+           .BP.........T.W.<.F.............
+           ....<.F.................<.F.....
+           ............
+    - PhysX memory: #08579D10
+      Type: ICE_MEMORY_IceContainer_NewEntries
+      Size: 64 b
+      Dump:  >
+           ................................
+           ................................
+           
+    - Pointer: #020D4768
+      Type: World
+      Size: 44 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .Be.pz.......]...]...M..h.b.....
+           P.`...`...`.
+    - Pointer: #020D4DE0
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           0...4...4...P...
+    - Pointer: #0762FA68
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #020B5D88
+      Type: PhysXOutputStream
+      Size: 12 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .He..He.....
+    - Pointer: #020B5DD0
+      Type: PhysXUserAllocator
+      Size: 8 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           \Je.0Je.
+    - PhysX memory: #020B5E18
+      Type: NX_MEMORY_FoundationSDK
+      Size: 56 b
+      Dump:  >
+           ..E.......................E..]..
+           ..X..................^..
+    - PhysX memory: #020B5E90
+      Type: NX_MEMORY_NxMutexRep
+      Size: 32 b
+      Dump:  >
+           P.K.............................
+           
+    - PhysX memory: #0758CAD0
+      Type: NX_MEMORY_RemoteDebugger
+      Size: 32.1 kb
+      Partial dump:  >
+           ..E...E.........................
+           ..........E.....................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #020B7A70
+      Type: NX_MEMORY_NpPhysicsSDK
+      Size: 244 b
+      Dump:  >
+           .|E..|E...b...b...b.............
+           .................^..............
+           ........P_......................
+           .{...|..`|...|....L...L...L.....
+           .....+O..+O..,O.................
+           ............x.........`.........
+           ....,...........................
+           .{E.pz..............
+    - PhysX memory: #020B5EF0
+      Type: NX_MEMORY_NxMutexRep
+      Size: 32 b
+      Dump:  >
+           ..K.............................
+           
+    - PhysX memory: #020B5F50
+      Type: NX_MEMORY_NxMutexRep
+      Size: 32 b
+      Dump:  >
+           ..K.............................
+           
+    - PhysX memory: #020B7BA0
+      Type: NX_MEMORY_NxMutexRep
+      Size: 32 b
+      Dump:  >
+           ..K.............................
+           
+    - PhysX memory: #020B7C00
+      Type: NX_MEMORY_NxMutexRep
+      Size: 32 b
+      Dump:  >
+           H.K.........................|...
+           
+    - PhysX memory: #020B7C60
+      Type: NX_MEMORY_NxMutexRep
+      Size: 32 b
+      Dump:  >
+           €.K.........................|...
+           
+    - PhysX memory: #020B7CC0
+      Type: NX_MEMORY_NxMutexRep
+      Size: 32 b
+      Dump:  >
+           ..K.............................
+           
+    - PhysX memory: #0207D878
+      Type: NX_MEMORY_NxMutexRep
+      Size: 32 b
+      Dump:  >
+           ..K.............................
+           
+    - PhysX memory: #0207D8D8
+      Type: NX_MEMORY_NxMutexRep
+      Size: 32 b
+      Dump:  >
+           (.K.............................
+           
+    - PhysX memory: #0207D938
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           P{......
+    - PhysX memory: #0207D980
+      Type: NX_MEMORY_LowLevel
+      Size: 120 b
+      Dump:  >
+           ..K.....................8.......
+           ................................
+           ................................
+           (...........€...........
+    - PhysX memory: #0207DA38
+      Type: NX_MEMORY_LowLevel
+      Size: 16 b
+      Dump:  >
+           ................
+    - PhysX memory: #0207DA88
+      Type: NX_MEMORY_LowLevel
+      Size: 16 b
+      Dump:  >
+           ................
+    - PhysX memory: #0207DAD8
+      Type: NX_MEMORY_LowLevel
+      Size: 16 b
+      Dump:  >
+           ................
+    - PhysX memory: #0207DB28
+      Type: NX_MEMORY_LowLevel
+      Size: 16 b
+      Dump:  >
+           ................
+    - PhysX memory: #0760E008
+      Type: NX_MEMORY_PhysicsSDK
+      Size: 8 b
+      Dump:  >
+           .4D.....
+    - PhysX memory: #0850B570
+      Type: NX_MEMORY_LowLevel
+      Size: 252 b
+      Dump:  >
+           .....€.....@...€..€....€.m......
+           ....A.#.....q..@...€..€....€w...
+           ........6.-........@...€..€....€
+           .I............-..u.....@...€..€.
+           ...€.S..........................
+           ................................
+           ................................
+           ............................
+    - Pointer: #074BC858
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.................
+    - Pointer: #021005B0
+      Type: char
+      Size: 13 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+      Dump:  >
+           NxOgreScene..
+    - User array: #00C3A730
+      Pointer class Id: 50000
+      Size: 4 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#332
+    - Pointer: #0760E308
+      Type: Scene
+      Size: 160 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           ..d...d.X.K.....pz..(.`.x.`...`.
+           ..`.H.`...`...`.(.`.h.`...`...`.
+           H.`...`...`...`.h.`...`.......`.
+           ..`.8.`...`...`...`.X.`.........
+           ......`............<e..<}4.?....
+           
+    - Pointer: #0760EA58
+      Type: SharedArray
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#79
+      Dump:  >
+           ....................
+    - Pointer: #0760EAA8
+      Type: PhysXCallback
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           €Ge.pGe.`Ge...`.
+    - Pointer: #0760E428
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ................
+    - Pointer: #0760E478
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#648
+    - Pointer: #0760E4B8
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ..N...N...N.@...
+    - Pointer: #0760E508
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#648
+    - Pointer: #0760E548
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ............P...
+    - Pointer: #0760E598
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #0760E5D8
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ............P...
+    - Pointer: #0760E628
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #0760E668
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ............P...
+    - Pointer: #0760E6B8
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #0760E6F8
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ............P...
+    - Pointer: #0760E748
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #0760E788
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ............P...
+    - Pointer: #0760E7D8
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #0760E818
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ............P...
+    - Pointer: #0760E868
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #0760E8A8
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ............P...
+    - Pointer: #0760E8F8
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #0760E938
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ............P...
+    - Pointer: #0760E988
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #0760E9C8
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ............P...
+    - Pointer: #0760EA18
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - PhysX memory: #0207DC00
+      Type: NX_MEMORY_NpScene
+      Size: 1.7 kb
+      Partial dump:  >
+           ..E...........E...`.h.`...E...E.
+           ................................
+           .... .U...U...U.................
+           ........X.`.j.`.j.`.............
+           h.c..EO..EO..EO...........`...`.
+           ..`.............................
+           ........-...............h.......
+           D.E....................B|.E.....
+           
+    - PhysX memory: #0755BF20
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 4.6 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #07630568
+      Type: NX_MEMORY_NxMutexRep
+      Size: 32 b
+      Dump:  >
+           ..K.........................|...
+           
+    - PhysX memory: #020E5E08
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 2.0 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #0760EAF8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 36 b
+      Dump:  >
+           8.E.$.E...E...E...E...E...E...E.
+           ..E.
+    - PhysX memory: #0760EB58
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 18 b
+      Dump:  >
+           ..................
+    - PhysX memory: #0760EBA8
+      Type: NX_MEMORY_NxMutexRep
+      Size: 32 b
+      Dump:  >
+           P.K.............................
+           
+    - PhysX memory: #0760E3E8
+      Type: NX_MEMORY_NxMutex
+      Size: 4 b
+    - PhysX memory: #0760EC08
+      Type: NX_MEMORY_NxMutexRep
+      Size: 32 b
+      Dump:  >
+           ..K.........................|...
+           
+    - PhysX memory: #0760EC68
+      Type: NX_MEMORY_NxMutex
+      Size: 4 b
+    - PhysX memory: #0760ECA8
+      Type: NX_MEMORY_NxMutexRep
+      Size: 32 b
+      Dump:  >
+           ..K.............................
+           
+    - PhysX memory: #0760ED08
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           ........
+    - PhysX memory: #0760ED50
+      Type: NX_MEMORY_PERSISTENT
+      Size: 72 b
+      Dump:  >
+           ................................
+           ................................
+           ........
+    - PhysX memory: #0760EDD8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 56 b
+      Dump:  >
+           ..E...E...E.|.E.d.E.L.E.<.E. .E.
+           ..E...E...E...E...E...E.
+    - PhysX memory: #0760EE50
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 28 b
+      Dump:  >
+           ............................
+    - PhysX memory: #0207E320
+      Type: NX_MEMORY_Scene
+      Size: 1.5 kb
+      Partial dump:  >
+           ..D.`V1..]................L....@
+           ................................
+           ................................
+           .......................;...C....
+           ...>9E.B.|.......|..............
+           ................................
+           ................................
+           ........................0.P....@
+           
+    - PhysX memory: #0760EEA8
+      Type: NX_MEMORY_NxMutexRep
+      Size: 32 b
+      Dump:  >
+           ..K.........................|...
+           
+    - PhysX memory: #020D8E28
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 4.6 kb
+      Partial dump:  >
+           ..........D...............D.....
+           ..........D...............D.....
+           ........€.D.............`.D.....
+           ........@.D.............0.D.....
+           ..........D...............D.....
+           ..........D...............D.....
+           ..........D...............D.....
+           ..........D.............|.D.....
+           
+    - PhysX memory: #020E6648
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 1.2 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #0207E978
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 400 b
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ....!..."...#...$...-...j.......
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #0760EF08
+      Type: NX_MEMORY_BroadPhase
+      Size: 140 b
+      Dump:  >
+            ......................@..R.d...
+           ........x.J.|.J.€.J.............
+           ................................
+           ......................`.........
+            ...........
+    - PhysX memory: #0760EFD0
+      Type: NX_MEMORY_PERSISTENT
+      Size: 16 b
+      Dump:  >
+           ................
+    - PhysX memory: #0207EB48
+      Type: NX_MEMORY_PxScene
+      Size: 296 b
+      Partial dump:  >
+           ."L.0"L.@"L................€....
+           ................@.W.X.W.x.W.....
+           ................................
+           ................................
+           .)R..)R..)R.....................
+           ................................
+           .....lQ.$lQ.0lQ.........h*R.t*R.
+           €*R.............HkQ.KkQ.NkQ.....
+           
+    - PhysX memory: #020E6B28
+      Type: NX_MEMORY_ProfilerManager
+      Size: 100 b
+      Dump:  >
+           p.b...b...b..............k.../O.
+           ./O../O.........p.b.4.b.4.b.....
+           ................................
+           /...
+    - PhysX memory: #020E6BC8
+      Type: NX_MEMORY_NxMutexRep
+      Size: 32 b
+      Dump:  >
+           p.K.........................|...
+           
+    - PhysX memory: #020E6C28
+      Type: NX_MEMORY_CCDTest
+      Size: 196 b
+      Dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ....
+    - PhysX memory: #0207ECB0
+      Type: NX_MEMORY_SceneObjectPools
+      Size: 24 b
+      Dump:  >
+           (m.......... ....\....f.
+    - PhysX memory: #020E6D28
+      Type: NX_MEMORY_PERSISTENT
+      Size: 16 b
+      Dump:  >
+           ..f.............
+    - PhysX memory: #0755D1F0
+      Type: NX_MEMORY_LowLevel
+      Size: 4.5 kb
+      Partial dump:  >
+           .ZF.....0.......................
+           .....................nY.."c...7.
+           ....................€m..........
+           ..........g......KY...U...g.....
+           ..................h...........U.
+           ..h......_......................
+           ................................
+           ................................
+           
+    - PhysX memory: #020E6D78
+      Type: NX_MEMORY_LowLevel
+      Size: 28 b
+      Dump:  >
+           ....xm..P.P.................
+    - PhysX memory: #07594B98
+      Type: NX_MEMORY_LowLevel
+      Size: 8.0 kb
+      Partial dump:  >
+           ..g.............................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #020DA0F8
+      Type: NX_MEMORY_LowLevel
+      Size: 8.0 kb
+      Partial dump:  >
+           p.g.............................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #07596BD8
+      Type: NX_MEMORY_LowLevel
+      Size: 16 b
+      Dump:  >
+           ................
+    - PhysX memory: #07630828
+      Type: NX_MEMORY_LowLevel
+      Size: 4.0 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #07596C28
+      Type: NX_MEMORY_LowLevel
+      Size: 256 b
+      Dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #07546CE8
+      Type: NX_MEMORY_LowLevel
+      Size: 16.0 kb
+      Partial dump:  >
+           ..O.............................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #07550900
+      Type: NX_MEMORY_LowLevel
+      Size: 16.0 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #07596D68
+      Type: NX_MEMORY_LowLevel
+      Size: 16 b
+      Dump:  >
+           ................
+    - PhysX memory: #07596DB8
+      Type: NX_MEMORY_LowLevel
+      Size: 16 b
+      Dump:  >
+           .AP.............
+    - PhysX memory: #07596E08
+      Type: NX_MEMORY_LowLevel
+      Size: 268 b
+      Partial dump:  >
+           t.F.......U.€................6h.
+           v.....U..nY.@8h.....x........8h.
+           ......F...R.....h.R.....h.R.....
+           ..R.....(.R..... *R......m..@...
+           .........nY.....(.T.@.......h.T.
+           @.......8...@.......LnY..nY.h.R.
+           .... ................1O.....(.R.
+           ....h.c.@............ c.@.......
+           
+    - PhysX memory: #0755E410
+      Type: NX_MEMORY_LowLevel
+      Size: 2.0 kb
+      Partial dump:  >
+           ..h.............................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #020E6DD0
+      Type: NX_MEMORY_LowLevel
+      Size: 768 b
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #0754AD28
+      Type: NX_MEMORY_LowLevel
+      Size: 512 b
+      Partial dump:  >
+           ...........6...€..z=...€.E.=....
+           ._.?...€.C7@.....I....€r.......
+           .......€...............€I\......
+           .......€........(.'....€.\A.....
+           29.....€.>.............€."......
+           .$t............€................
+           ................................
+           ................................
+           
+    - PhysX memory: #0754AF68
+      Type: NX_MEMORY_LowLevel
+      Size: 512 b
+      Partial dump:  >
+           ...........6...€.U.A...€.U.A...€
+           .?.G...€._.G...€..H...€...I...€
+           ...€...€..€....€.. ....€........
+           .......................€.....
+           0.€.......€.....C.......T.Y.....
+           T.Y............€................
+           ................................
+           ................................
+           
+    - PhysX memory: #020DC138
+      Type: NX_MEMORY_LowLevel
+      Size: 512 b
+      Partial dump:  >
+           ...........6...€...>...€...>...€
+           ..#?...€...............€........
+           PO.....€........RC$....€.C4.....
+           .Y;....€..?....€..Q......<V.....
+           8.h....€..y.....=.......=.......
+           .$t............€................
+           ................................
+           ................................
+           
+    - PhysX memory: #07631868
+      Type: NX_MEMORY_LowLevel
+      Size: 2.0 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #076320A8
+      Type: NX_MEMORY_LowLevel
+      Size: 512 b
+      Partial dump:  >
+           .$t.....=.......=...............
+           ................................
+           .......€.......€.......€.......€
+           .......€?<*.......L.....23.@...€
+           ...?...€...>...€...>...€...6...€
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #020E7110
+      Type: NX_MEMORY_LowLevel
+      Size: 256 b
+      Dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #076322E8
+      Type: NX_MEMORY_LowLevel
+      Size: 232 b
+      Dump:  >
+           ..U.€.................g.z.....b.
+           ."c...g.....0.g.....@.W........;
+           ...CP.U.........................
+           @IU.."c.........................
+           ..........U.."c.................
+           ................ .V.."c.........
+           ..W.....?.......................
+            .......
+    - PhysX memory: #0762B008
+      Type: NX_MEMORY_LowLevel
+      Size: 8.0 kb
+      Partial dump:  >
+           `0g.............................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #07554940
+      Type: NX_MEMORY_LowLevel
+      Size: 8.0 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #0755ECE0
+      Type: NX_MEMORY_LowLevel
+      Size: 8.0 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #07560D20
+      Type: NX_MEMORY_LowLevel
+      Size: 8.0 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #0755EC50
+      Type: NX_MEMORY_LowLevel
+      Size: 4 b
+    - PhysX memory: #0754B1A8
+      Type: NX_MEMORY_LowLevel
+      Size: 56 b
+      Dump:  >
+           .zF.x...........Pr............U.
+           8.K.....................
+    - PhysX memory: #020DC378
+      Type: NX_MEMORY_LowLevel
+      Size: 120 b
+      Dump:  >
+           .zF...............T..zF.........
+           ......T..zF...............T..zF.
+           ..............T..zF.............
+           ..T..zF...............T.
+    - PhysX memory: #020E7250
+      Type: NX_MEMORY_LowLevel
+      Size: 12 b
+      Dump:  >
+           ............
+    - PhysX memory: #020DC430
+      Type: NX_MEMORY_LowLevel
+      Size: 168 b
+      Dump:  >
+           .........ZF...........U.........
+           .ZF...........U.........€ZF.....
+           ......U.........dZF...........U.
+           ........LZF...........U.........
+           4ZF...........U..........ZF.....
+           ......U.
+    - PhysX memory: #020DC518
+      Type: NX_MEMORY_StaticActor
+      Size: 204 b
+      Dump:  >
+           d.D.........H....oY..oY..oY.....
+           ................................
+           ................................
+           ................ ...t.D.........
+           .................... ...........
+           ................................
+           ............
+    - PhysX memory: #084C2208
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 56 b
+      Dump:  >
+           ..f.T.f...f.......f.t.f.4.f..3L.
+           ..M...N.................
+    - PhysX memory: #07596F98
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 16 b
+      Dump:  >
+           ................
+    - PhysX memory: #020DC620
+      Type: NX_MEMORY_NPhaseCore
+      Size: 204 b
+      Dump:  >
+           ..O..... ...........0...@...T...
+           ................................
+           ................................
+           ................H.b.x.W...W...W.
+           ................................
+           ................................
+           ............
+    - PhysX memory: #0762D048
+      Type: NX_MEMORY_NPPoolManager
+      Size: 264 b
+      Partial dump:  >
+           ..b......... .......($R...b.....
+           .... ...€.......0.b......... ...
+           .....OQ.€.b......... ...€.......
+           ..b......... ...€....... .b.....
+           .... ...€.....W.p.b......... ...
+           .....YQ...b......... .........O.
+           ..b......... ...........`.b.....
+           .... .............b......... ...
+           
+    - PhysX memory: #0762D190
+      Type: NX_MEMORY_PERSISTENT
+      Size: 16 b
+      Dump:  >
+           ($R.............
+    - PhysX memory: #0762D1E0
+      Type: NX_MEMORY_PERSISTENT
+      Size: 16 b
+      Dump:  >
+           ................
+    - PhysX memory: #0762D230
+      Type: NX_MEMORY_PERSISTENT
+      Size: 16 b
+      Dump:  >
+           .OQ.............
+    - PhysX memory: #0762D280
+      Type: NX_MEMORY_PERSISTENT
+      Size: 16 b
+      Dump:  >
+           ................
+    - PhysX memory: #0762D2D0
+      Type: NX_MEMORY_PERSISTENT
+      Size: 16 b
+      Dump:  >
+           ................
+    - PhysX memory: #0762D320
+      Type: NX_MEMORY_PERSISTENT
+      Size: 16 b
+      Dump:  >
+           ..W.............
+    - PhysX memory: #0762D370
+      Type: NX_MEMORY_PERSISTENT
+      Size: 16 b
+      Dump:  >
+           .YQ.............
+    - PhysX memory: #0762D3C0
+      Type: NX_MEMORY_PERSISTENT
+      Size: 16 b
+      Dump:  >
+           ..O.............
+    - PhysX memory: #0762D410
+      Type: NX_MEMORY_PERSISTENT
+      Size: 16 b
+      Dump:  >
+           ................
+    - PhysX memory: #0762D460
+      Type: NX_MEMORY_PERSISTENT
+      Size: 16 b
+      Dump:  >
+           ................
+    - PhysX memory: #0762D4B0
+      Type: NX_MEMORY_PERSISTENT
+      Size: 16 b
+      Dump:  >
+           ................
+    - PhysX memory: #0762D500
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           $.......
+    - PhysX memory: #0762D548
+      Type: ICE_MEMORY_StaticPruner
+      Size: 40 b
+      Dump:  >
+           |.E.................`8L..9L.....
+           ....X}O.
+    - PhysX memory: #0762D5B0
+      Type: ICE_MEMORY_HandleManager
+      Size: 28 b
+      Dump:  >
+           ..b.........P.b...b...b.....
+    - PhysX memory: #0762D608
+      Type: ICE_MEMORY_IceHandleManager_Objects
+      Size: 8 b
+      Dump:  >
+           d.b.,.b.
+    - PhysX memory: #0762D650
+      Type: ICE_MEMORY_IceHandleManager_OutToIn
+      Size: 4 b
+    - PhysX memory: #0762D690
+      Type: ICE_MEMORY_IceHandleManager_InToOut
+      Size: 4 b
+    - PhysX memory: #0762D6D0
+      Type: ICE_MEMORY_IceHandleManager_Stamps
+      Size: 4 b
+    - PhysX memory: #0762D710
+      Type: ICE_MEMORY_FreePruner
+      Size: 36 b
+      Dump:  >
+           ..E.................`.L.`.L.....
+           .&..
+    - PhysX memory: #0762D770
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 196 b
+      Dump:  >
+           t.D.d.D.X.D.D.D.0.D...D...D...D.
+           ..D...D...D...D...D.|.D.`.D.@.D.
+           4.D...D...D...D...D...D...D...D.
+           ..D.p.D.`.D.D.D.0.D...D...D...D.
+           ..D...D...D...D.€.D.`.D.H.D.<.D.
+           4.D.(.D..ZF..ZF.€ZF.dZF.LZF.4ZF.
+           .ZF.
+    - PhysX memory: #0762D870
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 98 b
+      Dump:  >
+           ................................
+           ................................
+           ................................
+           ..
+    - PhysX memory: #0762D910
+      Type: NX_MEMORY_NpMaterial
+      Size: 32 b
+      Dump:  >
+           dqE.....\qE...`.h.`.$...........
+           
+    - PhysX memory: #0762D970
+      Type: NX_MEMORY_PhysicsThread
+      Size: 16 b
+      Dump:  >
+           H.E...b.h.......
+    - PhysX memory: #0762D9C0
+      Type: NX_MEMORY_NxMutexRep
+      Size: 20 b
+      Dump:  >
+           (...................
+    - PhysX memory: #0762DA10
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           ........
+    - Pointer: #00C3A5C0
+      Type: Material
+      Size: 12 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           €9e...`...b.
+    - User array: #00C3A608
+      Pointer class Id: 50000
+      Size: 4 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#332
+    - User array: #00C3A648
+      Pointer class Id: 50000
+      Size: 4 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#332
+    - User array: #00C3A688
+      Pointer class Id: 50000
+      Size: 4 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#332
+    - Pointer: #00C3A6C8
+      Type: FixedSceneTimer
+      Size: 40 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .0e..0e.e..<e..<..`............<
+           ...Bd.&<
+    - User pointer: #0760E218
+      Pointer class Id: 723
+      Size: 60 b
+      Source: c:\desarrollo\nxogre\sdk\nxogrepointerclass.h#61
+      Dump:  >
+           $.........`.......`.p...........
+           @........... ...............
+    - Pointer: #0760E290
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\sdk\nxogrearray.h#213
+      Dump:  >
+           ..L.(.L.0.L.P...
+    - Pointer: #00C3A770
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\sdk\nxogrearray.h#639
+    - Pointer: #00C3A7B0
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\sdk\nxogrearray.h#213
+      Dump:  >
+           ............P...
+    - Pointer: #00C3A800
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\sdk\nxogrearray.h#639
+    - Pointer: #00C3A840
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\sdk\nxogrearray.h#213
+      Dump:  >
+           ............P...
+    - Pointer: #00C3A890
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\sdk\nxogrearray.h#639
+    - Pointer: #00C3A8D0
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\sdk\nxogrearray.h#213
+      Dump:  >
+           ..f...f...f.P...
+    - Pointer: #00C3A920
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\sdk\nxogrearray.h#639
+    - User array: #00C3A960
+      Pointer class Id: 50000
+      Size: 4 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#332
+    - Pointer: #00C3A9A0
+      Type: URIHash
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .se.0...x....4..%..|
+    - Pointer: #00C3A9F0
+      Type: BufferReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogreuniformresourceidentifier.cpp#98
+    - Pointer: #00C3AA30
+      Type: char
+      Size: 5 b
+      Source: c:\desarrollo\nxogre\build\source\nxogreuniformresourceidentifier.cpp#158
+      Dump:  >
+           file.
+    - Pointer: #00C3AA78
+      Type: char
+      Size: 13 b
+      Source: c:\desarrollo\nxogre\build\source\nxogreuniformresourceidentifier.cpp#197
+      Dump:  >
+           ../media/nxs.
+    - Pointer: #00C3AAC8
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.................
+    - Pointer: #00C3AB18
+      Type: char
+      Size: 5 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+      Dump:  >
+           nxs.f
+    - Pointer: #00C3AB60
+      Type: MSWindowsFileArchive
+      Size: 48 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .De..De...........I.............
+            ...`.......@...
+    - Pointer: #00C3ABD0
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ............P...
+    - Pointer: #00C3AC20
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #00C3AC60
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.................
+    - Pointer: #00C3ACB0
+      Type: char
+      Size: 1 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+    - Pointer: #00C3ACF0
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           `.N.l.N.p.N.P...
+    - Pointer: #00C3AD40
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - User pointer: #00C3ADD0
+      Pointer class Id: 726
+      Size: 532 b
+      Source: c:\desarrollo\nxogre\sdk\nxogrepointerclass.h#61
+      Partial dump:  >
+           P...4...........................
+           ................................
+           ................|@k.....2.......
+           ...................?...?...?....
+           ......]?........................
+           ...?...?...?....................
+           ................................
+           ............ ...........|@k.....
+           
+    - PhysX memory: #074D7BA8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           ..g.....
+    - PhysX memory: #074ADE78
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           ........
+    - User pointer: #0766C868
+      Pointer class Id: 727
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\sdk\nxogrepointerclass.h#61
+      Dump:  >
+           ........`.v...`.
+    - User array: #0766CED8
+      Pointer class Id: 50000
+      Size: 4 b
+      Source: c:\desarrollo\nxogre\sdk\nxogrearray.h#332
+    - PhysX memory: #075A7FB0
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           ..f.....
+    - PhysX memory: #0766D3D0
+      Type: NX_MEMORY_PERSISTENT
+      Size: 23.0 kb
+      Partial dump:  >
+           4ID..HD.........H.....W...W...W.
+           ................................
+           ............gx................h.
+           ..h...h............. ....GD.....
+           ......................f. .......
+           ....P.h.P.h.X.h...........h...h.
+           ..h..........FD.................
+           ..........4A...@...A............
+           
+    - PhysX memory: #08579FE8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 40 b
+      Dump:  >
+           ..O...O...O...O...O...O.........
+           ........
+    - PhysX memory: #07673060
+      Type: NX_MEMORY_LowLevel
+      Size: 26.5 kb
+      Partial dump:  >
+           $.F.."c.........`0g.............
+           ................................
+           ................................
+           ......4A...@...A..............€?
+           ............................
+           .....y.............1g..1g.....
+            1g. 1g.............$.F.."c.....
+           ....41g.........................
+           
+    - PhysX memory: #07679AA0
+      Type: NX_MEMORY_LowLevel
+      Size: 512 b
+      Partial dump:  >
+           ..g...g...g...g.<.g.h.g...g...g.
+           ..g...g.D.g.p.g...g...g...g. .g.
+           L.g.x.g...g...g...g.(.g.T.g.€.g.
+           ..g...g...g.0.g.\.g...g..€g..g.
+           .g.8~g.d}g..|g..{g..zg..zg.@yg.
+           lxg..wg..vg..ug..ug.Htg.tsg..rg.
+           .qg..pg.$pg.Pog.|ng..mg..lg..lg.
+           ,kg.Xjg..ig..hg..gg..gg.4fg.`eg.
+           
+    - PhysX memory: #07679CE0
+      Type: NX_MEMORY_LowLevel
+      Size: 16 b
+      Dump:  >
+           ~...............
+    - PhysX memory: #07679D30
+      Type: NX_MEMORY_LowLevel
+      Size: 4 b
+    - PhysX memory: #084C2280
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 56 b
+      Dump:  >
+           ..f.P!L.0.L...h..Rh.0.L.P!L..3O.
+           ........................
+    - PhysX memory: #084F34F0
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 56 b
+      Dump:  >
+           ..f...f.p.f.P.f.0.f.0.f...f.....
+           ........................
+    - PhysX memory: #0762EA20
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           ........
+    - PhysX memory: #074BFEE0
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           ........
+    - PhysX memory: #07679EC8
+      Type: NX_MEMORY_CapsuleShape
+      Size: 392 b
+      Partial dump:  >
+           .ND..ND.........................
+           ......W...W.8.W...........f..;..
+           ..€?..............€?............
+           ..€?..4A...@...A......€?........
+           ......€?..............€?........
+           ..............................€?
+           l.g.`.g....<....................
+           ...€...€..5...5?..f......;..(.'A
+           
+    - PhysX memory: #0767A090
+      Type: NX_MEMORY_LowLevel
+      Size: 12.0 kb
+      Partial dump:  >
+           .{F...U...........g...........L?
+           ...?.............{F...U.........
+           XUh.........?...?...?...........
+           .{F...U...........h.........?...
+           ?...?............{F...U.........
+           h.L.........?...?...?...........
+           .{F...U.........(.L.........?...
+           ?...?............{F...U.........
+           
+    - PhysX memory: #0767D0D0
+      Type: NX_MEMORY_LowLevel
+      Size: 1.0 kb
+      Partial dump:  >
+           `.g.0.g...g...g...g.p.g.@.g...g.
+           ..g...g.€.g.P.g. .g...g...g...g.
+           `.g.0.g...g...g...g.p.g.@.g...g.
+           ..g...g.€.g.P.g. .g...g...g...g.
+           `.g.0.g...g...g...g.p.g.@.g...g.
+           ..g...g.€.g.P.g. .g...g...g...g.
+           `.g.0.g...g...g...g.p.g.@.g...g.
+           ..g...g.€.g.P.g. .g...g...g...g.
+           
+    - PhysX memory: #0767D510
+      Type: NX_MEMORY_LowLevel
+      Size: 32 b
+      Dump:  >
+           ................................
+           
+    - PhysX memory: #0767D570
+      Type: NX_MEMORY_LowLevel
+      Size: 16.0 kb
+      Partial dump:  >
+           `}F...U.........................
+           ..................5...5?........
+           `}F...U.....41g...g.............
+           ......................€?........
+           `}F...U......2g...g.............
+           ......................€?........
+           `}F...U......2g. .g.............
+           ......................€?........
+           
+    - PhysX memory: #076815B0
+      Type: NX_MEMORY_LowLevel
+      Size: 1.0 kb
+      Partial dump:  >
+           0.h...h...h.p.h.0.h...h...h.p.h.
+           0.h...h...h.p.h.0.h...h...h.p.h.
+           0.h...h...h.p.h.0.h...h...h.p.h.
+           0.h...h...h.p.h.0.h...h...h.p.h.
+           0.h...h...h.p.h.0.h...h...h.p.h.
+           0.h...h...h.p.h.0.h...h...h.p.h.
+           0.h...h...h.p.h.0.h...h...h.p.h.
+           0.h...h...h.p.h.0.h...h...h.p.h.
+           
+    - PhysX memory: #076819F0
+      Type: NX_MEMORY_LowLevel
+      Size: 32 b
+      Dump:  >
+           ................................
+           
+    - PhysX memory: #07681A50
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           ..g.....
+    - PhysX memory: #07681A98
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           `.g.....
+    - PhysX memory: #07681AE0
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           ..g.....
+    - PhysX memory: #084C1500
+      Type: ICE_MEMORY_IceContainer_NewEntries
+      Size: 32 b
+      Dump:  >
+           .5O.(.L.XUh.XUh...h.h.L..5O.....
+           
+    - PhysX memory: #0857FE10
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 40 b
+      Dump:  >
+           ..O..OQ..OQ..QQ.`RQ..QQ.........
+           ........
+    - PhysX memory: #07681BC0
+      Type: NX_MEMORY_LowLevel
+      Size: 6.5 kb
+      Partial dump:  >
+           ..F..nY.........p.g.......g...4A
+           ...@...A..L?...@..L?..F..nY.....
+           ......g.....\Uh....A...>tC,A...?
+           ...>...?..F..nY...........g.....
+           ..h...v@%..>..FA..4?W..?r.4?..F.
+           .nY.........0.g.....l.L..?.@...>
+           F.JA..3?#..?..3?..F..nY.........
+           p.g.....,.L....@...>..qA1..?8..?
+           
+    - PhysX memory: #07683600
+      Type: NX_MEMORY_LowLevel
+      Size: 512 b
+      Partial dump:  >
+           .5h.X5h.$5h..4h..4h..4h.T4h. 4h.
+           .3h..3h..3h.P3h..3h..2h..2h.€2h.
+           L2h..2h..1h..1h.|1h.H1h..1h..0h.
+           .0h.x0h.D0h..0h../h../h.t/h.@/h.
+           ./h...h...h.p.h.<.h...h..-h..-h.
+           l-h.8-h..-h..,h..,h.h,h.4,h..,h.
+           .+h..+h.d+h.0+h..*h..*h..*h.`*h.
+           ,*h..)h..)h..)h.\)h.()h..(h..(h.
+           
+    - PhysX memory: #07683840
+      Type: NX_MEMORY_LowLevel
+      Size: 16 b
+      Dump:  >
+           ................
+    - PhysX memory: #07683890
+      Type: NX_MEMORY_LowLevel
+      Size: 4 b
+    - PhysX memory: #076838D0
+      Type: NX_MEMORY_LowLevel
+      Size: 4 b
+    - PhysX memory: #084C1660
+      Type: ICE_MEMORY_IcePruningPool_Objects
+      Size: 32 b
+      Dump:  >
+           .6O.lVh...h.|.L.<.L.t$L..6O.....
+           
+    - PhysX memory: #084C1560
+      Type: ICE_MEMORY_IcePruningPool_WorldBoxes
+      Size: 192 b
+      Dump:  >
+           ,9.A....V$...>.AQ..@...?v..A....
+           TC$A...A..?.C4A.I@.€C..Y;Ar..@
+           ..?..QA...@......?A...@..€?.<VA
+           ...@..T.>.hAJ\.A$.€?..yA6.-..`..
+           ...@..../.€?...@,9.A....V$...>.A
+           Q..@...?........................
+           
+    - PhysX memory: #084C3950
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 56 b
+      Dump:  >
+           .3O..Rh...h.8.h.0.L.P!L..2L.€.M.
+           ..N..3O.................
+    - PhysX memory: #0759B258
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           ........
+    - Pointer: #07684B10
+      Type: Box
+      Size: 24 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           ..d..}..0Lh.hKh..Th..Th.
+    - Pointer: #07684B68
+      Type: ShapeBlueprint
+      Size: 136 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .}....€?..................€?....
+           ..............€?................
+           ..€?..............€?..€.........
+           ......................€?..€?..€?
+           ........
+    - Pointer: #07684C30
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.....€Lh.........
+    - Pointer: #07684C80
+      Type: char
+      Size: 1 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+    - PhysX memory: #07685858
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           \Uh.....
+    - User array: #084C0A10
+      Pointer class Id: 50000
+      Size: 32 b
+      Source: c:\desarrollo\nxogre\sdk\nxogrearray.h#332
+      Dump:  >
+           .Oh.x.h...h.(.L...L.P1O.........
+           
+    - PhysX memory: #076858A0
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 16 b
+      Dump:  >
+           €PQ..OQ..RQ.....
+    - Pointer: #076858F0
+      Type: PhysXPointer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .ie......Oh.....
+    - User array: #084C2DE8
+      Pointer class Id: 50000
+      Size: 32 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#332
+      Dump:  >
+           .Ph...h...h.P.L...L.x1O.........
+           
+    - User array: #07685140
+      Pointer class Id: 50000
+      Size: 4 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#332
+    - User pointer: #07684FF0
+      Pointer class Id: 724
+      Size: 68 b
+      Source: c:\desarrollo\nxogre\sdk\nxogrepointerclass.h#61
+      Dump:  >
+            ............Rh...`......Oh...`.
+           .Ph..Qh.............h.v...v.....
+           ....
+    - Pointer: #07684F10
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.....pPh.........
+    - Pointer: #07685070
+      Type: char
+      Size: 1 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+    - Pointer: #076850B0
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           @Qh.DQh.DQh.P...
+    - Pointer: #07685100
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #076851F8
+      Type: PhysXPointer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .ie.D....Kh..Oh.
+    - PhysX memory: #07685290
+      Type: NX_MEMORY_NpActor
+      Size: 124 b
+      Dump:  >
+           .%E..Xh..%E...`.h.`...E..Rh. ...
+           ..f.(.f.........................
+           ..........€?..............€?....
+           ..........€?.......?...@....
+    - PhysX memory: #07685348
+      Type: NX_MEMORY_SortedSet_NameBinding
+      Size: 12 b
+      Dump:  >
+           ..M.'.......
+    - PhysX memory: #084D0900
+      Type: NX_MEMORY_PERSISTENT
+      Size: 312 b
+      Partial dump:  >
+           ,.f.....`.g.....l.g......Rh..Mh.
+           .Th.€Lh..Th.€Lh.L.h...h.@.h.`Oh.
+           L.h.`Oh.$.h..Mh.p.h..^h.|.h..^h.
+           D.L.(.h...L.X.h...L.X.h.d!L...L.
+           ."L.(.h..#L.(.h..2L.X.L..3L...L.
+           .3L...L...M.P.L.8.M.`MV.D.M.`MV.
+           ..N.HFN...N..-V...N..-V..3O...N.
+           h5O...N.t5O...N.................
+           
+    - PhysX memory: #07685448
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 16 b
+      Dump:  >
+           €PQ.€PQ.€PQ.....
+    - PhysX memory: #076854F0
+      Type: NX_MEMORY_NpBoxShape
+      Size: 40 b
+      Dump:  >
+           D7E..Qh.XUh.,7E...`.h.`.XUh..Rh.
+           ..€?..€.
+    - PhysX memory: #07685558
+      Type: NX_MEMORY_BoxShape
+      Size: 708 b
+      Partial dump:  >
+           .LD..LD.........................
+           .....Xh..Xh..Xh...........f.....
+           ......?......?u~-8€c......1...
+           ......A...>tC,A......€?........
+           ......€?..............€?........
+           ..............................€?
+           .Th..Th....... ...P.............
+           ..............€?.Rh.........v..A
+           
+    - PhysX memory: #07679D70
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           XUh.....
+    - PhysX memory: #07596F50
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           .Th.....
+    - Pointer: #07685DB0
+      Type: Box
+      Size: 24 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           ..d..}...Oh..Lh.p.h.p.h.
+    - Pointer: #07684CC0
+      Type: ShapeBlueprint
+      Size: 136 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .}....€?..................€?....
+           ..............€?................
+           ..€?..............€?..€.........
+           ......................€?..€?..€?
+           ........
+    - Pointer: #07684FA0
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d......^h.........
+    - Pointer: #07685E08
+      Type: char
+      Size: 1 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+    - PhysX memory: #07679DB8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           ..h.....
+    - PhysX memory: #0768FDD8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           p.h.....
+    - PhysX memory: #0768FE20
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           ..h.....
+    - PhysX memory: #0768FEB8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 16 b
+      Dump:  >
+           pQQ..OQ.pQQ.pQQ.
+    - User array: #07683A00
+      Pointer class Id: 50000
+      Size: 4 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#332
+    - Pointer: #0768FF90
+      Type: PhysXPointer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .ie.....€.h.....
+    - User pointer: #0768D478
+      Pointer class Id: 724
+      Size: 68 b
+      Source: c:\desarrollo\nxogre\sdk\nxogrepointerclass.h#61
+      Dump:  >
+            .............h...`.....XNh...`.
+           8.h...h.............P.v.X.v.....
+           ....
+    - Pointer: #07684E58
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.......h.........
+    - Pointer: #0768D4F8
+      Type: char
+      Size: 1 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+    - Pointer: #0768D538
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           .:h..:h..:h.P...
+    - Pointer: #0768D588
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #0768F878
+      Type: PhysXPointer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .ie.D....]h.€.h.
+    - PhysX memory: #0768F910
+      Type: NX_MEMORY_NpActor
+      Size: 124 b
+      Dump:  >
+           .%E...h..%E...`.h.`...E...h. ...
+           ..f...f.........................
+           ..........€?..............€?....
+           ..........€?.......?...@....
+    - PhysX memory: #0768F9C8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 16 b
+      Dump:  >
+           pQQ.pQQ.pQQ.pQQ.
+    - PhysX memory: #0768FA70
+      Type: NX_MEMORY_NpBoxShape
+      Size: 40 b
+      Dump:  >
+           D7E.x.h...h.,7E...`.h.`...h...h.
+           ..€?..€.
+    - PhysX memory: #0768FAD8
+      Type: NX_MEMORY_BoxShape
+      Size: 708 b
+      Partial dump:  >
+           .LD..LD.........................
+           ......h...h...h...........f.....
+           .. ...*?..>?..€?..d6...6......>?
+           9.*...v@%..>..FA......€?........
+           ......€?..............€?........
+           ..............................€?
+           |.h.p.h....... ...P.............
+           ..............€?..h..........I@
+           
+    - Pointer: #0768E388
+      Type: Box
+      Size: 24 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           ..d..}...Nh..Mh.@.h.@.h.
+    - Pointer: #07684D88
+      Type: ShapeBlueprint
+      Size: 136 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .}....€?..................€?....
+           ..............€?................
+           ..€?..............€?..€.........
+           ......................€?..€?..€?
+           ........
+    - Pointer: #07684EA8
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.....`Oh.........
+    - Pointer: #07684F60
+      Type: char
+      Size: 1 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+    - PhysX memory: #0768E9A8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           h.L.....
+    - PhysX memory: #0768E9F0
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           @.h.....
+    - PhysX memory: #0768EA38
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           l.L.....
+    - PhysX memory: #0768EA80
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 16 b
+      Dump:  >
+           `RQ..OQ.`RQ.....
+    - User array: #0768E6E8
+      Pointer class Id: 50000
+      Size: 4 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#332
+    - Pointer: #084C0368
+      Type: PhysXPointer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .ie.......h.....
+    - User pointer: #0768E598
+      Pointer class Id: 724
+      Size: 68 b
+      Source: c:\desarrollo\nxogre\sdk\nxogrepointerclass.h#61
+      Dump:  >
+            ...........8.h...`.......h...`.
+           X.h...h.............h.v.p.v.....
+           ....
+    - Pointer: #0768E4B8
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.......h.........
+    - Pointer: #0768E618
+      Type: char
+      Size: 1 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+    - Pointer: #0768E658
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           ..h...h...h.P...
+    - Pointer: #0768E6A8
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #0768E7A0
+      Type: PhysXPointer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .ie.D.....h...h.
+    - PhysX memory: #0768E838
+      Type: NX_MEMORY_NpActor
+      Size: 124 b
+      Dump:  >
+           .%E.h.L..%E...`.h.`...E.8.h. ...
+           p.f...f.........................
+           ..........€?..............€?....
+           ..........€?...... @...@....
+    - PhysX memory: #0768E8F0
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 16 b
+      Dump:  >
+           `RQ.`RQ.`RQ.....
+    - PhysX memory: #0768E940
+      Type: NX_MEMORY_NpBoxShape
+      Size: 40 b
+      Dump:  >
+           D7E...h.h.L.,7E...`.h.`.h.L.8.h.
+           ..€?..€.
+    - PhysX memory: #084C0068
+      Type: NX_MEMORY_BoxShape
+      Size: 708 b
+      Partial dump:  >
+           .LD..LD.........................
+           ....€.h...h...h.........t.f.i...
+           .`...} ?wrG?#.€?. .7..&..€..vrG?
+           .} ..?.@...>F.JA......€?........
+           ......€?..............€?........
+           ..............................€?
+           L.h.@.h....... ...P.............
+           ..............€?8.h.....i......@
+           
+    - Pointer: #0768D188
+      Type: Box
+      Size: 24 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           ..d..}....h...h...L...L.
+    - Pointer: #0768D2B8
+      Type: ShapeBlueprint
+      Size: 136 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .}....€?..................€?....
+           ..............€?................
+           ..€?..............€?..€.........
+           ......................€?..€?..€?
+           ........
+    - Pointer: #0768E1A0
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.....X.h.........
+    - Pointer: #0768E558
+      Type: char
+      Size: 1 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+    - PhysX memory: #084C1428
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           (.L.....
+    - PhysX memory: #084C1470
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           ..L.....
+    - PhysX memory: #084C14B8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           ,.L.....
+    - PhysX memory: #0768FE68
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 16 b
+      Dump:  >
+           .RQ..RQ..OQ.....
+    - User array: #07683960
+      Pointer class Id: 50000
+      Size: 4 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#332
+    - Pointer: #07683910
+      Type: PhysXPointer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .ie.....0.L.....
+    - User pointer: #084C0828
+      Pointer class Id: 724
+      Size: 68 b
+      Source: c:\desarrollo\nxogre\sdk\nxogrepointerclass.h#61
+      Dump:  >
+            ...........0.L...`.......L...`.
+           P.L...L.............€.v...v.....
+           ....
+    - Pointer: #084C0CC0
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.......L.........
+    - Pointer: #084C0D10
+      Type: char
+      Size: 1 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+    - Pointer: #084C0D50
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           `9h.d9h.d9h.P...
+    - Pointer: #084C0DA0
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #084C0E98
+      Type: PhysXPointer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .ie.D.....h.0.L.
+    - PhysX memory: #084C0F30
+      Type: NX_MEMORY_NpActor
+      Size: 124 b
+      Dump:  >
+           .%E..9h..%E...`.h.`...E.0.L. ...
+           P.f...f.........................
+           ..........€?..............€?....
+           ..........€?......`@...@....
+    - PhysX memory: #0768FF08
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 16 b
+      Dump:  >
+           .RQ..RQ..OQ.....
+    - PhysX memory: #084C10C0
+      Type: NX_MEMORY_NpBoxShape
+      Size: 40 b
+      Dump:  >
+           D7E...L.(.L.,7E...`.h.`.(.L.0.L.
+           ..€?..€.
+    - PhysX memory: #084C1128
+      Type: NX_MEMORY_BoxShape
+      Size: 708 b
+      Partial dump:  >
+           .LD..LD.........................
+           ....h.h.l.h.x.h.........T.f.7D..
+           ..`.8..=.b?..€?.......4..X5.b?
+           .......@...?!.qA......€?........
+           ......€?..............€?........
+           ..............................€?
+           ..L...L....... ...P.............
+           ..............€?0.L.....6D.....@
+           
+    - Pointer: #084C1C60
+      Type: Box
+      Size: 24 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           ..d..}....h.€.h.."L.."L.
+    - Pointer: #0768D380
+      Type: ShapeBlueprint
+      Size: 136 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .}....€?..................€?....
+           ..............€?................
+           ..€?..............€?..€.........
+           ......................€?..€?..€?
+           ........
+    - Pointer: #0768E1F0
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.....(.h.........
+    - Pointer: #07681B28
+      Type: char
+      Size: 1 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+    - PhysX memory: #07685498
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           `#L.....
+    - PhysX memory: #084C2660
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           ."L.....
+    - PhysX memory: #084C26A8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           d#L.....
+    - PhysX memory: #084C26F0
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 16 b
+      Dump:  >
+           .OQ..QQ.........
+    - User array: #084C2000
+      Pointer class Id: 50000
+      Size: 4 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#332
+    - Pointer: #084C2740
+      Type: PhysXPointer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .ie.......L.....
+    - User pointer: #084C1EB0
+      Pointer class Id: 724
+      Size: 68 b
+      Source: c:\desarrollo\nxogre\sdk\nxogrepointerclass.h#61
+      Dump:  >
+            ...........P!L...`.......L...`.
+           p.L...L...............v...v.....
+           ....
+    - Pointer: #084C1DD0
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.....0.L.........
+    - Pointer: #084C1F30
+      Type: char
+      Size: 1 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+    - Pointer: #084C1F70
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           . L.. L.. L.P...
+    - Pointer: #084C1FC0
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #084C20B8
+      Type: PhysXPointer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .ie.D...d.L...L.
+    - PhysX memory: #084C2150
+      Type: NX_MEMORY_NpActor
+      Size: 124 b
+      Dump:  >
+           .%E.@'L..%E...`.h.`...E.P!L. ...
+           0.f...f.........................
+           ..........€?..............€?....
+           ..........€?.......@...@....
+    - PhysX memory: #076853F0
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 16 b
+      Dump:  >
+           .OQ..QQ.........
+    - PhysX memory: #084C22F8
+      Type: NX_MEMORY_NpBoxShape
+      Size: 40 b
+      Dump:  >
+           D7E.. L.`#L.,7E...`.h.`.`#L.P!L.
+           ..€?..€.
+    - PhysX memory: #084C2360
+      Type: NX_MEMORY_BoxShape
+      Size: 708 b
+      Partial dump:  >
+           .LD..LD.........................
+           .....&L..&L..'L.........4.f.....
+           .`....|.I. ...€........7....J. >
+           ..|.W...M..>.Q.@......€?........
+           ......€?..............€?........
+           ..............................€?
+           .#L.."L....... ...P.............
+           ..............€?P!L.........6.-.
+           
+    - Pointer: #084C1E20
+      Type: PlaneGeometry
+      Size: 24 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           dKe.l|....h.@.L..3L..3L.
+    - Pointer: #084C0B40
+      Type: ShapeBlueprint
+      Size: 136 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           h.d...€?..................€?....
+           ..............€?................
+           ..€?..............€?..€.........
+           ..........................€?....
+           ........
+    - Pointer: #0768E508
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.......L.........
+    - Pointer: #084C1D90
+      Type: char
+      Size: 1 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+    - PhysX memory: #084FB1E0
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 40 b
+      Dump:  >
+           €PQ..OQ. QQ.pQQ.`RQ..RQ..OQ.....
+           ........
+    - Array: #084ED8C0
+      Type: SceneGeometry
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#332
+      Dump:  >
+           ..L...M.P.N.....
+    - PhysX memory: #084C3860
+      Type: ICE_MEMORY_IcePruningPool_WorldBoxes
+      Size: 96 b
+      Dump:  >
+           .$t..$t..$t..$tI.....$tI."......
+           vj......T.YB=..A...B....vj...".B
+           T.YB=..A........................
+           
+    - PhysX memory: #084C3900
+      Type: ICE_MEMORY_IcePruningPool_Objects
+      Size: 16 b
+      Dump:  >
+           d6L...M.\.N.....
+    - User array: #084C3188
+      Pointer class Id: 50000
+      Size: 4 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#332
+    - Pointer: #07685390
+      Type: PhysXPointer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .ie.@.....L.....
+    - Pointer: #084C1AB8
+      Type: SceneGeometry
+      Size: 36 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           Tke.0ke..2L...`.....h0L...`..0L.
+           H1L.
+    - Pointer: #084C3068
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d......0L.........
+    - Pointer: #084C30B8
+      Type: char
+      Size: 1 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+    - Pointer: #084C30F8
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           .1L..1L..1L.P...
+    - Pointer: #084C3148
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #084C3240
+      Type: PhysXPointer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .ie.D...$.L...L.
+    - PhysX memory: #084C32D8
+      Type: NX_MEMORY_NpActor
+      Size: 124 b
+      Dump:  >
+           .%E..Sh..%E...`.h.`...E..2L. ...
+           ....l4L.........................
+           ..........€?..............€?....
+           ..........€?................
+    - PhysX memory: #084C3390
+      Type: NX_MEMORY_NpPlaneShape
+      Size: 40 b
+      Dump:  >
+           ..E.@2L.P5L...E...`.h.`.P5L..2L.
+           ..€?..€.
+    - PhysX memory: #084C33F8
+      Type: NX_MEMORY_StaticActor
+      Size: 204 b
+      Dump:  >
+           d.D.........H... .W.8.W.H.W.....
+           ................................
+           .........C...............7L..7L.
+           .7L............. ...t.D.........
+           .................2L. ...........
+           87L.<7L.@7L.........€7L..7L..7L.
+           ............
+    - PhysX memory: #0857A720
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 40 b
+      Dump:  >
+           €PQ..OQ. QQ.pQQ.`RQ..RQ..OQ.....
+           ........
+    - PhysX memory: #084C3550
+      Type: NX_MEMORY_PlaneShape
+      Size: 424 b
+      Partial dump:  >
+           .|D..|D.........................
+           ......O...O...O..........3L.....
+           ..€?..............€?............
+           ..€?..................€?........
+           ......€?..............€?........
+           ..............................€?
+           .3L..3L....... ...P.............
+           ..............€?.2L..........$t.
+           
+    - PhysX memory: #084C3738
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           P5L.....
+    - PhysX memory: #084C3780
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           .3L.....
+    - PhysX memory: #084C37C8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           T5L.....
+    - Pointer: #084C49A8
+      Type: URIHash
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           ..d..IL.8JL......#..
+    - Pointer: #084C4568
+      Type: ArchiveResourceIdentifierReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearchiveresourceidentifier.cpp#98
+    - Pointer: #084C49F8
+      Type: char
+      Size: 4 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearchiveresourceidentifier.cpp#158
+    - Pointer: #084C4A38
+      Type: char
+      Size: 15 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearchiveresourceidentifier.cpp#197
+      Dump:  >
+           tudorhouse.nxs.
+    - Pointer: #084C4A88
+      Type: MSWindowsFileResource
+      Size: 48 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .De.lCe..IL.hEL.............d...
+           .........$.h....
+    - User array: #084EE460
+      Pointer class Id: 50000
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#332
+      Dump:  >
+           .JL..BN...N.....
+    - Pointer: #084C4BB8
+      Type: SharedBuffer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#76
+      Dump:  >
+           ................
+    - Pointer: #084C4C08
+      Type: BufferReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#214
+    - Pointer: #084C4C48
+      Type: SharedBuffer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#76
+      Dump:  >
+           ................
+    - Pointer: #084C4C98
+      Type: BufferReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#214
+    - Pointer: #084C4CD8
+      Type: SharedBuffer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#76
+      Dump:  >
+           ................
+    - Pointer: #084C4D28
+      Type: BufferReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#214
+    - Pointer: #084C4D68
+      Type: SharedBuffer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#76
+      Dump:  >
+           ................
+    - Pointer: #07562D60
+      Type: BufferReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#214
+    - Pointer: #07562DA0
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d......LV.........
+    - Pointer: #07564CB8
+      Type: char
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+      Dump:  >
+           tudorhouse.nxs..
+    - PhysX memory: #07563E70
+      Type: NX_MEMORY_TriangleMesh
+      Size: 264 b
+      Partial dump:  >
+           <.D./.......0.L...L...O.........
+           .....@V..GV...L..KV....6........
+           ;......A...A=..A......L......uO.
+           ....o..:............/.....L.0.L.
+           ........;......A...A=..AK...F.7.
+           .%...I.B...6....................
+           ..................(G"..J4.m."...
+           4.m.$u.J.=qG"....=qG...J_~h..z"@
+           
+    - PhysX memory: #07563FB8
+      Type: NX_MEMORY_NpTriangleMesh
+      Size: 12 b
+      Dump:  >
+           ..E.....p>V.
+    - PhysX memory: #084C8E30
+      Type: NX_MEMORY_InternalTriangleMesh_NxPoint
+      Size: 6.6 kb
+      Partial dump:  >
+           ;C'@...AH..A.2.@CY}ATL.A.2.@P.|A
+           aXAAM.|@#3.A..DA.e.A...A..DA...A
+           .J.A..DA.?q@Pi.A..DA.1.Az..AaXAA
+           ..|@@0.AaXAA.e.A...A...A.s€..W.A
+           ...A@..@Jy.A=..A..€.X..A...A}.%@
+           ...A(A.@.k.....AH..AX*..CY}ATL.A
+           ...A}?}AaXAA.$.@-<8AaXAAv..A..}A
+           .G9A...@.MEA.G9A.1.Az..A...A...A
+           
+    - PhysX memory: #084CA8A0
+      Type: NX_MEMORY_InternalTriangleMesh_NxTriangle32
+      Size: 11.5 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #084CD6C0
+      Type: NX_MEMORY_InternalTriangleMesh_faceRemap
+      Size: 3.8 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+            ...!..."...#...$...%...&...'...
+           (...)...*...+...,...-......./...
+           0...1...2...3...4...5...6...7...
+           8...9...:...;...<...=...>...?...
+           
+    - PhysX memory: #07564000
+      Type: NX_MEMORY_TriangleMesh_NxU16
+      Size: 1.9 kb
+      Partial dump:  >
+           ................$...............
+           $.$...............P.N...O.......
+           ........#.........M.M.M...H.....
+           ......#.L.L.#.N.M...L.L.H.K.....
+           ....................J...........
+           J...............................
+           ......................I.........
+           ....I.................H...H...G.
+           
+    - PhysX memory: #075647E8
+      Type: NX_MEMORY_TriangleMesh_NxU8
+      Size: 979 b
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #07564BF8
+      Type: ICE_MEMORY_MeshModel
+      Size: 36 b
+      Dump:  >
+           \.E..>V.........XLV.......L.....
+           ....
+    - PhysX memory: #07564C58
+      Type: ICE_MEMORY_PERSISTENT
+      Size: 36 b
+      Dump:  >
+           ..E.....L.L..3.:.rR:c..:...:`.[:
+           [..:
+    - PhysX memory: #084CE648
+      Type: ICE_MEMORY_AABBCollisionNode
+      Size: 3.5 kb
+      Partial dump:  >
+           ...........€..€.......... >..(z
+           .D.€....S......8.@$zg?k@..../...
+           .+.8.?]Ig?.?........T.lY.?.$( .?
+           ...€....T.lYdY.$( .&...€.....+)L
+           dY..u..&.........*@LGl.._.!.....
+           ...../,H.ED...O........../|R^MD.
+           .......€...../|R^MD.............
+           16.D.E%...O....€....2?.D^MM.....
+           
+    - PhysX memory: #084CF488
+      Type: ICE_MEMORY_LeafTriangles
+      Size: 724 b
+      Partial dump:  >
+           ........d...............&.......
+           D...5...................U...'...
+           ....r...........G...........F...
+           ................1.......V.......
+           ........e...............B...'...
+           ........e...S...".......U.......
+           e.......s.......................
+           v...............6...C...........
+           
+    - PhysX memory: #084CF798
+      Type: NX_MEMORY_ExtraTrigData
+      Size: 979 b
+      Partial dump:  >
+           ..7'4..1.3......%..%%.1....'....
+           1?.%./...........%........'%%...
+           1..%'8,..<%..1,.1.(......!%%....
+           ..8..1./1</%.!,<.,1....'........
+           8..%%1...%...'.<-1...5.5........
+           ..%..5....'%.....'..%.7......%$.
+           ...%.%...........81%..1..9....,.
+           !(.......1,..%.1.<,%....8..(....
+           
+    - PhysX memory: #084CFBA8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 256 b
+      Dump:  >
+           .?V..XN.........................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - User array: #084F2CA0
+      Pointer class Id: 50000
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#332
+      Dump:  >
+           8KL.xCN...N.....
+    - Pointer: #07564D08
+      Type: TriangleGeometry
+      Size: 28 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $se..~....L...L.8.M.8.M.8KL.
+    - Pointer: #084CFCE8
+      Type: ShapeBlueprint
+      Size: 136 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .}....€?..................€?....
+           ..............€?................
+           ..€?..............€?..€.........
+           ................................
+           ....8KL.
+    - Pointer: #084CFDB0
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.....`MV.........
+    - Pointer: #07564D60
+      Type: char
+      Size: 1 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+    - PhysX memory: #084D07D8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           ..M.....
+    - PhysX memory: #084D0820
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           8.M.....
+    - PhysX memory: #084D0868
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           ..M.....
+    - PhysX memory: #084D08B0
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 16 b
+      Dump:  >
+           ................
+    - User array: #084C1038
+      Pointer class Id: 50000
+      Size: 4 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#332
+    - Pointer: #084C0FE8
+      Type: PhysXPointer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .ie.@.....M.....
+    - Pointer: #084D0100
+      Type: SceneGeometry
+      Size: 36 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           Tke.0ke.€.M...`..... .M...`...M.
+           ..M.
+    - Pointer: #084D0020
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.....`.M.........
+    - Pointer: #084D0160
+      Type: char
+      Size: 1 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+    - Pointer: #084D01A0
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           8.L.<.L.<.L.P...
+    - Pointer: #084D01F0
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #084D02E8
+      Type: PhysXPointer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .ie.D....MV...M.
+    - PhysX memory: #084D0380
+      Type: NX_MEMORY_NpActor
+      Size: 124 b
+      Dump:  >
+           .%E...L..%E...`.h.`...E.€.M. ...
+           ......M.........................
+           ..........€?..............€?....
+           ..........€?..H....A...A....
+    - PhysX memory: #084D0438
+      Type: NX_MEMORY_NpTriangleMeshShape
+      Size: 40 b
+      Dump:  >
+           ..E...M...M...E...`.h.`...M.€.M.
+           ..€?..€.
+    - PhysX memory: #084D04A0
+      Type: NX_MEMORY_StaticActor
+      Size: 204 b
+      Dump:  >
+           d.D.........H.....M...M...M.....
+           ................................
+           ........................h.M.l.M.
+           p.M............. ...t.D.........
+           ................€.M. ...........
+           ..M...M...M......... .M.$.M.(.M.
+           ............
+    - PhysX memory: #084D05A8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 16 b
+      Dump:  >
+           ................
+    - PhysX memory: #084D05F8
+      Type: NX_MEMORY_TriangleMeshShape
+      Size: 416 b
+      Partial dump:  >
+           t.D.`.D.........................
+           ......M...M...M...........M.....
+           ..€?..............€?............
+           ..€?..H....A...A......€?........
+           ......€?..............€?..H....A
+           ...A..H....A...A..............€?
+           D.M.8.M....... ...P.............
+           ..............€?€.M.........."..
+           
+    - Pointer: #084E41A0
+      Type: URIHash
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           ..d.0BN.pBN......#..
+    - Pointer: #084E41F0
+      Type: ArchiveResourceIdentifierReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearchiveresourceidentifier.cpp#98
+    - Pointer: #084E4230
+      Type: char
+      Size: 4 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearchiveresourceidentifier.cpp#158
+    - Pointer: #084E4270
+      Type: char
+      Size: 15 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearchiveresourceidentifier.cpp#197
+      Dump:  >
+           tudorhouse.nxs.
+    - Pointer: #084E42C0
+      Type: MSWindowsFileResource
+      Size: 48 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .De.lCe..AN..AN.............d...
+           .........$.h....
+    - Pointer: #084E43F8
+      Type: SharedBuffer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#76
+      Dump:  >
+           ................
+    - Pointer: #084C4AF8
+      Type: BufferReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#214
+    - Pointer: #084E4448
+      Type: SharedBuffer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#76
+      Dump:  >
+           ................
+    - Pointer: #084E4498
+      Type: BufferReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#214
+    - Pointer: #084E44D8
+      Type: SharedBuffer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#76
+      Dump:  >
+           ................
+    - Pointer: #084E4528
+      Type: BufferReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#214
+    - Pointer: #084E4568
+      Type: SharedBuffer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#76
+      Dump:  >
+           ................
+    - Pointer: #084E45B8
+      Type: BufferReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#214
+    - Pointer: #084E45F8
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.......N.........
+    - Pointer: #084ED288
+      Type: char
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+      Dump:  >
+           tudorhouse.nxs..
+    - PhysX memory: #084E56C8
+      Type: NX_MEMORY_TriangleMesh
+      Size: 264 b
+      Partial dump:  >
+           <.D./.......XXN..rN...R.........
+           ....p.N.X.N.x.N.h.N....6........
+           ;......A...A=..A......N.....0vO.
+           ....o..:............/....rN.XXN.
+           ........;......A...A=..AK...F.7.
+           .%...I.B...6....................
+           ..................(G"..J4.m."...
+           4.m.$u.J.=qG"....=qG...J_~h..z"@
+           
+    - PhysX memory: #084E5810
+      Type: NX_MEMORY_NpTriangleMesh
+      Size: 12 b
+      Dump:  >
+           ..E......VN.
+    - PhysX memory: #084E5858
+      Type: NX_MEMORY_InternalTriangleMesh_NxPoint
+      Size: 6.6 kb
+      Partial dump:  >
+           ;C'@...AH..A.2.@CY}ATL.A.2.@P.|A
+           aXAAM.|@#3.A..DA.e.A...A..DA...A
+           .J.A..DA.?q@Pi.A..DA.1.Az..AaXAA
+           ..|@@0.AaXAA.e.A...A...A.s€..W.A
+           ...A@..@Jy.A=..A..€.X..A...A}.%@
+           ...A(A.@.k.....AH..AX*..CY}ATL.A
+           ...A}?}AaXAA.$.@-<8AaXAAv..A..}A
+           .G9A...@.MEA.G9A.1.Az..A...A...A
+           
+    - PhysX memory: #084E72C8
+      Type: NX_MEMORY_InternalTriangleMesh_NxTriangle32
+      Size: 11.5 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #084EA0E8
+      Type: NX_MEMORY_InternalTriangleMesh_faceRemap
+      Size: 3.8 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+            ...!..."...#...$...%...&...'...
+           (...)...*...+...,...-......./...
+           0...1...2...3...4...5...6...7...
+           8...9...:...;...<...=...>...?...
+           
+    - PhysX memory: #084EB070
+      Type: NX_MEMORY_TriangleMesh_NxU16
+      Size: 1.9 kb
+      Partial dump:  >
+           ................$...............
+           $.$...............P.N...O.......
+           ........#.........M.M.M...H.....
+           ......#.L.L.#.N.M...L.L.H.K.....
+           ....................J...........
+           J...............................
+           ......................I.........
+           ....I.................H...H...G.
+           
+    - PhysX memory: #084EB858
+      Type: NX_MEMORY_TriangleMesh_NxU8
+      Size: 979 b
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #084EBC68
+      Type: ICE_MEMORY_MeshModel
+      Size: 36 b
+      Dump:  >
+           \.E.0WN...........N.....l.N.....
+           ....
+    - PhysX memory: #084EBCC8
+      Type: ICE_MEMORY_PERSISTENT
+      Size: 36 b
+      Dump:  >
+           ..E.....,.N..3.:.rR:c..:...:`.[:
+           [..:
+    - PhysX memory: #084EBD28
+      Type: ICE_MEMORY_AABBCollisionNode
+      Size: 3.5 kb
+      Partial dump:  >
+           ...........€..€.......... >..(z
+           .D.€....S......8.@$zg?k@..../...
+           .+.8.?]Ig?.?........T.lY.?.$( .?
+           ...€....T.lYdY.$( .&...€.....+)L
+           dY..u..&.........*@LGl.._.!.....
+           ...../,H.ED...O........../|R^MD.
+           .......€...../|R^MD.............
+           16.D.E%...O....€....2?.D^MM.....
+           
+    - PhysX memory: #084ECB68
+      Type: ICE_MEMORY_LeafTriangles
+      Size: 724 b
+      Partial dump:  >
+           ........d...............&.......
+           D...5...................U...'...
+           ....r...........G...........F...
+           ................1.......V.......
+           ........e...............B...'...
+           ........e...S...".......U.......
+           e.......s.......................
+           v...............6...C...........
+           
+    - PhysX memory: #084ECE78
+      Type: NX_MEMORY_ExtraTrigData
+      Size: 979 b
+      Partial dump:  >
+           ..7'4..1.3......%..%%.1....'....
+           1?.%./...........%........'%%...
+           1..%'8,..<%..1,.1.(......!%%....
+           ..8..1./1</%.!,<.,1....'........
+           8..%%1...%...'.<-1...5.5........
+           ..%..5....'%.....'..%.7......%$.
+           ...%.%...........81%..1..9....,.
+           !(.......1,..%.1.<,%....8..(....
+           
+    - Pointer: #084ED320
+      Type: TriangleGeometry
+      Size: 28 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $se..~..@.N.x.N...N...N.xCN.
+    - Pointer: #084ED378
+      Type: ShapeBlueprint
+      Size: 136 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .}....€?..................€?....
+           ..............€?................
+           ..€?..............€?..€.........
+           ................................
+           ....xCN.
+    - Pointer: #084ED440
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d......-V.........
+    - Pointer: #07562DF0
+      Type: char
+      Size: 1 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+    - PhysX memory: #084EDE28
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           H.N.....
+    - PhysX memory: #084EDE70
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           ..N.....
+    - PhysX memory: #084EDEB8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           L.N.....
+    - PhysX memory: #084EDF00
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 16 b
+      Dump:  >
+           ................
+    - User array: #084ED880
+      Pointer class Id: 50000
+      Size: 4 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#332
+    - Pointer: #084EDF50
+      Type: PhysXPointer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .ie.@...T.N.....
+    - Pointer: #084ED750
+      Type: SceneGeometry
+      Size: 36 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           Tke.0ke...N...`.....p.N...`...N.
+           @.N.
+    - Pointer: #084ED670
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.......N.........
+    - Pointer: #084ED7B0
+      Type: char
+      Size: 1 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+    - Pointer: #084ED7F0
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           €.N...N...N.P...
+    - Pointer: #084ED840
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #084ED938
+      Type: PhysXPointer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .ie.D...$.N.T.N.
+    - PhysX memory: #084ED9D0
+      Type: NX_MEMORY_NpActor
+      Size: 124 b
+      Dump:  >
+           .%E.P.N..%E...`.h.`...E...N. ...
+           ....d.N.........................
+           ..........€?..............€?....
+           ..........€?..HB...A...A....
+    - PhysX memory: #084EDA88
+      Type: NX_MEMORY_NpTriangleMeshShape
+      Size: 40 b
+      Dump:  >
+           ..E.8.N.H.N...E...`.h.`.H.N...N.
+           ..€?..€.
+    - PhysX memory: #084EDAF0
+      Type: NX_MEMORY_StaticActor
+      Size: 204 b
+      Dump:  >
+           d.D.........H.....N...N...N.....
+           ................................
+           ..........................N...N.
+           ..N............. ...t.D.........
+           ..................N. ...........
+           (.N.,.N.0.N.........p.N.t.N.x.N.
+           ............
+    - PhysX memory: #084EDBF8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 16 b
+      Dump:  >
+           ................
+    - PhysX memory: #084EDC48
+      Type: NX_MEMORY_TriangleMeshShape
+      Size: 416 b
+      Partial dump:  >
+           t.D.`.D.........................
+           ......N...N...N...........N.....
+           ..€?..............€?............
+           ..€?..HB...A...A......€?........
+           ......€?..............€?..HB...A
+           ...A..HB...A...A..............€?
+           ..N...N....... ...P.............
+           ..............€?..N............B
+           
+    - Pointer: #084EE358
+      Type: URIHash
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           ..d...N...N......p..
+    - Pointer: #084D0338
+      Type: ArchiveResourceIdentifierReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearchiveresourceidentifier.cpp#98
+    - Pointer: #084ED988
+      Type: char
+      Size: 4 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearchiveresourceidentifier.cpp#158
+    - Pointer: #084EE3A8
+      Type: char
+      Size: 11 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearchiveresourceidentifier.cpp#197
+      Dump:  >
+           Barrel.nxs.
+    - Pointer: #084EE3F0
+      Type: MSWindowsFileResource
+      Size: 48 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .De.lCe.X.N.8.M.............d...
+           u........$.h....
+    - Pointer: #084EE5A0
+      Type: SharedBuffer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#76
+      Dump:  >
+           ................
+    - Pointer: #084E4330
+      Type: BufferReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#214
+    - Pointer: #084EE5F0
+      Type: SharedBuffer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#76
+      Dump:  >
+           ................
+    - Pointer: #084EE640
+      Type: BufferReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#214
+    - Pointer: #084EE680
+      Type: SharedBuffer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#76
+      Dump:  >
+           ................
+    - Pointer: #084EE6D0
+      Type: BufferReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#214
+    - Pointer: #084EE710
+      Type: SharedBuffer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#76
+      Dump:  >
+           ................
+    - Pointer: #084EE760
+      Type: BufferReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrebuffer.h#214
+    - Pointer: #084EE7A0
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.....X,O.........
+    - Pointer: #084F2C58
+      Type: char
+      Size: 12 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+      Dump:  >
+           Barrel.nxs..
+    - PhysX memory: #084EF870
+      Type: NX_MEMORY_ConvexMeshRuntime
+      Size: 352 b
+      Partial dump:  >
+           .[D.....\.E...N.........h.O.....
+           ..O.|...H.O.\.N...O.:<*.].B...,.
+           =<*@[.E@..'@[.E5............|...
+           @...@.O.@.N.....:<*.].B...,.=<*@
+           [.E@..'@.€..€.<@......@[.E5.RD.
+           |...@.O.@...@.N...O....5o.<2...
+           "...x.N...O.P.O.`.....O...O...O.
+           ..O.X.N.......N.h.N...O.@...t...
+           
+    - PhysX memory: #084EFA10
+      Type: NX_MEMORY_NpConvexMesh
+      Size: 12 b
+      Dump:  >
+           .>E.....p.N.
+    - PhysX memory: #084EFA58
+      Type: ICE_MEMORY_PERSISTENT
+      Size: 7.0 kb
+      Partial dump:  >
+           ................................
+            .....O.P.O.......€?....[.E.].B.
+           [.E@ .....O...O.......€.....^.B.
+           [.E.].B@......O...O..g"?...4..E.
+           o:+.].'.o:+@......O...O...E?Z.c.
+           .g".9.*...'.9.*@......O...O.q.~.
+           .r......;.)../).;.)@......O...O.
+           l..=....p.~...+...'...+@.... .O.
+           
+    - PhysX memory: #084F16B8
+      Type: ICE_MEMORY_PERSISTENT
+      Size: 628 b
+      Partial dump:  >
+            ..... ...$...).......3...8...=.
+           ..B...G...L...Q...W...[...a...e.
+           ..j...o...u...y................
+           ................................
+           !...............................
+           .............................. .
+           ..%...*.../...5...9...>...C...I.
+           ..M...S...W...\...a...g...k...q.
+           
+    - PhysX memory: #084F1968
+      Type: ICE_MEMORY_PERSISTENT
+      Size: 36 b
+      Dump:  >
+           ..E.......O..sK8...8...8.=.8...8
+           .=.8
+    - PhysX memory: #084F19C8
+      Type: ICE_MEMORY_AABBCollisionNode
+      Size: 424 b
+      Partial dump:  >
+           ...........€.€.€..............€
+           ...€............`.€..|L...€....
+           ....`|L..|L............€.~...@
+           ...............€.€.€........4V..
+           ..}L.€.€........5V...`|L.€}L....
+           ....5V.."y|L.€.@.........k...`.@
+           .€}L........4V..-.}L.€.~........
+           4V...€}L.€.@.........k..-..@.€.~
+           
+    - PhysX memory: #084F1BB0
+      Type: ICE_MEMORY_LeafTriangles
+      Size: 92 b
+      Dump:  >
+           ............D...........t.......
+           ....V...t...............V...4...
+           ........v...............V...
+    - PhysX memory: #084F1C48
+      Type: ICE_MEMORY_OPC_HybridModel_Indices
+      Size: 496 b
+      Partial dump:  >
+           ............................I...
+           U...V...t...y...o...F...w...[...
+           ............................p...
+           s...K...<...?...e...f...B...L...
+           ................................
+           ....X...]...^...a...b...P...S...
+           ............................D...
+           h...k...l...O...A...z...G...H...
+           
+    - PhysX memory: #084F1E78
+      Type: ICE_MEMORY_SupportVertexMap
+      Size: 36 b
+      Dump:  >
+           .rD...........O...........O..$O.
+           ..N.
+    - PhysX memory: #084F1ED8
+      Type: ICE_MEMORY_IceHullGaussMaps_Samples
+      Size: 3.0 kb
+      Partial dump:  >
+           556677899:;;<<==556677899:;;<<==
+           556677899:;;<<==556677899:;;<<==
+           556677899:;;<<==556677899:;;<<==
+           556677899:;;<<==556677899:;;<<==
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #084F2B18
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 256 b
+      Dump:  >
+           ..N.............................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - Pointer: #084F2CF0
+      Type: Convex
+      Size: 28 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .*e..~....O.H-O.h5O.h5O...N.
+    - Pointer: #084F2D48
+      Type: ShapeBlueprint
+      Size: 136 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .}....€?..................€?....
+           ..............€?................
+           ..€?..............€?..€.........
+           ................................
+           ......N.
+    - Pointer: #084F2E10
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d.......N.........
+    - Pointer: #084EE7F0
+      Type: char
+      Size: 1 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+    - PhysX memory: #0768FA18
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           .5O.....
+    - PhysX memory: #084F3790
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           h5O.....
+    - PhysX memory: #084F37D8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           .5O.....
+    - PhysX memory: #084F3820
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 16 b
+      Dump:  >
+            QQ..PQ.........
+    - User array: #084F32A0
+      Pointer class Id: 50000
+      Size: 4 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#332
+    - Pointer: #084F3870
+      Type: PhysXPointer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .ie.....X1O.....
+    - User pointer: #084F3150
+      Pointer class Id: 724
+      Size: 68 b
+      Source: c:\desarrollo\nxogre\sdk\nxogrepointerclass.h#61
+      Dump:  >
+            ............3O...`.....p0O...`.
+           .2O.`2O...............w.`Uw.....
+           ....
+    - Pointer: #084F3070
+      Type: StringBase
+      Size: 20 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           $.d......1O.........
+    - Pointer: #084F31D0
+      Type: char
+      Size: 1 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrestring.h#66
+    - Pointer: #084F3210
+      Type: SharedArray
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#213
+      Dump:  >
+           .2O..2O..2O.P...
+    - Pointer: #084F3260
+      Type: ArrayReferenceCounter
+      Size: 2 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrearray.h#639
+    - Pointer: #084F3350
+      Type: PhysXPointer
+      Size: 16 b
+      Source: c:\desarrollo\nxogre\build\source\nxogrepointerclass.h#61
+      Dump:  >
+           .ie.D....,O.X1O.
+    - PhysX memory: #084F33E8
+      Type: NX_MEMORY_NpActor
+      Size: 124 b
+      Dump:  >
+           .%E.p8O..%E...`.h.`...E..3O. ...
+           ..f...f.........................
+           ..........€?..............€?....
+           ..........€?..pA...@........
+    - PhysX memory: #084F34A0
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 16 b
+      Dump:  >
+            QQ. QQ.........
+    - PhysX memory: #084F3568
+      Type: NX_MEMORY_NpConvexShape
+      Size: 40 b
+      Dump:  >
+           .BE.P3O..5O..BE...`.h.`..5O..3O.
+           ..€?..€.
+    - PhysX memory: #084F35D0
+      Type: NX_MEMORY_ConvexShape
+      Size: 388 b
+      Partial dump:  >
+           d\D.P\D.........................
+           .... 8O.$8O.08O...........f.4l..
+           ..A.j..5..'?..&..........'?....
+           ..A?.l.AL.E@.kF.......€?........
+           ......€?..............€?........
+           ..............................€?
+           t5O.h5O....... ...P.............
+           ..............€?.3O.....3l..,9.A
+           
+    - PhysX memory: #091E0040
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 659.4 kb
+      Partial dump:  >
+           ..4A...@...A..DA...@...A......DA
+           ...@...A.)BA...@...A......DA...@
+           ...A.)BA...?...A......DA...@...A
+           .)BA...@...A......DA...@...A.)BA
+           ...@...A......4A...@...A..4A..@@
+           ...A......4A..@@...A.)2Aff6@...A
+           ......4A..@@...A[.6Aff6@...A....
+           ..4A..@@...A..4Aff6@...A......4A
+           
+    - PhysX memory: #08578928
+      Type: NX_MEMORY_LowLevel
+      Size: 700 b
+      Partial dump:  >
+           .....€.....@.....€.....@...>....
+           Q......€..€....€..€?81.6.....m..
+           ..................5...5?........
+           ....A.#.....q..@A.#.....q..@T..?
+           Y..?V......€..€....€..€?81.6....
+           w.....................5...5?....
+           ........6.-........@6.-........@
+           [..?S..?Y..?...€..€....€..€?81.6
+           
+    - PhysX memory: #0857A4B8
+      Type: ICE_MEMORY_IceContainer_NewEntries
+      Size: 256 b
+      Dump:  >
+           ................................
+           ........................p...s...
+           K...<...?...e...f...B...L...T...
+           q...r...J...g...>...d...C...=...
+           0...1.......2...3.../...4...E...
+           N...{...)...,...'...*...-...(...
+           +...(...+.......................
+           ................................
+           
+    - PhysX memory: #084F2EC0
+      Type: NX_MEMORY_Profiler
+      Size: 88 b
+      Dump:  >
+           .....xO..{O..{O.................
+           ............psO..uO..uO.........
+           .........xO.psO.........
+    - PhysX memory: #084F2F58
+      Type: NX_MEMORY_Profiler
+      Size: 88 b
+      Dump:  >
+           ....pO...O...O.................
+           .............vO.`xO.`xO.........
+           ........pO..vO.........
+    - PhysX memory: #084F7370
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 400 b
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #084F76D0
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 400 b
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #084F7F70
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 560 b
+      Partial dump:  >
+           8.E....../......h...............
+           ........................$.E.....
+           ./...r€.>.......................
+           ..................E..........r€.
+           ................................
+           ..........E..........r€.........
+           ................................
+           ..E..........r€.................
+           
+    - PhysX memory: #084F78A0
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 840 b
+      Partial dump:  >
+           ..E....../......b...............
+           ..........................E.....
+           ................................
+           ..................E.............
+           ................................
+           ........|.E.....................
+           ................................
+           d.E.............................
+           
+    - PhysX memory: #084ED2D8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           ..O.(|O.
+    - PhysX memory: #084F45B8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           X/O.p.W.
+    - PhysX memory: #084F7540
+      Type: NX_MEMORY_Profiler
+      Size: 88 b
+      Dump:  >
+           ......O...O...O.................
+           ..............O.p.O.p.O.........
+           ..........O...O.........
+    - PhysX memory: #084F81E0
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 400 b
+      Partial dump:  >
+           1.......'.......................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #084FB2B0
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 2.7 kb
+      Partial dump:  >
+           t.D.............................
+           ........................d.D.1...
+           .|......+........Q.............
+           :...............X.D.'....|......
+           ................................
+           ........D.D.'....|......1.......
+           ................................
+           0.D.'....|......................
+           
+    - PhysX memory: #084F2FF0
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           @uO..|O.
+    - PhysX memory: #085808B0
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 447.9 kb
+      Partial dump:  >
+           ...@......iA...@3.€...iA.....a.@
+           ......iA?..@......iA.......@....
+           ..iA...@...=..iA.......@....;.hA
+           ...@....oEkA.....@.A.p..>.hA.@.A
+           :.€.>.hA.......A.p..>.hAO..A.p..
+           >.hA.....@.A{...>.hA.@.A...=>.hA
+           .....@.A.€....fA.@.A.€...)jA....
+           3..@..q...yA3..@..€...yA.......@
+           
+    - PhysX memory: #084F75D8
+      Type: ICE_MEMORY_EdgeListBuilder
+      Size: 24 b
+      Dump:  >
+           6....nQ......QP.h.Q..ZT.
+    - PhysX memory: #085051E8
+      Type: ICE_MEMORY_EdgeTriangle
+      Size: 11.5 kb
+      Partial dump:  >
+           .......@.......@...@.......@....
+            ......@...@!......@$...........
+           ...@.......@*......@'..@!..."...
+           *..@........3..@........4...:...
+           3..@.......@(..@...@...@...@5...
+           .......@....;..@...@.......@...@
+           ...@....O...+......@...........@
+           ...@-..@...@S.../..@%..@$.../..@
+           
+    - PhysX memory: #08516EA8
+      Type: ICE_MEMORY_Edge
+      Size: 12.4 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ....)...............0.......2...
+           ....E.......F.......G.......m...
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #08511268
+      Type: ICE_MEMORY_EdgeDesc
+      Size: 12.4 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           .... .......".......$.......&...
+           ....(.......*.......,...........
+           ....0.......2.......4.......6...
+           ....8.......:.......<.......>...
+           
+    - PhysX memory: #08545A88
+      Type: ICE_MEMORY_EdgeList_FacesByEdges
+      Size: 11.5 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ............................|...
+           z...|...C...D...C...`...D...z...
+           ^..._...^......._...`...........
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #084FBDE0
+      Type: NX_MEMORY_InternalTriangleMesh_Normals
+      Size: 6.6 kb
+      Partial dump:  >
+           ..!?*..>..0?...?.Y.>..3?...?@'.>
+           .{5?~-G?z.w>yn.?.ID?...>...?.E.>
+           [.>.E..?..:?..-?8..=8I.<..g..%.>
+           F.'?.....4.?€ID?...>..........r?
+           x..>.m.>...=Z.s?D....I.?.vS?..U?
+           ...?.0...2"....>_.0?.M..!3.>i.3?
+           ..........€?t.i?.%.>17.=..a?....
+           >F....g?...>D....f.<..g......F.>
+           
+    - PhysX memory: #084F7630
+      Type: ICE_MEMORY_EdgeListBuilder
+      Size: 24 b
+      Dump:  >
+           6....*R......._...Q...Q.
+    - PhysX memory: #085F08B8
+      Type: ICE_MEMORY_EdgeTriangle
+      Size: 11.5 kb
+      Partial dump:  >
+           .......@.......@...@.......@....
+            ......@...@!......@$...........
+           ...@.......@*......@'..@!..."...
+           *..@........3..@........4...:...
+           3..@.......@(..@...@...@...@5...
+           .......@....;..@...@.......@...@
+           ...@....O...+......@...........@
+           ...@-..@...@S.../..@%..@$.../..@
+           
+    - PhysX memory: #08522AC0
+      Type: ICE_MEMORY_Edge
+      Size: 12.4 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ....)...............0.......2...
+           ....E.......F.......G.......m...
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #0851A098
+      Type: ICE_MEMORY_EdgeDesc
+      Size: 12.4 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           .... .......".......$.......&...
+           ....(.......*.......,...........
+           ....0.......2.......4.......6...
+           ....8.......:.......<.......>...
+           
+    - PhysX memory: #0851D288
+      Type: ICE_MEMORY_EdgeList_FacesByEdges
+      Size: 11.5 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ............................|...
+           z...|...C...D...C...`...D...z...
+           ^..._...^......._...`...........
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #085200A8
+      Type: NX_MEMORY_InternalTriangleMesh_Normals
+      Size: 6.6 kb
+      Partial dump:  >
+           ..!?*..>..0?...?.Y.>..3?...?@'.>
+           .{5?~-G?z.w>yn.?.ID?...>...?.E.>
+           [.>.E..?..:?..-?8..=8I.<..g..%.>
+           F.'?.....4.?€ID?...>..........r?
+           x..>.m.>...=Z.s?D....I.?.vS?..U?
+           ...?.0...2"....>_.0?.M..!3.>i.3?
+           ..........€?t.i?.%.>17.=..a?....
+           >F....g?...>D....f.<..g......F.>
+           
+    - PhysX memory: #084F7C28
+      Type: NX_MEMORY_Profiler
+      Size: 88 b
+      Dump:  >
+           .... .O.h.O.h.O.................
+           ............P.O...O...O.........
+           ........ .O.P.O.........
+    - PhysX memory: #084FD850
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 400 b
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #084FDA20
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 840 b
+      Partial dump:  >
+           ..E.............................
+           ..........................E.....
+           ......D.......................D.
+           ..................E...........D.
+           ......................D.........
+           ........|.E...........D.........
+           ..............D.................
+           d.E...........D.................
+           
+    - PhysX memory: #084F7CC0
+      Type: NX_MEMORY_Profiler
+      Size: 88 b
+      Dump:  >
+           ....XDQ.HOQ.HOQ.................
+           ..............O.8.O.8.O.........
+           ........XDQ...O.........
+    - PhysX memory: #084FDDA8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 400 b
+      Partial dump:  >
+           1...............................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #08514458
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 2.7 kb
+      Partial dump:  >
+           t.D.............................
+           ........................d.D.....
+           .............................y3.
+           ................X.D.............
+           .....................y3.........
+           ........D.D.....................
+           .............y3.................
+           0.D.............................
+           
+    - PhysX memory: #084F7D58
+      Type: ICE_MEMORY_AABBTree
+      Size: 28 b
+      Dump:  >
+           .vO..}O.....................
+    - PhysX memory: #084F7688
+      Type: ICE_MEMORY_OPC_AABBTree_Indices
+      Size: 12 b
+      Dump:  >
+           ............
+    - PhysX memory: #084F7DB0
+      Type: ICE_MEMORY_AABBTreeNode
+      Size: 204 b
+      Dump:  >
+           .....$t..$t..$t..$tIT.YB.$tI.}O.
+           .....vO......"......vj...".BT.YB
+           =..A-~O..}O..vO......$t..$t..$t.
+           .$tI.....$tI.....}O..vO........B
+           ....vj...".BT.YB=..A.....}O..vO.
+           ....."......vj......T.YB=..A....
+           .}O..vO.....
+    - PhysX memory: #0857B8A0
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 24 b
+      Dump:  >
+           ..f...h.8.h.0.L.P!L.....
+    - PhysX memory: #08521B68
+      Type: NX_MEMORY_LowLevel
+      Size: 128 b
+      Dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #084F3108
+      Type: NX_MEMORY_LowLevel
+      Size: 4 b
+    - PhysX memory: #08521C28
+      Type: NX_MEMORY_LowLevel
+      Size: 4 b
+    - PhysX memory: #08521C68
+      Type: NX_MEMORY_LowLevel
+      Size: 4 b
+    - PhysX memory: #08521CA8
+      Type: NX_MEMORY_LowLevel
+      Size: 4 b
+    - PhysX memory: #08521CE8
+      Type: NX_MEMORY_LowLevel
+      Size: 4 b
+    - PhysX memory: #08521D28
+      Type: NX_MEMORY_LowLevel
+      Size: 4 b
+    - PhysX memory: #08521D68
+      Type: NX_MEMORY_LowLevel
+      Size: 4 b
+    - PhysX memory: #08521DA8
+      Type: NX_MEMORY_PERSISTENT
+      Size: 1.6 kb
+      Partial dump:  >
+           ..........g.\Uh.........d#L...g.
+           ..........g.,.L...........g...h.
+           ..........g.\Uh.........\Uh...h.
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #08522428
+      Type: NX_MEMORY_PERSISTENT
+      Size: 768 b
+      Partial dump:  >
+           .$R...f..x..Ow...........3L.4.f.
+           {G..|G......0ZQ.0%R.T.f..?...?..
+           .........3L...f..|...|.......[Q.
+           .$R...f..l...l............f..3L.
+           .{...{.......[Q..3L...f..m...m..
+           ....8\Q..$R...f..B...B..........
+           X$R...f..@...@...........3L.t.f.
+           yC..zC......p]Q..3L.T.f..{...{..
+           
+    - PhysX memory: #08514F88
+      Type: NX_MEMORY_PERSISTENT
+      Size: 2.5 kb
+      Partial dump:  >
+           .PQ......@D...f...f.............
+           ....\Uh...g.........($R.........
+           ....Ow...x......lyD......yD..3L.
+           4.f.................T5L.d#L.....
+           ....@$R.......W...p.|G..{G......
+           .RQ......@D.4.f.T.f.............
+           ....d#L.,.L.........X$R.........
+           .....?...?......lyD......yD..3L.
+           
+    - PhysX memory: #0857E640
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 56 b
+      Dump:  >
+           .RQ. QQ.€PQ.pQQ.`RQ..OQ.pQQ..OQ.
+            QQ. QQ. QQ.............
+    - PhysX memory: #085159C8
+      Type: NX_MEMORY_PERSISTENT
+      Size: 3.3 kb
+      Partial dump:  >
+           h[Q.............XUh...g...h>0...
+           .Ty?...................@.....x..
+           .............................x..
+           ................................
+           ................ ....... .W....@
+           ....>H..................k.>G...
+           "'..>H..........@^Q.............
+           `#L.(.L.].....?................
+           
+    - PhysX memory: #085791B8
+      Type: NX_MEMORY_LowLevel
+      Size: 252 b
+      Dump:  >
+           ...@......iA...€..€....€.,......
+           .....@.A.p..>.hA...€..€....€....
+           ........3..@..q...yA...€..€....€
+           KF..........I\.AK...m.xA...€..€.
+           ...€.O..........................
+           ................................
+           ................................
+           ............................
+    - PhysX memory: #0857FE78
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 56 b
+      Dump:  >
+           .RQ..QQ.xPQ.xPQ.hQQ..OQ.XRQ..RQ.
+           .OQ..QQ.................
+    - PhysX memory: #084FE188
+      Type: NX_MEMORY_LowLevel
+      Size: 24.0 kb
+      Partial dump:  >
+           .€F...U.......g.p.g.hx..gx.....?
+           ...?...=...<...;..O...O...O.p.A.
+           ......€?..€?.................OQ.
+           .€F...U.......g...g.>H..=H.....?
+           ...?...=........D5g.D5g...O. #A.
+           .BP...€?..€?7................OQ.
+           .€F...U.......g.p.g..@...@.....?
+           ...?...=........x.O.x.O.H.O.0.@.
+           
+    - PhysX memory: #08516708
+      Type: NX_MEMORY_LowLevel
+      Size: 1.0 kb
+      Partial dump:  >
+           (AP..@P.h@P..@P..?P.H?P..>P..>P.
+           (>P..=P.h=P..=P..<P.H<P..;P..;P.
+           (;P..:P.h:P..:P..9P.H9P..8P..8P.
+           (8P..7P.h7P..7P..6P.H6P..5P..5P.
+           (5P..4P.h4P..4P..3P.H3P..2P..2P.
+           (2P..1P.h1P..1P..0P.H0P../P../P.
+           (/P...P.h.P...P..-P.H-P..,P..,P.
+           (,P..+P.h+P..+P..*P.H*P..)P..)P.
+           
+    - PhysX memory: #08522840
+      Type: NX_MEMORY_LowLevel
+      Size: 32 b
+      Dump:  >
+           j...............................
+           
+    - PhysX memory: #085228A0
+      Type: NX_MEMORY_LowLevel
+      Size: 4 b
+    - PhysX memory: #085041C8
+      Type: NX_MEMORY_LowLevel
+      Size: 2.6 kb
+      Partial dump:  >
+           .CP...O...g.p.g.....€.W.........
+           H.W.........()R.................
+           ......W...............F...O...g.
+           ..g.....(.W.........p.P.........
+            .W.......................P.....
+           ........dEP.H.O...g.p.g.......W.
+           ..........W......... .W.........
+           ..............W...............F.
+           
+    - PhysX memory: #0857D858
+      Type: NX_MEMORY_LowLevel
+      Size: 2.2 kb
+      Partial dump:  >
+           .U.AH.n..+........€?....H.n.....
+           .....Z.A..t.Y.........€?......t.
+           ........R..A .t...........€?....
+            .t..........q.A.~m..€}.......€?
+           .....~m..........Z.A.._...\.....
+           ..€?......_.........{t.A.ML.\.;.
+           ......€?.....ML.........N..A.€3.
+           ..........€?.....€3.........f<.A
+           
+    - PhysX memory: #085794B0
+      Type: NX_MEMORY_LowLevel
+      Size: 140 b
+      Dump:  >
+           <.F..EP...........P.<.F..EP.....
+           ....T.P.<.F..EP...........P.<.F.
+           .EP...........P.<.F.............
+           ....<.F.................<.F.....
+           ............
+    - PhysX memory: #08522768
+      Type: ICE_MEMORY_IceContainer_NewEntries
+      Size: 128 b
+      Dump:  >
+           .....3L..Th....................
+           ...A.N.6DC4A"..5...A...6SC$A...5
+           ...A...5DC4A...6...A...4SC$A./.6
+           ................................
+           
+    - PhysX memory: #084F83B0
+      Type: NX_MEMORY_PERSISTENT
+      Size: 1.5 kb
+      Partial dump:  >
+           ..O......@D..3L...f.............
+           ....T5L...g.......O.............
+           ................................
+           @.O.............................
+           ................p.O.............
+           ................................
+           ..O.............................
+           ..................O.............
+           
+    - PhysX memory: #085229D8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           ..O.....
+    - PhysX memory: #0857B7B0
+      Type: ICE_MEMORY_IceContainer_NewEntries
+      Size: 128 b
+      Dump:  >
+           .....3L.p.h....................
+           KI@N.^.>.FA.r^8m*y@.....Y;A...7
+           .3t@X.....QA<..7{..@$.W..CGA.Ac5
+           ................................
+           
+    - PhysX memory: #0857A0C8
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 24 b
+      Dump:  >
+           ..f...f...f...f.4.f.....
+    - PhysX memory: #08522A68
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 24 b
+      Dump:  >
+           ........................
+    - PhysX memory: #08516C18
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 24 b
+      Dump:  >
+           ..f.T.f...f...f.t.f.t.f.
+    - PhysX memory: #08516B48
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 6 b
+      Dump:  >
+           ......
+    - PhysX memory: #084F89F0
+      Type: NX_MEMORY_NPhaseContext
+      Size: 1.4 kb
+      Partial dump:  >
+           $yD..... .............O.........
+           ..........O...€..LP...O.........
+           ..............E.................
+           ................................
+           ................................
+           ...@..O.....$.E.................
+           ................................
+           ................................
+           
+    - PhysX memory: #084F8FD8
+      Type: NX_MEMORY_Scene_vertexTagStamps
+      Size: 4.0 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #084FA018
+      Type: NX_MEMORY_Scene_featureCache
+      Size: 4.0 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #08504C88
+      Type: NX_MEMORY_Scene_featureCacheExternal
+      Size: 1.0 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #08508008
+      Type: NX_MEMORY_Scene_featureCache
+      Size: 1.0 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #08508448
+      Type: NX_MEMORY_LowLevel
+      Size: 1.2 kb
+      Partial dump:  >
+           ....H.P.....@...'.....W....@$.E.
+           ................................
+           ................................
+           ...................@T.P.........
+           ...............?..E.....x.N...N.
+           T.P..sK8...8...8.=.8...8.=.8....
+           ......-@..|?..}..$>@.yT@X.]....>
+           .?.?P..>...>.?.?P..>,.6@'..@.Im.
+           
+    - PhysX memory: #085688E8
+      Type: NX_MEMORY_LowLevel
+      Size: 64.0 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #085F36D8
+      Type: NX_MEMORY_LowLevel
+      Size: 132.0 kb
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ....hx..p.g....A...@S..A........
+           ..5...5?..€3......€..?..€3....
+           .......€..€?...A...@S..A..€?....
+           ..........€?..............€?...A
+           
+    - PhysX memory: #0857AB48
+      Type: ICE_MEMORY_IceContainer_NewEntries
+      Size: 128 b
+      Dump:  >
+           .....3L.@.h....................
+           ...@.L....IA.^.8D..@......?A"..8
+           ...@[....4LA.".5...@.s...4LAni.5
+           ................................
+           
+    - PhysX memory: #0850BBF0
+      Type: NX_MEMORY_LowLevel
+      Size: 700 b
+      Partial dump:  >
+           ...@......iA...@......iA........
+           .......€..€....€..€.L.-...[5.,..
+           ..................5...5?........
+           .....@.A.p..>.hA.@.A.p..>.hA4...
+           2...k..?...€..€....€..€.L.-...[5
+           ......................5...5?....
+           ........3..@..q...yA3..@..q...yA
+           8...i..?<......€..€....€..€.L.-.
+           
+    - PhysX memory: #08579C90
+      Type: NX_MEMORY_LowLevel
+      Size: 64 b
+      Dump:  >
+           (.F.r}.;...7.{ ;(.F...;........
+           (.F..~.;h..:Hf5.(.F....;.€..E>.:
+           
+    - PhysX memory: #08516B90
+      Type: NX_MEMORY_LowLevel
+      Size: 4 b
+    - PhysX memory: #0857E170
+      Type: NX_MEMORY_LowLevel
+      Size: 512 b
+      Partial dump:  >
+           (.F..p ;....(..:(.F.........."..
+           (.F.....D./...`.(.F..0.9x.......
+           (.F.~..:K.b...).(.F..!<:......O.
+           (.F..]r:O...l.p.(.F....:V...(.<.
+           (.F.B+.:..G...F9(.F..d.:l.':.€.9
+           (.F.k..:...:(y..(.F....;.N3:.k..
+           (.F....<...;...9(.F.............
+           (.F.............(.F.............
+           
+    - PhysX memory: #0850C1C8
+      Type: NX_MEMORY_LowLevel
+      Size: 6.2 kb
+      Partial dump:  >
+           .U.AH.n..+....&.8.C@.....U.AH.n.
+           .+..>......%.w.......€?....H.n.
+           ...............€..5?..5?........
+           .....Z.A..t.Y....<*.9.C@..:7.Z.A
+           ..t.Y...>......%.w.......€?....
+           ..t................€..5?..5?....
+           ........R..A .t.......&.9.C@...?
+           R..A .t.....>......%.w.......€?
+           
+    - PhysX memory: #0857D230
+      Type: NX_MEMORY_LowLevel
+      Size: 1.2 kb
+      Partial dump:  >
+           <.F.lCP...........P.<.F.lCP.....
+           ....,.P.<.F.lCP...........P.<.F.
+           lCP...........P.<.F.lCP.........
+           X.P.<.F.lCP...........P.<.F.lCP.
+           ........ .P.<.F.lCP...........P.
+           <.F.lCP...........P.<.F.lCP.....
+           ....L.P.<.F.lCP...........P.<.F.
+           lCP...........P.<.F.lCP.........
+           
+    - PhysX memory: #08578CB8
+      Type: NX_MEMORY_LowLevel
+      Size: 700 b
+      Partial dump:  >
+           ...@.L....IA...@.L....IA........
+           7......€..€....€#.€.....U.%6.^..
+           ..................5...5?........
+           ....D..@......?AD..@......?A(...
+           .......?...€..€....€#.€.....U.%6
+           ".....................5...5?....
+           ...........@[....4LA...@[....4LA
+           ....j..?r..?...€..€....€#.€.....
+           
+    - PhysX memory: #0857FEF0
+      Type: NX_MEMORY_LowLevel
+      Size: 64 b
+      Dump:  >
+           (.F.e..;6..:U~,;(.F....;.^.;...:
+           (.F.. .;9.#9/E..(.F.W..;S....+.:
+           
+    - PhysX memory: #08578FB0
+      Type: NX_MEMORY_LowLevel
+      Size: 140 b
+      Dump:  >
+           <.F..DP...........W.<.F..DP.....
+           ......W.<.F..DP.........€.W.<.F.
+           .DP...........W.<.F.............
+           ....<.F.................<.F.....
+           ............
+    - PhysX memory: #08579080
+      Type: NX_MEMORY_LowLevel
+      Size: 252 b
+      Dump:  >
+           ...A.N.6DC4A...€..€....€".......
+           .......A...6SC$A...€..€....€....
+           ...........A...5DC4A...€..€....€
+           ...............A...4SC$A...€..€.
+           ...€./..........................
+           ................................
+           ................................
+           ............................
+    - PhysX memory: #08579648
+      Type: NX_MEMORY_LowLevel
+      Size: 700 b
+      Partial dump:  >
+           ...A.N.6DC4A...A.N.6DC4A....*..>
+            ......€..€....€....m...q)5"...
+           ..................5...5?........
+           .......A...6SC$A...A...6SC$A....
+           #..>...>...€..€....€....m...q)5
+           ......................5...5?....
+           ...........A...5DC4A...A...5DC4A
+           ....*..>)......€..€....€.....B.
+           
+    - PhysX memory: #08505148
+      Type: NX_MEMORY_LowLevel
+      Size: 64 b
+      Dump:  >
+           (.F....;<.>;.g..(.F.R..;v.(;..Y:
+           (.F..I.;.......:(.F...j;#..9.u.:
+           
+    - PhysX memory: #08516C70
+      Type: NX_MEMORY_LowLevel
+      Size: 252 b
+      Dump:  >
+           KI@N.^.>.FA...€..€....€.r^.....
+           ....m*y@.....Y;A...€..€....€....
+           .........3t@X.....QA...€..€....€
+           <...........{..@$.W..CGA...€..€.
+           ...€.Ac.........................
+           ................................
+           ................................
+           ............................
+    - PhysX memory: #0857A1E8
+      Type: NX_MEMORY_LowLevel
+      Size: 140 b
+      Dump:  >
+           <.F..CP...........W.<.F..CP.....
+           ......W.<.F..CP.........`.W.<.F.
+           .CP...........W.<.F.............
+           ....<.F.................<.F.....
+           ............
+    - PhysX memory: #08579998
+      Type: NX_MEMORY_LowLevel
+      Size: 700 b
+      Partial dump:  >
+           KI@N.^.>.FAKI@N.^.>.FA........
+           (......€..€....€..€.a .......r^.
+           ..................5...5?........
+           ....m*y@.....Y;Am*y@.....Y;A....
+           ....`..?...€..€....€..€.a ......
+           ......................5...5?....
+           .........3t@X.....QA.3t@X.....QA
+           :...T..?@......€..€....€..€.a ..
+           
+    - PhysX memory: #0857E3B0
+      Type: NX_MEMORY_LowLevel
+      Size: 504 b
+      Partial dump:  >
+           H.O.....H.O.....H.O.....H.O.....
+           h.O.....h.O.....h.O.....h.O.....
+           h.O.....h.O.....h.O.....h.O.....
+           h.O.....h.O.....h.O.....h.O.....
+           h.O.....h.O.....h.O.....h.O.....
+           h.O.....h.O.....h.O.....h.O.....
+           ..O.......O.......O.......O.....
+           ..O.....h.O.....h.O.....h.O.....
+           
+    - PhysX memory: #084FB058
+      Type: NX_MEMORY_LowLevel
+      Size: 252 b
+      Dump:  >
+           ...@.L....IA...€..€....€.^......
+           ....D..@......?A...€..€....€"...
+           ...........@[....4LA...€..€....€
+           .".............@.s...4LA...€..€.
+           ...€ni..........................
+           ................................
+           ................................
+           ............................
+    - PhysX memory: #0211CA90
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 8 b
+      Dump:  >
+           ..O.....
+    - PhysX memory: #08579578
+      Type: ICE_MEMORY_IceContainer_NewEntries
+      Size: 128 b
+      Dump:  >
+           .....3L...L....................
+           ...@......iA.,.6.@.A.p..>.hA...6
+           3..@..q...yAKF.4I\.AK...m.xA.O.5
+           ................................
+           
+    - PhysX memory: #0857A120
+      Type: NX_MEMORY_LowLevel
+      Size: 140 b
+      Dump:  >
+           <.F..BP.........H.W.<.F..BP.....
+           ......W.<.F..BP...........W.<.F.
+           .BP.........t.W.<.F.............
+           ....<.F.................<.F.....
+           ............
+    - PhysX memory: #0857A438
+      Type: NX_MEMORY_LowLevel
+      Size: 64 b
+      Dump:  >
+           (.F..hf<..Z9..p:(.F..7.<....y..;
+           (.F..|.<....i.(.(.F.D..;Q.#.T.>.
+           
+    - PhysX memory: #08579E68
+      Type: NX_MEMORY_LowLevel
+      Size: 84 b
+      Dump:  >
+           ................................
+           ................................
+           ....................
+    - PhysX memory: #08579940
+      Type: NX_MEMORY_LowLevel
+      Size: 28 b
+      Dump:  >
+           ............................
+    - PhysX memory: #0850E920
+      Type: NX_MEMORY_LowLevel
+      Size: 804 b
+      Partial dump:  >
+           ............ .P..j....d9P..:....
+           v0.:.......:....L.G... :...:..€?
+           .3*:.*....C:O.Q>.......4.......>
+           m%.2...4m%.2..Q>X5g...........
+           ................................
+           ................................
+           ................................
+           ..............................
+           
+    - PhysX memory: #0857E6F0
+      Type: NX_MEMORY_LowLevel
+      Size: 5.7 kb
+      Partial dump:  >
+           ..............W...0.0.P...P.p.W.
+           ...?W.C..$.....?.U.AH.n..+......
+           ...:....(..:...?.......€..5?..5?
+           V..>..u>?..>.................p ;
+           ................0.0.P...P.€.W.
+           ...@W.C.d<.....?.Z.A..t.Y.......
+           ...5..t..".....?.......€..5?..5?
+           K..>...>9Q{>....................
+           
+    - PhysX memory: #0857CF88
+      Type: NX_MEMORY_LowLevel
+      Size: 512 b
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #0857A2B0
+      Type: NX_MEMORY_LowLevel
+      Size: 200 b
+      Dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ........
+    - PhysX memory: #0857A788
+      Type: NX_MEMORY_PERSISTENT
+      Size: 896 b
+      Partial dump:  >
+           ..W......................x.....
+           .........k.>G..."'..>H....W..zV@
+           7}....]?..E=S..?.?...|G.........
+           ..(@...4..9>.|..0.W.............
+           .........l......e.!A...4..3..4..
+           ..,..|..L.W.....................
+           .@....W......................@..
+           ...............?.....{.?.n.../..
+           
+    - PhysX memory: #08522A20
+      Type: NX_MEMORY_LowLevel
+      Size: 4 b
+    - PhysX memory: #08508930
+      Type: ICE_MEMORY_IceContainer_NewEntries
+      Size: 11.0 kb
+      Partial dump:  >
+           .....2L.0.L.`.P.....M..........?
+           .....j9.....`........3L...L.....
+           ..................@D.....iAU..7
+           .@.A....(.hA...5K..@.~C...yA...7
+           T\.Ax...V.xAW..5.....3O..2L...P.
+           ......"AW.j..0.?..o6........p...
+           ....h5O..3L.......,...?........
+           €q.A...6.€}.I3G5.Z.A.h.6..\.r.96
+           
+    - PhysX memory: #0850B7B0
+      Type: ICE_MEMORY_IceContainer_NewEntries
+      Size: 1.0 kb
+      Partial dump:  >
+           ....h5O..3L.....D.B...?..K2....
+           .U.AT^A7.+..H.n6.Z.A^.>7R.....t6
+           N..AD1<7.... .t6€q.A.P97.€}..~m6
+           .Z.A..67..\..._6wt.A.K07f.;..ML6
+           J..A..'7.....€36b<.A...7.#...p.6
+           ...A...7....*v.5...A...7.u...8.5
+           I..A.h.7..P...E5...A<..6....:.v4
+           _w.A.Q.7,...L..4.X.A...7%...l.S5
+           
+    - PhysX memory: #0857A620
+      Type: ICE_MEMORY_IceContainer_NewEntries
+      Size: 128 b
+      Dump:  >
+           .....3L.."L....................
+           .....€.....@.m.7A.#.....q..@w..8
+           6.-........@.I.6..-..u.....@.S.6
+           ................................
+           
+    - PhysX memory: #0857FF70
+      Type: NX_MEMORY_Profiler
+      Size: 88 b
+      Dump:  >
+           ......W.H.W.H.W.................
+           ............H.W...W...W.........
+           ..........W.H.W.........
+    - PhysX memory: #0857B948
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 400 b
+      Partial dump:  >
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           ................................
+           
+    - PhysX memory: #0857BB18
+      Type: NX_MEMORY_Generic_Array_Container
+      Size: 560 b
+      Partial dump:  >
+           8.E.............................
+           ........................$.E.....
+           ................................
+           ..................E.............
+           ................................
+           ..........E.....................
+           ................................
+           ..E.............................
+           
+    - PhysX memory: #0207DB78
+      Type: NX_MEMORY_LowLevel
+      Size: 4 b
+    - PhysX memory: #020B5FB0
+      Type: NX_MEMORY_LowLevel
+      Size: 4 b
+
+# End of 657 allocations.
