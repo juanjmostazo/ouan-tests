@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<Configuration>
+    <!--Config options-->
+    <Options>
+        <Option key="autoSaveEnabled">true</Option>
+        <Option key="difficultyLevel">Easy</Option>
+        <Option key="numLives">3</Option>
+    </Options>
+</Configuration>
