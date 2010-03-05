@@ -34,7 +34,7 @@ int Event::getPriority() const
 
 //----------------------
 ChangeWorldEvent::ChangeWorldEvent(bool dreamWorld)
-:Event(EVT_PRIORITY_CHANGEWORLD,EVENT_TYPE_CHANGEWORLD)//TODO: Replace magic number with enum, const or delete it
+:Event(EVT_PRIORITY_CHANGEWORLD,EVENT_TYPE_CHANGEWORLD)
 ,mDreamWorld(dreamWorld)
 {
 };

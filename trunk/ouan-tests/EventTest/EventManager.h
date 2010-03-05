@@ -27,7 +27,7 @@ namespace OUAN
 		EventPtr removeEvent();
 
 		void registerHandler(EventHandlerPtr handler,TEventType evtType);
-		//void unregisterHandler(EventHandler,TEventType evtType);
+		void unregisterHandler(EventHandlerPtr handler,TEventType evtType);
 	};
 }
 #endif
