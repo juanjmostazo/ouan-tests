@@ -1,4 +1,5 @@
 #include "EventManager.h"
+#include <algorithm>
 using namespace OUAN;
 EventManager::EventManager()
 {
@@ -48,12 +49,14 @@ void EventManager::registerHandler(EventHandlerPtr handler, TEventType evtType)
 		mEventHandlers[evtType].clear();
 	mEventHandlers[evtType].push_back(handler);
 }
-//void EventManager::unregisterHandler(EventHandler hdl,TEventType evtType)
-//{
-//	if (!mEventHandlers.empty() && mEventHandlers.count(evtType))
-//	{
-//		mEventHandlers[evtType].remove(hdl);
-//		if (mEventHandlers[evtType].size()==0)
-//			mEventHandlers.erase(evtType);
-//	}
-//}
+void EventManager::unregisterHandler(EventHandlerPtr hdl,TEventType evtType)
+{
+	if (!mEventHandlers.empty() && mEventHandlers.count(evtType))
+	{
+		//look for handler in the list
+		TEventHandlerList::iterator newEnd=remove_if(mEventHandlers[evtType].begin(),mEventHandlers[evtType].end(),EventHandlerComparisonFunctor(hdl));
+		mEventHandlers[evtType].erase(newEnd,mEventHandlers[evtType].end());
+		if (mEventHandlers[evtType].size()==0)
+			mEventHandlers.erase(evtType);
+	}
+}
