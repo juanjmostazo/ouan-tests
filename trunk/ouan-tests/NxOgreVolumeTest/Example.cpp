@@ -37,7 +37,7 @@ protected:
 	NxOgre::TimeController*		mTimeController;
 	OGRE3DRenderSystem*		mRenderSystem;
 
-	OGRE3DBody*			mCube;
+	OGRE3DBody*			    mCube;
 	NxOgre::Volume*			mVolume;
 
 	NxOgre::VisualDebugger*		mVisualDebugger;
@@ -82,7 +82,7 @@ protected:
 		mTimeController = NxOgre::TimeController::getSingleton();
 
 		// Add objects
-		mCube = mRenderSystem->createBody(new NxOgre::Box(1, 1, 1), NxOgre::Vec3(0, 20, 0), "cube.1m.mesh");
+		mCube = mRenderSystem->createBody(new NxOgre::Sphere(1), NxOgre::Vec3(0, 20, 0), "cube.1m.mesh");
 
 		// Create floor plane (Ogre)
 		MovablePlane *plane = new MovablePlane("Plane");
@@ -97,7 +97,7 @@ protected:
 		Ogre::SceneNode* mPlaneNode = mSceneMgr->getRootSceneNode()->createChildSceneNode();
 		mPlaneNode->attachObject(planeEnt);
 
-		mVolume = mScene->createVolume(new NxOgre::Box(10), NxOgre::Matrix44(NxOgre::Vec3(0, 5, 0)), this, NxOgre::Enums::VolumeCollisionType_All);
+		mVolume = mScene->createVolume(new NxOgre::Box(5), NxOgre::Matrix44(NxOgre::Vec3(0, 0, 0)), this, NxOgre::Enums::VolumeCollisionType_All);
 
 		mVisualDebuggerRenderable = new OGRE3DRenderable(NxOgre::Enums::RenderableType_VisualDebugger);
 		mVisualDebugger->setRenderable(mVisualDebuggerRenderable);
