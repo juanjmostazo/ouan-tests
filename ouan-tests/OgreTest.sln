@@ -39,11 +39,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NxOgreVolumeTest", "NxOgreV
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EventTest", "EventTest\EventTest.vcproj", "{FBF40E11-A644-4E33-B1B5-E4511ACDF3A7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestGrass", "TestGrass\TestGrass.vcproj", "{93967860-3978-4FCD-B449-8709020811AA}"
+EndProject
 Global
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
 		DebugStatic|Win32 = DebugStatic|Win32
@@ -313,8 +311,26 @@ Global
 		{FBF40E11-A644-4E33-B1B5-E4511ACDF3A7}.Release|Win32.Build.0 = Release|Win32
 		{FBF40E11-A644-4E33-B1B5-E4511ACDF3A7}.ReleaseStatic|Win32.ActiveCfg = Release|Win32
 		{FBF40E11-A644-4E33-B1B5-E4511ACDF3A7}.ReleaseStatic|Win32.Build.0 = Release|Win32
+		{93967860-3978-4FCD-B449-8709020811AA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{93967860-3978-4FCD-B449-8709020811AA}.Debug|Win32.Build.0 = Debug|Win32
+		{93967860-3978-4FCD-B449-8709020811AA}.DebugStatic|Win32.ActiveCfg = Debug|Win32
+		{93967860-3978-4FCD-B449-8709020811AA}.DebugStatic|Win32.Build.0 = Debug|Win32
+		{93967860-3978-4FCD-B449-8709020811AA}.Minimal|Win32.ActiveCfg = Release|Win32
+		{93967860-3978-4FCD-B449-8709020811AA}.Minimal|Win32.Build.0 = Release|Win32
+		{93967860-3978-4FCD-B449-8709020811AA}.MinimalDebug|Win32.ActiveCfg = Debug|Win32
+		{93967860-3978-4FCD-B449-8709020811AA}.MinimalDebug|Win32.Build.0 = Debug|Win32
+		{93967860-3978-4FCD-B449-8709020811AA}.MinimalStatic|Win32.ActiveCfg = Release|Win32
+		{93967860-3978-4FCD-B449-8709020811AA}.MinimalStatic|Win32.Build.0 = Release|Win32
+		{93967860-3978-4FCD-B449-8709020811AA}.Release|Win32.ActiveCfg = Release|Win32
+		{93967860-3978-4FCD-B449-8709020811AA}.Release|Win32.Build.0 = Release|Win32
+		{93967860-3978-4FCD-B449-8709020811AA}.ReleaseStatic|Win32.ActiveCfg = Release|Win32
+		{93967860-3978-4FCD-B449-8709020811AA}.ReleaseStatic|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
 	EndGlobalSection
 EndGlobal
