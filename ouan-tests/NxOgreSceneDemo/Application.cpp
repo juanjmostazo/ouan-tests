@@ -229,7 +229,17 @@ bool Application::createConvexes()
 	NxOgre::Mesh* barrelConvexMesh = NxOgre::MeshManager::getSingleton()->load("nxs:Barrel.nxs");
 	NxOgre::Convex* barrelConvex = new NxOgre::Convex(barrelConvexMesh);
 	
-	OGRE3DBody* barrelConvexBody = m_NXOgreRenderSystem->createBody(barrelConvex, NxOgre::Vec3(15,5,0), "Barrel.mesh");
+	/***/
+	NxOgre::RigidBodyDescription desc = NxOgre::RigidBodyDescription();
+	desc.mMass=10;
+	/***/
+
+	OGRE3DBody* barrelConvexBody = m_NXOgreRenderSystem->createBody(
+		barrelConvex, 
+		NxOgre::Vec3(15,5,0), 
+		"Barrel.mesh",
+		desc);
+
 	barrelConvexBody->setGlobalOrientation(NxOgre::Matrix33(NxOgre::Vec4(0, 45, 0, 45)));
 
 	return true;
