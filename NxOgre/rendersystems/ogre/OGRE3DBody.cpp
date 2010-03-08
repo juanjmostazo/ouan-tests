@@ -76,13 +76,16 @@ OGRE3DBody::OGRE3DBody(OGRE3DRigidBodyPrototype* prototype, OGRE3DRenderSystem* 
  NxOgre::TimeController::getSingleton()->addTimeListener(this, mRenderPriority);
 }
 
+/*
+* OUAN HACK
+*/
 OGRE3DBody::~OGRE3DBody()
 {
  
  NxOgre::TimeController::getSingleton()->removeTimeListener(this, mRenderPriority);
  
  // In here, we would clean up any rendering stuff.
- 
+ /*
  // Remove all attachments.
  if (mNode->numAttachedObjects())
   mNode->detachAllObjects();
@@ -94,7 +97,7 @@ OGRE3DBody::~OGRE3DBody()
  // Destroy this Scene node.
  mNode->getParentSceneNode()->removeAndDestroyChild(mNode->getName());
  mNode = 0;
- 
+ */
  // We leave the physics stuff to the Actors destructor, including freeing the shapes.
 }
 
