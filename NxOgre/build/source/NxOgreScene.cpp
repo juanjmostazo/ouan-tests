@@ -351,6 +351,13 @@ Volume* Scene::createVolume(Shapes shapes, const Matrix44& pose, Callback* callb
  return volume;
 }
 
+/*** OUAN HACK ***/
+void Scene::destroyVolume(Volume* volume)
+{
+	mVolumes.remove(volume);
+	NxOgre_Delete(volume);
+}
+
 void Scene::destroyJoint(Joint* joint)
 {
  mJoints.remove(joint);

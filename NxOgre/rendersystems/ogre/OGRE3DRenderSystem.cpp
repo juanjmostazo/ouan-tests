@@ -293,6 +293,45 @@ OGRE3DKinematicBody* OGRE3DRenderSystem::createKinematicBody(NxOgre::Shape* shap
  return kinematicBody;
 }
 
+OGRE3DKinematicBody* OGRE3DRenderSystem::createKinematicBody(NxOgre::Shape* shape, NxOgre::Vec3 position, Ogre::SceneNode* node, const NxOgre::RigidBodyDescription& description)
+{
+	// Create a OGRE3DPrototype using the NxOgre_New macro, all NxOgre classes and classes that
+	// use PointerClass should use NxOgre_New and NxOgre_Delete.
+	OGRE3DRigidBodyPrototype* prototype = NxOgre_New(OGRE3DRigidBodyPrototype)();
+
+	if (prototype->mSceneManager == 0)
+		prototype->mSceneManager = mSceneManager;
+
+	// Send the physics stuff from the description into the prototype. This is quite important.
+	NxOgre::Functions::PrototypeFunctions::RigidBodyDescriptionToRigidBodyPrototype(description, prototype);
+
+	// We want a kinematic rigid body, so it can laugh at the other bodies as it defies gravity and ignores conventional forces.
+	prototype->mType = NxOgre::Enums::RigidBodyType_Kinematic;
+
+	// Copy the position over to the prototype.
+	prototype->mGlobalPose.identity();
+	prototype->mGlobalPose.set(position);
+
+	// Add the shape to the list of shapes in the prototype.
+	prototype->mShapes.insert(shape);
+
+	// And our bits.
+	prototype->mNode=node;
+
+	// Create the body using again the NxOgre_New macro. Passing on the prototype we just created and a copy
+	// of the scene pointer. we are using.
+	OGRE3DKinematicBody* kinematicBody = NxOgre_New(OGRE3DKinematicBody)(prototype, this);
+
+	// Since the OGRE3DBody and NxOgre no longer needs the prototype, and we don't either. It's time to clean up.
+	NxOgre_Delete(prototype);
+
+	// Make a local copy.
+	mKinematicBodies.insert(kinematicBody);
+
+	// And we are done.
+	return kinematicBody;
+}
+
 void  OGRE3DRenderSystem::destroyKinematicBody(OGRE3DKinematicBody* kinematicBody)
 {
  if (kinematicBody == 0 || kinematicBody->getClassType() != _OGRE3DKinematicBody)

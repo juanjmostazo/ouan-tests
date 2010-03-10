@@ -69,7 +69,7 @@ class OGRE3DExportClass OGRE3DRenderSystem : public NxOgre::PointerClass<_OGRE3D
      OGRE3DBody*                          createBody(NxOgre::Shape*, NxOgre::Vec3 position, Ogre::SceneNode*, const NxOgre::RigidBodyDescription& = NxOgre::RigidBodyDescription());
      
      /** \brief Create a Body, with a scenenode.
-         \note SceneNode will be now be "owned" by the Body, and will release it and the contents when destroyed.
+         \note SceneNode will be now be "owned" by the Body, and will release it and the contents when destroyed. -- OUAN HACK - NOT NOW
      */
      OGRE3DBody*                          createBody(NxOgre::Shapes, NxOgre::Vec3 position, Ogre::SceneNode*, const NxOgre::RigidBodyDescription& = NxOgre::RigidBodyDescription());
      
@@ -105,6 +105,9 @@ class OGRE3DExportClass OGRE3DRenderSystem : public NxOgre::PointerClass<_OGRE3D
      /** \brief Create a KinematicBody, a KinematicActor as a Body.
      */
      OGRE3DKinematicBody*                 createKinematicBody(NxOgre::Shape*, NxOgre::Vec3 position, const Ogre::String& meshName, const NxOgre::RigidBodyDescription& = NxOgre::RigidBodyDescription());
+
+	 /** OUAN HACK */
+	 OGRE3DKinematicBody*                 createKinematicBody(NxOgre::Shape*, NxOgre::Vec3 position, Ogre::SceneNode* node, const NxOgre::RigidBodyDescription& = NxOgre::RigidBodyDescription());
      
      /** \brief Destroy a KinematicBody.
      */

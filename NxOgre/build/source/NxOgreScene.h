@@ -113,6 +113,8 @@ class NxOgrePublicClass Scene : public PointerClass<Classes::_Scene>, public Tim
   */
                        Volume*                createVolume(Shapes, const Matrix44&, Callback*, Enums::VolumeCollisionType = Enums::VolumeCollisionType_All);
   
+  /** \brief; OUAN HACK */
+					   void                   destroyVolume(Volume* volume);
   /** \brief
   */
                        KinematicController*   createKinematicController(const Vec3& size, const Vec3& globalPosition);
