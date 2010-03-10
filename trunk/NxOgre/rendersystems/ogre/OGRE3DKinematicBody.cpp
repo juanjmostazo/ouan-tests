@@ -78,6 +78,7 @@ OGRE3DKinematicBody::OGRE3DKinematicBody(OGRE3DRigidBodyPrototype* prototype, OG
  NxOgre::TimeController::getSingleton()->addTimeListener(this, mRenderPriority);
 }
 
+/** OUAN HACK **/
 OGRE3DKinematicBody::~OGRE3DKinematicBody()
 {
  
@@ -86,16 +87,16 @@ OGRE3DKinematicBody::~OGRE3DKinematicBody()
  // In here, we would clean up any rendering stuff.
  
  // Remove all attachments.
- if (mNode->numAttachedObjects())
-  mNode->detachAllObjects();
+ //if (mNode->numAttachedObjects())
+ // mNode->detachAllObjects();
  
  // Destroy all child scenenodes.
- if (mNode->numChildren())
-  mNode->removeAndDestroyAllChildren();
+ //if (mNode->numChildren())
+ // mNode->removeAndDestroyAllChildren();
  
  // Destroy this Scene node.
- mNode->getParentSceneNode()->removeAndDestroyChild(mNode->getName());
- mNode = 0;
+ //mNode->getParentSceneNode()->removeAndDestroyChild(mNode->getName());
+ //mNode = 0;
  
  // We leave the physics stuff to the Actors destructor, including freeing the shapes.
 }
