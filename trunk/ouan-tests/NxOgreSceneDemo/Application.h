@@ -45,6 +45,7 @@ class Application : SimpleInputManager, NxOgre::ControllerCallback, public NxOgr
 		virtual bool mouseMoved( const OIS::MouseEvent& e );
 	
 	private:
+
 		Ogre::Root* m_root;
 		Ogre::RenderWindow* m_window;
 		Ogre::SceneManager* m_sceneMgr;
@@ -52,7 +53,14 @@ class Application : SimpleInputManager, NxOgre::ControllerCallback, public NxOgr
 		Ogre::Camera* m_camera;
 		OrbitCameraController* m_cameraOrbitController;
 		Ogre::Entity* m_character;
-		
+
+		Ogre::String m_debug_1;
+		Ogre::String m_debug_2;
+
+		bool onSurface;
+		NxOgre::Vec3 last_hit_position;
+		NxOgre::Vec3 last_hit_normal;
+
 		NxOgre::World* m_NXOgreWorld;
 		NxOgre::Scene* m_NXOgreScene;
 		OGRE3DRenderSystem* m_NXOgreRenderSystem;
@@ -76,33 +84,8 @@ class Application : SimpleInputManager, NxOgre::ControllerCallback, public NxOgr
 		bool m_showInfo;
 		bool m_showDebug;
 		
-		virtual NxOgre::Enums::ControllerAction onShape(const NxOgre::ControllerShapeHit& hit)
-		{
-			return NxOgre::Enums::ControllerAction_None;
-		}
-
-		virtual NxOgre::Enums::ControllerAction onController(NxOgre::Controller* controller, NxOgre::Controller* other)
-		{	
-			return NxOgre::Enums::ControllerAction_None;
-		}
-
-		void onVolumeEvent(NxOgre::Volume* volume, NxOgre::Shape* volumeShape, NxOgre::RigidBody* rigidBody, NxOgre::Shape* rigidBodyShape, unsigned int collisionEvent)
-		{
-			/*
-			if(collisionEvent == NxOgre::Enums::VolumeCollisionType_OnEnter)
-			{
-				NxOgre::Actor* actor = static_cast<NxOgre::Actor*>(rigidBody);
-				float y =   (9.81 * actor->getMass())				  // counteract gravity
-					+ (-actor->getLinearVelocity().y * actor->getMass())      // counteract vertical velocity
-					+ (10 - actor->getGlobalPosition().y * actor->getMass()); // Add some force to move it to the top
-
-				actor->addForce(NxOgre::Vec3(0, y, 0), NxOgre::Enums::ForceMode_Impulse); 
-			}
-			*/
-		}
-
-		void onVolumeEvent(NxOgre::Volume* volume, NxOgre::Shape* volumeShape, void* controller, unsigned int collisionEvent)
-		{
-
-		}
+		virtual NxOgre::Enums::ControllerAction onShape(const NxOgre::ControllerShapeHit& hit);
+		virtual NxOgre::Enums::ControllerAction onController(NxOgre::Controller* controller, NxOgre::Controller* other);
+		void onVolumeEvent(NxOgre::Volume* volume, NxOgre::Shape* volumeShape, NxOgre::RigidBody* rigidBody, NxOgre::Shape* rigidBodyShape, unsigned int collisionEvent);
+		void onVolumeEvent(NxOgre::Volume* volume, NxOgre::Shape* volumeShape, void* controller, unsigned int collisionEvent);
 };

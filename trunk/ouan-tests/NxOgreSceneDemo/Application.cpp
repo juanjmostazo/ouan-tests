@@ -26,6 +26,13 @@ Application::Application()
 	m_exitRequested = false;
 	m_showInfo = false;
 	m_showDebug = true;
+
+	m_debug_1 = "";
+	m_debug_2 = "";
+
+	onSurface = false;
+	last_hit_position = NxOgre::Vec3(0,0,0);
+	last_hit_normal = NxOgre::Vec3(0,0,0);
 }
 
 Application::~Application()
@@ -59,9 +66,10 @@ bool Application::initialise()
 
 	m_cameraOrbitController = new OrbitCameraController( m_camera );
 	m_cameraOrbitController->setOrientation( -45, -45 );
-	m_cameraOrbitController->setDistance( 8 );
-	m_cameraOrbitController->setLookAtPosition( 0, 0.5, 0 );
+	m_cameraOrbitController->setDistance( 10 );
+	m_cameraOrbitController->setLookAtPosition( 0, 80, 0 );
 	m_camera->setNearClipDistance( 0.01 );
+	m_camera->move(Ogre::Vector3(0, 0, 120));
 
 	m_viewport = m_window->addViewport(m_camera);
 
@@ -154,7 +162,7 @@ bool Application::createCharacter()
 	m_runAnimation->setEnabled( true );
 
 	NxOgre::ControllerDescription desc;
-	desc.mPosition.set(0,3,0);
+	desc.mPosition.set(45, 100, 10);
 	desc.mCallback = this;
 
 	m_NXOgreControllerRenderable = m_NXOgreRenderSystem->createPointRenderable(m_character);
@@ -179,7 +187,9 @@ bool Application::createBasicScenary()
 
 	//m_NXOgreRenderSystem->createBody(new NxOgre::Capsule(2, 4),NxOgre::Vec3(0, 25, 5),"cube.1m.mesh");
 
-	m_NXOgreScene->createSceneGeometry(new NxOgre::PlaneGeometry(0, NxOgre::Vec3(0, 1, 0)), Matrix44_Identity);
+	NxOgre::PlaneGeometry * planeGeometry = new NxOgre::PlaneGeometry(0, NxOgre::Vec3(0, 1, 0));
+	planeGeometry->setGroup(GROUP_COLLIDABLE_NON_PUSHABLE);
+	m_NXOgreScene->createSceneGeometry(planeGeometry, Matrix44_Identity);
 
 	Ogre::Plane *plane = new Ogre::Plane;
 	plane->normal = Ogre::Vector3::UNIT_Y;
@@ -203,23 +213,23 @@ bool Application::createTriangleMeshes()
 	NxOgre::TriangleGeometry* house1TriangleGeometry = new NxOgre::TriangleGeometry(house1Mesh);
 	house1TriangleGeometry->setGroup(GROUP_COLLIDABLE_NON_PUSHABLE);
 
-	m_NXOgreScene->createSceneGeometry(house1TriangleGeometry, NxOgre::Matrix44(NxOgre::Vec3(-50, 27, 8)));
+	m_NXOgreScene->createSceneGeometry(house1TriangleGeometry, NxOgre::Matrix44(NxOgre::Vec3(-50, 25, 8)));
 	
 	Ogre::Entity* house1Entity = m_sceneMgr->createEntity("house1Entity", "tudorhouse.mesh");
 	Ogre::SceneNode* house1Node = m_sceneMgr->getRootSceneNode()->createChildSceneNode();
 	house1Node->attachObject(house1Entity);
-	house1Node->setPosition(Ogre::Vector3(-50, 27, 8));
+	house1Node->setPosition(Ogre::Vector3(-50, 25, 5));
 
 	NxOgre::Mesh* house2Mesh = NxOgre::MeshManager::getSingleton()->load("nxs:tudorhouse.nxs");
 	NxOgre::TriangleGeometry* house2TriangleGeometry = new NxOgre::TriangleGeometry(house2Mesh);
 	house2TriangleGeometry->setGroup(GROUP_COLLIDABLE_NON_PUSHABLE);
 
-	m_NXOgreScene->createSceneGeometry(house2TriangleGeometry, NxOgre::Matrix44(NxOgre::Vec3(50, 27, 8)));
+	m_NXOgreScene->createSceneGeometry(house2TriangleGeometry, NxOgre::Matrix44(NxOgre::Vec3(50, 25, 8)));
 	
 	Ogre::Entity* house2Entity = m_sceneMgr->createEntity("house2Entity", "tudorhouse.mesh");
 	Ogre::SceneNode* house2Node = m_sceneMgr->getRootSceneNode()->createChildSceneNode();
 	house2Node->attachObject(house2Entity);
-	house2Node->setPosition(Ogre::Vector3(50, 27, 8));
+	house2Node->setPosition(Ogre::Vector3(50, 25, 8));
 
 	return true;
 }
@@ -263,13 +273,13 @@ void Application::update()
 
 		updateAnimations( elapsedSeconds );
 
-		updateOverlayInfo();
-
 		m_NXOgreVisualDebugger->draw();
 
 		m_NXOgreVisualDebuggerNode->needUpdate();
 
 		m_NXOgreTimeController->advance(elapsedSeconds);
+
+		updateOverlayInfo();
 
 		loopTimer.reset();
 
@@ -289,25 +299,45 @@ void Application::updateLogic( const float elapsedSeconds )
 
 	m_movingDirection = 0;
 	
-	if ( m_keyboard->isKeyDown( OIS::KC_LEFT ) )
+	Ogre::Vector3 displacement(0, -9.8f, 0);
+
+	if ( m_keyboard->isKeyDown( OIS::KC_LEFT ) || m_keyboard->isKeyDown( OIS::KC_A ))
 	{
 		m_NXOgreController->setDisplayYaw(m_NXOgreController->getDisplayYaw()+TURN_DEGREES_PER_SECOND * elapsedSeconds);
 	}
-	if ( m_keyboard->isKeyDown( OIS::KC_RIGHT ) )
+	if ( m_keyboard->isKeyDown( OIS::KC_RIGHT ) || m_keyboard->isKeyDown( OIS::KC_D ))
 	{
 		m_NXOgreController->setDisplayYaw(m_NXOgreController->getDisplayYaw()-TURN_DEGREES_PER_SECOND * elapsedSeconds);
 	}
-	if ( m_keyboard->isKeyDown( OIS::KC_DOWN ) )
+	if ( m_keyboard->isKeyDown( OIS::KC_DOWN ) || m_keyboard->isKeyDown( OIS::KC_S ))
 	{
-		unsigned int collisionFlags;
-		m_NXOgreController->move(Ogre::Quaternion(Ogre::Degree(m_NXOgreController->getDisplayYaw()), Ogre::Vector3::UNIT_Y) * Ogre::Vector3::UNIT_Z * MOVEMENT_UNITS_PER_SECOND * elapsedSeconds,COLLIDABLE_MASK, 0.001f, collisionFlags,1.0f);
 		m_movingDirection++;
+		displacement += Ogre::Vector3::UNIT_Z;
 	}
-	if ( m_keyboard->isKeyDown( OIS::KC_UP ) )
+	if ( m_keyboard->isKeyDown( OIS::KC_UP ) || m_keyboard->isKeyDown( OIS::KC_W ))
 	{
-		unsigned int collisionFlags;
-		m_NXOgreController->move(Ogre::Quaternion(Ogre::Degree(m_NXOgreController->getDisplayYaw()), Ogre::Vector3::UNIT_Y) * Ogre::Vector3::NEGATIVE_UNIT_Z * MOVEMENT_UNITS_PER_SECOND * elapsedSeconds,COLLIDABLE_MASK,0.001f,collisionFlags,1.0f);
 		m_movingDirection--;
+		displacement += Ogre::Vector3::NEGATIVE_UNIT_Z;
+	}
+
+	unsigned int collisionFlags;
+
+	m_NXOgreController->move(
+		Ogre::Quaternion(
+			Ogre::Degree(m_NXOgreController->getDisplayYaw()), Ogre::Vector3::UNIT_Y) * 
+			displacement * MOVEMENT_UNITS_PER_SECOND * elapsedSeconds,
+		COLLIDABLE_MASK, 
+		0.001f, 
+		collisionFlags,
+		1.0f);
+
+	if(collisionFlags & NxOgre::Enums::ControllerFlag_Down)
+	{
+		onSurface = true;
+	}
+	else
+	{
+		onSurface = false;
 	}
 }
 
@@ -332,6 +362,30 @@ void Application::updateAnimations( const float elapsedSeconds )
 
 void Application::updateOverlayInfo()
 {
+	m_debug_1 = "";
+	m_debug_2 = "";
+	
+	if (onSurface)
+	{
+		m_debug_1 = "On surface";
+	}
+	else
+	{
+		m_debug_1 = "On air";	
+		last_hit_position = NxOgre::Vec3(0,0,0);
+		last_hit_normal = NxOgre::Vec3(0,0,0);
+	}
+
+	m_debug_1 = m_debug_1 + " :: " + "P[" 
+		" " + Ogre::StringConverter::toString(last_hit_position.x) +
+		" " + Ogre::StringConverter::toString(last_hit_position.y) +
+		" " + Ogre::StringConverter::toString(last_hit_position.z) +
+		" " + "]" + " :: " + "N[" +
+		" " + Ogre::StringConverter::toString(last_hit_normal.x) +
+		" " + Ogre::StringConverter::toString(last_hit_normal.y) +
+		" " + Ogre::StringConverter::toString(last_hit_normal.z) +
+		" " + "]";
+
 	if (m_showInfo)
 	{
 		Ogre::OverlayElement* overlay  = Ogre::OverlayManager::getSingleton().getOverlayElement("InfoPanelFps");
@@ -342,19 +396,18 @@ void Application::updateOverlayInfo()
 	else 
 	{
 		Ogre::OverlayElement* overlay  = Ogre::OverlayManager::getSingleton().getOverlayElement("InfoPanelFps");
-		overlay->setCaption("Press I to view Statistics");
+		overlay->setCaption(m_debug_2);
 		overlay = Ogre::OverlayManager::getSingleton().getOverlayElement("InfoPanelNTriangles");
 		overlay->setCaption("");
 	}
 	if (m_showDebug)
 	{
 		Ogre::OverlayElement* overlay  = Ogre::OverlayManager::getSingleton().getOverlayElement("InfoPanelDebug");
-		overlay->setCaption("Press H to hide Debug graphics");
+		overlay->setCaption(m_debug_1);
 	}
 	else 
 	{
-		Ogre::OverlayElement* overlay  = Ogre::OverlayManager::getSingleton().getOverlayElement("InfoPanelDebug");
-		overlay->setCaption("Press H to show Debug graphics");
+		Ogre::OverlayElement* overlay_2  = Ogre::OverlayManager::getSingleton().getOverlayElement("InfoPanelDebug");
 	}
 }
 
@@ -391,4 +444,29 @@ bool Application::mouseMoved( const OIS::MouseEvent& e )
 	m_cameraOrbitController->addDistance( -e.state.Z.rel * 0.05 );
 
 	return true;
+}
+
+NxOgre::Enums::ControllerAction Application::onShape(const NxOgre::ControllerShapeHit& hit)
+{
+	last_hit_position = hit.mWorldPosition;
+	last_hit_normal = hit.mWorldNormal;
+
+	return NxOgre::Enums::ControllerAction_None;
+}
+
+NxOgre::Enums::ControllerAction Application::onController(NxOgre::Controller* controller, NxOgre::Controller* other)
+{	
+	return NxOgre::Enums::ControllerAction_None;
+}
+
+// General
+void Application::onVolumeEvent(NxOgre::Volume* volume, NxOgre::Shape* volumeShape, NxOgre::RigidBody* rigidBody, NxOgre::Shape* rigidBodyShape, unsigned int collisionEvent)
+{
+
+}
+
+// Character
+void Application::onVolumeEvent(NxOgre::Volume* volume, NxOgre::Shape* volumeShape, void* controller, unsigned int collisionEvent)
+{
+
 }
