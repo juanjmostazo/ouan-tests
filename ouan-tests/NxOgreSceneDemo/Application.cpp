@@ -33,6 +33,8 @@ Application::Application()
 	onSurface = false;
 	last_hit_position = NxOgre::Vec3(0,0,0);
 	last_hit_normal = NxOgre::Vec3(0,0,0);
+	last_hit_sliding = NxOgre::Vec3(0,0,0);
+	angle_normal = 0;
 }
 
 Application::~Application()
@@ -67,9 +69,9 @@ bool Application::initialise()
 	m_cameraOrbitController = new OrbitCameraController( m_camera );
 	m_cameraOrbitController->setOrientation( -45, -45 );
 	m_cameraOrbitController->setDistance( 10 );
-	m_cameraOrbitController->setLookAtPosition( 0, 80, 0 );
+	m_cameraOrbitController->setLookAtPosition( 0, 50, 0 );
 	m_camera->setNearClipDistance( 0.01 );
-	m_camera->move(Ogre::Vector3(0, 0, 120));
+	m_camera->move(Ogre::Vector3(0, 0, 75));
 
 	m_viewport = m_window->addViewport(m_camera);
 
@@ -162,7 +164,7 @@ bool Application::createCharacter()
 	m_runAnimation->setEnabled( true );
 
 	NxOgre::ControllerDescription desc;
-	desc.mPosition.set(45, 100, 10);
+	desc.mPosition.set(45, 75, 10);
 	desc.mCallback = this;
 
 	m_NXOgreControllerRenderable = m_NXOgreRenderSystem->createPointRenderable(m_character);
@@ -339,6 +341,18 @@ void Application::updateLogic( const float elapsedSeconds )
 	{
 		onSurface = false;
 	}
+
+	if (onSurface && last_hit_normal.y > 0){
+		displacement = last_hit_sliding.as<Ogre::Vector3>();
+		
+		m_NXOgreController->move(		
+			displacement * MOVEMENT_UNITS_PER_SECOND * elapsedSeconds,
+			COLLIDABLE_MASK, 
+			0.001f, 
+			collisionFlags,
+			1.0f);
+		
+	}
 }
 
 void Application::updateAnimations( const float elapsedSeconds )
@@ -374,6 +388,8 @@ void Application::updateOverlayInfo()
 		m_debug_1 = "On air";	
 		last_hit_position = NxOgre::Vec3(0,0,0);
 		last_hit_normal = NxOgre::Vec3(0,0,0);
+		last_hit_sliding = NxOgre::Vec3(0,0,0);
+		angle_normal = 0;
 	}
 
 	m_debug_1 = m_debug_1 + " :: " + "P[" 
@@ -384,6 +400,12 @@ void Application::updateOverlayInfo()
 		" " + Ogre::StringConverter::toString(last_hit_normal.x) +
 		" " + Ogre::StringConverter::toString(last_hit_normal.y) +
 		" " + Ogre::StringConverter::toString(last_hit_normal.z) +
+		" " + "]" + " :: " + "S[" +
+		" " + Ogre::StringConverter::toString(last_hit_sliding.x) +
+		" " + Ogre::StringConverter::toString(last_hit_sliding.y) +
+		" " + Ogre::StringConverter::toString(last_hit_sliding.z) +
+		" " + "]" + " :: " + "A[" +
+		" " + Ogre::StringConverter::toString(Ogre::Real(angle_normal)) +
 		" " + "]";
 
 	if (m_showInfo)
@@ -450,6 +472,13 @@ NxOgre::Enums::ControllerAction Application::onShape(const NxOgre::ControllerSha
 {
 	last_hit_position = hit.mWorldPosition;
 	last_hit_normal = hit.mWorldNormal;
+	
+	angle_normal = acos(last_hit_normal.y) * 180.0f / 3.14159;
+
+	last_hit_sliding.x = last_hit_normal.x;
+	last_hit_sliding.y = last_hit_normal.y;
+	last_hit_sliding.z = last_hit_normal.z;
+	last_hit_sliding.normalise();
 
 	return NxOgre::Enums::ControllerAction_None;
 }
