@@ -4,6 +4,7 @@
 #include <NxOgre.h>
 #include <NxOgreOGRE3D.h>
 #include <NxOgreAddonCharacterController.h>
+#include "math.h"
 
 #include "SimpleInputManager.h"
 #include "OrbitCameraController.h"
@@ -60,6 +61,8 @@ class Application : SimpleInputManager, NxOgre::ControllerCallback, public NxOgr
 		bool onSurface;
 		NxOgre::Vec3 last_hit_position;
 		NxOgre::Vec3 last_hit_normal;
+		NxOgre::Vec3 last_hit_sliding;
+		double angle_normal;
 
 		NxOgre::World* m_NXOgreWorld;
 		NxOgre::Scene* m_NXOgreScene;
