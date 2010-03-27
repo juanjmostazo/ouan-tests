@@ -62,7 +62,7 @@ class PhysXControllerCallback : public NxUserControllerHitReport
  NxControllerAction  onControllerHit(const NxControllersHit& hit)
  {
   Controller* first = static_cast<Controller*>(hit.controller->getUserData());
-  Controller* second = static_cast<Controller*>(hit.controller->getUserData());
+  Controller* second = static_cast<Controller*>(hit.other->getUserData());
 
   return NxControllerAction(int(mCallback->onController(first, second)));
  }
