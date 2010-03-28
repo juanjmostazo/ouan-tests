@@ -39,12 +39,12 @@ Callback::~Callback()
 {
  // virtual function.
 }
-
+/*
 void Callback::onVolumeEvent(Volume* volume, Shape* volumeShape, RigidBody* rigidBody, Shape* rigidBodyShape, unsigned int collisionEvent)
 {
 
 }
-
+*/
 bool Callback::onHitEvent(const RaycastHit&)
 {
  return false;
@@ -58,7 +58,13 @@ void Callback::onContact(const ContactPair&)
 /***
 * OUAN HACK
 */
+/*
 void Callback::onVolumeEvent(Volume* volume, Shape* volumeShape, void* controller, unsigned int collisionEvent)
+{
+
+}
+*/
+void Callback::onVolumeEvent(Volume* volume, Shape* volumeShape, const std::string objectName, NxOgre::Vec3 objectPosition, unsigned int collisionEvent)
 {
 
 }

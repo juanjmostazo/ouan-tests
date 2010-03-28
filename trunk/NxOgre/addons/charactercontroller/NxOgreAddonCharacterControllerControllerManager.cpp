@@ -87,19 +87,27 @@ ControllerManager::~ControllerManager()
  NxReleaseControllerManager(mManager);
  delete mAllocator;
 }
-
+/*
 Controller*  ControllerManager::createBoxController(const ControllerDescription& description, const Vec3& size, Scene* scene, PointRenderable* renderable)
 {
  Controller* controller = new Controller(description, size, renderable, scene, this);
  mControllers.insert(controller);
  return controller;
 }
-
+*/
+/*
 Controller*  ControllerManager::createCapsuleController(const ControllerDescription& description, const Vec2& size, Scene* scene, PointRenderable* renderable)
 {
  Controller* controller = new Controller(description, size, renderable, scene, this);
  mControllers.insert(controller);
  return controller;
+}
+*/
+Controller*  ControllerManager::createCapsuleController(const ControllerDescription& description, const Vec2& size, Scene* scene, PointRenderable* renderable, const std::string objectName)
+{
+	Controller* controller = new Controller(description, size, renderable, scene, this, objectName);
+	mControllers.insert(controller);
+	return controller;
 }
 
 void  ControllerManager::destroyController(Controller* controller)

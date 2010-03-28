@@ -24,7 +24,7 @@
 #ifndef NXOGRE_PHYSX_CALLBACK_H
 #define NXOGRE_PHYSX_CALLBACK_H
 
-                                                                                       
+                                                                                  
 
 #include "NxOgreStable.h"
 #include "NxOgreCommon.h"

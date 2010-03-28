@@ -97,8 +97,7 @@ bool  ControllerDescription::valid(void)
   return false;
  return true;
 }
-
-
+/*
 Controller::Controller(const ControllerDescription& desc, const Vec3& size, PointRenderable* renderable, Scene* scene, ControllerManager* manager)
 : mScene(scene),
   mManager(manager->getControllerManager()),
@@ -121,10 +120,11 @@ Controller::Controller(const ControllerDescription& desc, const Vec3& size, Poin
  controller_desc.upDirection = NxHeightFieldAxis(int(desc.mUpDirection));
  
  mController = mManager->createController(scene->getScene(), controller_desc);
- 
+
  updateRenderable();
 }
-
+*/
+/*
 Controller::Controller(const ControllerDescription& desc, const Vec2& size, PointRenderable* renderable, Scene* scene, ControllerManager* manager)
 : mScene(scene),
   mManager(manager->getControllerManager()),
@@ -150,6 +150,34 @@ Controller::Controller(const ControllerDescription& desc, const Vec2& size, Poin
  mController = mManager->createController(scene->getScene(), controller_desc);
  
  updateRenderable();
+}
+*/
+Controller::Controller(const ControllerDescription& desc, const Vec2& size, PointRenderable* renderable, Scene* scene, ControllerManager* manager, const std::string objectName)
+: mScene(scene),
+mManager(manager->getControllerManager()),
+mRenderable(renderable),
+mCallback(0),
+mDisplayYaw(0.f)
+{
+	if (desc.mCallback)
+		mCallback = new PhysXControllerCallback(desc.mCallback);
+
+	NxCapsuleControllerDesc controller_desc;
+	controller_desc.callback = mCallback;
+	controller_desc.interactionFlag = NxCCTInteractionFlag(int(desc.mInteractionFlag));
+	controller_desc.position = desc.mPosition.as<NxExtendedVec3>();
+	controller_desc.skinWidth = desc.mSkinWidth;
+	controller_desc.radius = size.x;
+	controller_desc.height = size.y;
+	controller_desc.userData = this;
+	controller_desc.slopeLimit = desc.mSlopeLimit;
+	controller_desc.stepOffset = desc.mStepOffset;
+	controller_desc.upDirection = NxHeightFieldAxis(int(desc.mUpDirection));
+
+	mController = mManager->createController(scene->getScene(), controller_desc);
+	mController->getActor()->setName(objectName.c_str());
+
+	updateRenderable();
 }
 
 Controller::~Controller()

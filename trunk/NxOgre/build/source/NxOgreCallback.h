@@ -29,6 +29,7 @@
 #include "NxOgreStable.h"
 #include "NxOgreCommon.h"
                                                                                        
+#include <string>
 
 namespace NxOgre
 {
@@ -55,7 +56,7 @@ class NxOgrePublicClass Callback
       \note Depending on the RigidBody the collision_shape may be zero, you should always check
             to see if the pointer exists before using it!
    */
-   virtual void onVolumeEvent(Volume* volume, Shape* volumeShape, RigidBody* collision_body, Shape* rigidBodyShape, unsigned int collisionEvent);
+   //virtual void onVolumeEvent(Volume* volume, Shape* volumeShape, RigidBody* collision_body, Shape* rigidBodyShape, unsigned int collisionEvent);
    
    /** \brief Is called every time a rayquery gets a hit.
        \return True if the ray should continue, or false to abort.
@@ -71,7 +72,8 @@ class NxOgrePublicClass Callback
    /**
    * OUAN HACK
    */
-   virtual void onVolumeEvent(Volume* volume, Shape* volumeShape, void* controller, unsigned int collisionEvent);
+   //virtual void onVolumeEvent(Volume* volume, Shape* volumeShape, void* controller, unsigned int collisionEvent);
+   virtual void onVolumeEvent(Volume* volume, Shape* volumeShape, const std::string objectName, NxOgre::Vec3 objectPosition, unsigned int collisionEvent);
 
    /**
    *
