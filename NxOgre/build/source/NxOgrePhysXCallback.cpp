@@ -35,7 +35,7 @@
 #include "NxOgreRigidBody.h"
 #include "NxOgreContactPair.h"
 
-                                                                                       
+#include <string>                                                                                     
 
 namespace NxOgre
 {
@@ -53,6 +53,7 @@ PhysXCallback::~PhysXCallback()
 /***
 * OUAN HACK
 */
+/*
 void PhysXCallback::onTrigger(NxShape& triggerShape, NxShape& physxCollisionShape, NxTriggerFlag status)
 {
  
@@ -92,7 +93,32 @@ void PhysXCallback::onTrigger(NxShape& triggerShape, NxShape& physxCollisionShap
  {
 	volume->getVolumeCallback()->onVolumeEvent(volume, volume_shape, collision_body, collision_shape, status);	
  }
- 
+}
+*/
+void PhysXCallback::onTrigger(NxShape& triggerShape, NxShape& physxCollisionShape, NxTriggerFlag status)
+{
+	if (!triggerShape.getActor().userData && !physxCollisionShape.getActor().userData)
+		return;
+
+	Shape* volume_shape = pointer_representive_cast<Shape>(triggerShape.userData);
+	RigidBody* rb_volume = pointer_parent_cast<RigidBody>(triggerShape.userData);
+	Volume* volume = static_cast<Volume*>(rb_volume);
+
+	Shape* collision_shape = 0;
+	RigidBody* collision_body = 0;
+
+	bool isCharacter = false;
+
+	if (physxCollisionShape.userData && size_t(physxCollisionShape.userData) == 'CCTS')
+	{
+		const std::string objectName(physxCollisionShape.getActor().getName());
+		NxOgre::Vec3 objectPosition(
+			physxCollisionShape.getGlobalPosition().x,
+			physxCollisionShape.getGlobalPosition().y,
+			physxCollisionShape.getGlobalPosition().z);
+
+		volume->getVolumeCallback()->onVolumeEvent(volume, volume_shape, objectName, objectPosition, status);
+	}
 }
 
 void PhysXCallback::onContactNotify(NxContactPair &pair, NxU32 events)

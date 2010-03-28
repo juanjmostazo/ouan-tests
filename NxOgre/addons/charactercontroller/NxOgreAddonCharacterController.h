@@ -33,6 +33,4 @@
 #include "NxOgreAddonCharacterControllerControllerManager.h"
 #include "NxOgreAddonCharacterControllerController.h"
 
-                                                                                       
-
 #endif

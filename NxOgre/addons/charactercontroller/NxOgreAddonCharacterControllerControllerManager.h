@@ -29,8 +29,8 @@
 
 #include "NxOgreAddonCharacterControllerCommon.h"
 
+#include <string>
                                                                                        
-
 class NxControllerManager;
 
 namespace NxOgre
@@ -45,10 +45,12 @@ class NxOgreCCExportClass ControllerManager
   
  ~ControllerManager();
   
-  Controller*  createBoxController(const ControllerDescription& description, const Vec3& size, Scene* scene, PointRenderable* renderable = 0);
+  //Controller*  createBoxController(const ControllerDescription& description, const Vec3& size, Scene* scene, PointRenderable* renderable = 0);
   
-  Controller*  createCapsuleController(const ControllerDescription& description, const Vec2& size, Scene* scene, PointRenderable* renderable = 0);
+  //Controller*  createCapsuleController(const ControllerDescription& description, const Vec2& size, Scene* scene, PointRenderable* renderable = 0);
   
+ Controller*  createCapsuleController(const ControllerDescription& description, const Vec2& size, Scene* scene, PointRenderable* renderable, const std::string objectName);
+
   void         destroyController(Controller*);
   
   NxControllerManager* getControllerManager();

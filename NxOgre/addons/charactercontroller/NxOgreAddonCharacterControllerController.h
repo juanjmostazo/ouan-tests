@@ -29,7 +29,7 @@
 
 #include "NxOgreAddonCharacterControllerCommon.h"
 
-                                                                                       
+#include <string>                                                                                     
 
 namespace NxOgre
 {
@@ -131,10 +131,12 @@ class NxOgreCCExportClass Controller
   
  protected:
   
-  Controller(const ControllerDescription&, const Vec3&, PointRenderable*, Scene*, ControllerManager*);
+  //Controller(const ControllerDescription&, const Vec3&, PointRenderable*, Scene*, ControllerManager*);
   
-  Controller(const ControllerDescription&, const Vec2&, PointRenderable*, Scene*, ControllerManager*);
+  //Controller(const ControllerDescription&, const Vec2&, PointRenderable*, Scene*, ControllerManager*);
   
+  Controller(const ControllerDescription&, const Vec2&, PointRenderable*, Scene*, ControllerManager*, const std::string);
+
  ~Controller();
   
  protected:
