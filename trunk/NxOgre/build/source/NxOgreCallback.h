@@ -73,7 +73,7 @@ class NxOgrePublicClass Callback
    * OUAN HACK
    */
    //virtual void onVolumeEvent(Volume* volume, Shape* volumeShape, void* controller, unsigned int collisionEvent);
-   virtual void onVolumeEvent(Volume* volume, Shape* volumeShape, const std::string objectName, NxOgre::Vec3 objectPosition, unsigned int collisionEvent);
+   virtual void onVolumeEvent(Volume* volume, Shape* volumeShape, const std::string objectName, NxOgre::Vec3 objectPosition, double objectMass, unsigned int collisionEvent);
 
    /**
    *

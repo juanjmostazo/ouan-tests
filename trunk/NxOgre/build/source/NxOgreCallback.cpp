@@ -64,7 +64,7 @@ void Callback::onVolumeEvent(Volume* volume, Shape* volumeShape, void* controlle
 
 }
 */
-void Callback::onVolumeEvent(Volume* volume, Shape* volumeShape, const std::string objectName, NxOgre::Vec3 objectPosition, unsigned int collisionEvent)
+void Callback::onVolumeEvent(Volume* volume, Shape* volumeShape, const std::string objectName, NxOgre::Vec3 objectPosition, double objectMass, unsigned int collisionEvent)
 {
 
 }

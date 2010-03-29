@@ -135,7 +135,7 @@ class NxOgreCCExportClass Controller
   
   //Controller(const ControllerDescription&, const Vec2&, PointRenderable*, Scene*, ControllerManager*);
   
-  Controller(const ControllerDescription&, const Vec2&, PointRenderable*, Scene*, ControllerManager*, const std::string);
+  Controller(const ControllerDescription&, const Vec2&, PointRenderable*, Scene*, ControllerManager*, const std::string, double);
 
  ~Controller();
   

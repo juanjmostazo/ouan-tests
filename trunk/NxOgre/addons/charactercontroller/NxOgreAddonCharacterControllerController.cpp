@@ -152,7 +152,7 @@ Controller::Controller(const ControllerDescription& desc, const Vec2& size, Poin
  updateRenderable();
 }
 */
-Controller::Controller(const ControllerDescription& desc, const Vec2& size, PointRenderable* renderable, Scene* scene, ControllerManager* manager, const std::string objectName)
+Controller::Controller(const ControllerDescription& desc, const Vec2& size, PointRenderable* renderable, Scene* scene, ControllerManager* manager, const std::string objectName, double objectMass)
 : mScene(scene),
 mManager(manager->getControllerManager()),
 mRenderable(renderable),
@@ -173,9 +173,10 @@ mDisplayYaw(0.f)
 	controller_desc.slopeLimit = desc.mSlopeLimit;
 	controller_desc.stepOffset = desc.mStepOffset;
 	controller_desc.upDirection = NxHeightFieldAxis(int(desc.mUpDirection));
-
+	
 	mController = mManager->createController(scene->getScene(), controller_desc);
 	mController->getActor()->setName(objectName.c_str());
+	mController->getActor()->setMass(objectMass);
 
 	updateRenderable();
 }

@@ -116,8 +116,9 @@ void PhysXCallback::onTrigger(NxShape& triggerShape, NxShape& physxCollisionShap
 			physxCollisionShape.getGlobalPosition().x,
 			physxCollisionShape.getGlobalPosition().y,
 			physxCollisionShape.getGlobalPosition().z);
+		double objectMass = physxCollisionShape.getActor().getMass();
 
-		volume->getVolumeCallback()->onVolumeEvent(volume, volume_shape, objectName, objectPosition, status);
+		volume->getVolumeCallback()->onVolumeEvent(volume, volume_shape, objectName, objectPosition, objectMass, status);
 	}
 }
 
