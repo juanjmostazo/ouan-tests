@@ -103,9 +103,9 @@ Controller*  ControllerManager::createCapsuleController(const ControllerDescript
  return controller;
 }
 */
-Controller*  ControllerManager::createCapsuleController(const ControllerDescription& description, const Vec2& size, Scene* scene, PointRenderable* renderable, const std::string objectName)
+Controller*  ControllerManager::createCapsuleController(const ControllerDescription& description, const Vec2& size, Scene* scene, PointRenderable* renderable, const std::string objectName, double objectMass)
 {
-	Controller* controller = new Controller(description, size, renderable, scene, this, objectName);
+	Controller* controller = new Controller(description, size, renderable, scene, this, objectName, objectMass);
 	mControllers.insert(controller);
 	return controller;
 }
