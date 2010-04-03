@@ -200,7 +200,9 @@ class NxOgrePublicClass KinematicActor : public PointerClass<Classes::_Kinematic
   /** \brief Returns the number of shapes assigned to the actor.
   */
                                       unsigned int           getNbShapes(void) const;
-  
+
+									  /* OUAN HACK */
+									  Shapes                getShapes();
   
   protected: // Functions
   

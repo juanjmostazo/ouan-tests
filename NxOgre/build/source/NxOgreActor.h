@@ -395,6 +395,9 @@ class NxOgrePublicClass Actor : public PointerClass<Classes::_Actor>, public Rig
   */
                                        void                  putToSleep(void);
 
+									   /* OUAN HACK */
+									   Shapes                getShapes();
+
   protected: // Functions
   
   /** \internal Classes that inherit from Actor should use this constructor.

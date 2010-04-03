@@ -464,7 +464,10 @@ void Actor::putToSleep(void)
  ::NxOgre::Functions::RigidBodyFunctions::putToSleep(mActor);
 }
 
-                                                                                       
+Shapes Actor::getShapes()
+{
+	return mShapes;
+}
 
 } // namespace NxOgre
 

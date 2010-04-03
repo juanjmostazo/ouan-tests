@@ -215,7 +215,10 @@ void KinematicActor::moveGlobalOrientationQuat (const Quat& q)
  ::NxOgre::Functions::RigidBodyFunctions::moveGlobalOrientationQuat(q, mActor);
 }
 
-                                                                                       
+Shapes KinematicActor::getShapes()
+{
+	return mShapes;
+}                                                                                    
 
 } // namespace NxOgre
 
