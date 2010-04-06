@@ -38,8 +38,6 @@
 namespace NxOgre
 {
 
-                                                                                       
-
 /** \brief
 */
 class NxOgrePublicClass Volume : public PointerClass<Classes::_Volume>, public RigidBody
@@ -100,6 +98,10 @@ class NxOgrePublicClass Volume : public PointerClass<Classes::_Volume>, public R
   /** \brief Returns the number of shapes assigned to the Volume.
   */
                                       unsigned int           getNbShapes(void) const;
+
+  /** \brief Returns the number of shapes assigned to the Volume. OUAN HACK
+  */
+                                      Shapes				 getShapes(void) const;
   
   /** \brief Get the callback
   */

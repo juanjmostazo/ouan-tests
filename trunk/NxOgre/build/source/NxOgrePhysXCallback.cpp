@@ -97,29 +97,28 @@ void PhysXCallback::onTrigger(NxShape& triggerShape, NxShape& physxCollisionShap
 */
 void PhysXCallback::onTrigger(NxShape& triggerShape, NxShape& physxCollisionShape, NxTriggerFlag status)
 {
-	if (!triggerShape.getActor().userData && !physxCollisionShape.getActor().userData)
-		return;
 
-	Shape* volume_shape = pointer_representive_cast<Shape>(triggerShape.userData);
 	RigidBody* rb_volume = pointer_parent_cast<RigidBody>(triggerShape.userData);
+
 	Volume* volume = static_cast<Volume*>(rb_volume);
 
-	Shape* collision_shape = 0;
-	RigidBody* collision_body = 0;
+	Shape * volume_shape;
+	//Shape * collision;
 
-	bool isCharacter = false;
 
-	if (physxCollisionShape.userData && size_t(physxCollisionShape.userData) == 'CCTS')
-	{
-		const std::string objectName(physxCollisionShape.getActor().getName());
-		NxOgre::Vec3 objectPosition(
-			physxCollisionShape.getGlobalPosition().x,
-			physxCollisionShape.getGlobalPosition().y,
-			physxCollisionShape.getGlobalPosition().z);
-		double objectMass = physxCollisionShape.getActor().getMass();
+	volume_shape=pointer_representive_cast<Shape>(triggerShape.userData);
 
-		volume->getVolumeCallback()->onVolumeEvent(volume, volume_shape, objectName, objectPosition, objectMass, status);
-	}
+	//collision=pointer_representive_cast<Shape>(physxCollisionShape.userData);
+
+
+	//Shape* collision_shape = ;
+	////RigidBody* collision_body = pointer_parent_cast<RigidBody>(physxCollisionShape.userData);
+
+
+	//if (physxCollisionShape.userData && size_t(physxCollisionShape.userData) == 'CCTS')
+	//{
+	volume->getVolumeCallback()->onVolumeEvent( volume_shape, NxOgre::String(physxCollisionShape.getName()), status );
+	//}
 }
 
 void PhysXCallback::onContactNotify(NxContactPair &pair, NxU32 events)

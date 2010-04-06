@@ -28,6 +28,8 @@
 
 #include "NxOgreStable.h"
 #include "NxOgreCommon.h"
+
+#include "NxOgrePhysXCallback.h"   
                                                                                        
 #include <string>
 
@@ -42,7 +44,7 @@ class NxOgrePublicClass Callback
 {
   
   public: // Functions
-   
+
    Callback();
    
    virtual ~Callback();
@@ -72,8 +74,9 @@ class NxOgrePublicClass Callback
    /**
    * OUAN HACK
    */
+
    //virtual void onVolumeEvent(Volume* volume, Shape* volumeShape, void* controller, unsigned int collisionEvent);
-   virtual void onVolumeEvent(Volume* volume, Shape* volumeShape, const std::string objectName, NxOgre::Vec3 objectPosition, double objectMass, unsigned int collisionEvent);
+   virtual void onVolumeEvent(  Shape * volume, String collisionName, unsigned int collisionEventType );
 
    /**
    *

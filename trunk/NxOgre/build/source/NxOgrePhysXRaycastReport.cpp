@@ -58,6 +58,7 @@ bool PhysXRaycastReport::onHit(const NxRaycastHit& hit)
  out.mShape = static_cast<Shape*>(hit.shape->userData);
  out.mU = hit.u;
  out.mV = hit.v;
+ out.name = NxOgre::String(hit.shape->getName());
  Functions::XYZ<NxVec3, Vec3>(hit.worldImpact, out.mWorldImpact);
  Functions::XYZ<NxVec3, Vec3>(hit.worldNormal, out.mWorldNormal);
 
