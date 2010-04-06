@@ -46,25 +46,46 @@ class PhysXControllerCallback : public NxUserControllerHitReport
  : mCallback(callback)
  {}
 
+ //OUAN HACK
+ String getShapeName(NxController * pController)
+ {
+
+	NxShape* const* physx_shapes = pController->getActor()->getShapes();
+	return NxOgre::String(physx_shapes[0]->getName());
+ }
+
+
  NxControllerAction  onShapeHit(const NxControllerShapeHit& hit)
  {
   ControllerShapeHit out;
+
   out.mController = static_cast<Controller*>(hit.controller->getUserData());
   out.mDirection.from<NxVec3>(hit.dir);
   out.mLength = hit.length;
   out.mShape = NxOgre::pointer_representive_cast<Shape>(hit.shape->userData);
   out.mWorldNormal.from<NxVec3>(hit.worldNormal);
   out.mWorldPosition.from<NxExtendedVec3>(hit.worldPos);
+
+
+  out.mControllerName=getShapeName(hit.controller);
+  out.mShapeName=out.mShape->getName();
   
   return NxControllerAction(int(mCallback->onShape(out)));
  }
 
  NxControllerAction  onControllerHit(const NxControllersHit& hit)
  {
-  Controller* first = static_cast<Controller*>(hit.controller->getUserData());
-  Controller* second = static_cast<Controller*>(hit.other->getUserData());
 
-  return NxControllerAction(int(mCallback->onController(first, second)));
+	ControllerControllerHit out;
+
+	out.mControllerName=getShapeName(hit.controller);
+	out.mController=static_cast<Controller*>(hit.controller->getUserData());
+
+	out.mOtherControllerName=getShapeName(hit.other);
+	out.mOtherController=static_cast<Controller*>(hit.other->getUserData());
+
+	return NxControllerAction(int(mCallback->onController(out)));
+
  }
  
  ControllerCallback* mCallback;
@@ -152,7 +173,7 @@ Controller::Controller(const ControllerDescription& desc, const Vec2& size, Poin
  updateRenderable();
 }
 */
-Controller::Controller(const ControllerDescription& desc, const Vec2& size, PointRenderable* renderable, Scene* scene, ControllerManager* manager, const std::string objectName, double objectMass)
+Controller::Controller(const ControllerDescription& desc, const Vec2& size, PointRenderable* renderable, Scene* scene, ControllerManager* manager,  String name , double objectMass)
 : mScene(scene),
 mManager(manager->getControllerManager()),
 mRenderable(renderable),
@@ -175,8 +196,31 @@ mDisplayYaw(0.f)
 	controller_desc.upDirection = NxHeightFieldAxis(int(desc.mUpDirection));
 	
 	mController = mManager->createController(scene->getScene(), controller_desc);
-	mController->getActor()->setName(objectName.c_str());
+	mController->getActor()->setName(name.c_str());
 	mController->getActor()->setMass(objectMass);
+
+
+	//OUAN HACK to set shapes names and NxOgre Shape to user data
+
+	int i;
+
+	NxShape* const* physx_shapes = mController->getActor()->getShapes();
+	int nbShapes = mController->getActor()->getNbShapes();
+
+	NxOgre::Capsule* pCapsule;
+	pCapsule = new NxOgre::Capsule(size.x,size.y);
+	pCapsule->setName(name);
+
+	for(i=0;i<nbShapes;i++)
+	{
+		NxShape* physx_shape = physx_shapes[i*sizeof(NxShape)];
+		physx_shape->setName(name.c_str());
+
+		//TODO UPDATE THIS IF  MORE SHAPES ARE ADDED PER CHARACTER, OnLY WORKS FOR 1 CAPSULE NOW
+		physx_shape->userData=(void*) NxOgre_New(PhysXPointer)(pCapsule, pCapsule->getClassType(), mController->getActor());
+	}
+
+
 
 	updateRenderable();
 }
@@ -268,6 +312,15 @@ void Controller::setRenderable(PointRenderable* renderable)
 void Controller::clearRenderable()
 {
  mRenderable = 0;
+}
+
+NxShape * const * Controller::getShapes()
+{
+	return mController->getActor()->getShapes();
+}
+int Controller::getNbShapes()
+{
+	return mController->getActor()->getNbShapes();
 }
 
 void Controller::updateRenderable()

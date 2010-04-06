@@ -80,6 +80,9 @@ struct NxOgrePublicClass RaycastHit
   */
   unsigned int       mFlags;
 
+  //OUAN HACK TO GET NAME
+  String			 name;
+
 }; // class RaycastHit
 
 

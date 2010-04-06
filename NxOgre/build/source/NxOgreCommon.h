@@ -59,9 +59,7 @@
                                                                                        
 
 namespace NxOgre
-{
-
-                                                                                       
+{                                                                                  
 
 namespace Enums
 {
@@ -1078,9 +1076,8 @@ enum
  DefaultRemoteDebuggerPort = 5425
 };
 
-}; // namespace Constants
+}; // namespace Constants            
 
-                                                                                       
 
 } // namespace NxOgre
 

@@ -36,12 +36,22 @@ namespace NxOgre
 
 struct NxOgreCCExportClass ControllerShapeHit
 {
+	String mControllerName;
+	String mShapeName;
+	Controller* mController;
+	Shape*      mShape;
+	Vec3        mWorldPosition;
+	Vec3        mWorldNormal;
+	Vec3        mDirection;
+	Real        mLength;
+};
+
+struct NxOgreCCExportClass ControllerControllerHit
+{
  Controller* mController;
- Shape*      mShape;
- Vec3        mWorldPosition;
- Vec3        mWorldNormal;
- Vec3        mDirection;
- Real        mLength;
+ Controller* mOtherController;
+ String mControllerName;
+ String mOtherControllerName;
 };
 
 class NxOgreCCExportClass ControllerCallback
@@ -50,7 +60,7 @@ class NxOgreCCExportClass ControllerCallback
   
   virtual Enums::ControllerAction onShape(const ControllerShapeHit&) {return Enums::ControllerAction_None;}
   
-  virtual Enums::ControllerAction onController(Controller* controller, Controller* other) {return Enums::ControllerAction_None;}
+  virtual Enums::ControllerAction onController(const ControllerControllerHit&) {return Enums::ControllerAction_None;}
   
 };
 
@@ -105,6 +115,10 @@ class NxOgreCCExportClass Controller
   Vec3   getFilteredPosition();
   
   Vec3   getDebugPosition();
+
+  NxShape * const *  getShapes();
+
+  int  getNbShapes();
   
   void   setStepOffset(const float offset);
   
@@ -135,7 +149,7 @@ class NxOgreCCExportClass Controller
   
   //Controller(const ControllerDescription&, const Vec2&, PointRenderable*, Scene*, ControllerManager*);
   
-  Controller(const ControllerDescription&, const Vec2&, PointRenderable*, Scene*, ControllerManager*, const std::string, double);
+  Controller(const ControllerDescription&, const Vec2&, PointRenderable*, Scene*, ControllerManager*, String name, double);
 
  ~Controller();
   

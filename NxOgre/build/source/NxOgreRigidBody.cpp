@@ -159,6 +159,9 @@ void RigidBody::create(RigidBodyPrototype* prototype, Scene* scene, Shapes* fina
  {
   Shape* shape = prototype->mShapes[i];
   NxShapeDesc* description = shape->create();
+  //OUAN HACK MAYBE HERE IS WHY SHAPES DIDNT GET ITS NAME
+  description->name=prototype->mName.c_str();
+
   if (description)
   {
    if (final_shapes)

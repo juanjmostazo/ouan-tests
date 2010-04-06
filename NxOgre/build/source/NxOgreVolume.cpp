@@ -107,6 +107,11 @@ unsigned int Volume::getNbShapes(void) const
  return ::NxOgre::Functions::RigidBodyFunctions::getNbShapes(mActor);
 }
 
+Shapes Volume::getShapes() const
+{
+	return mShapes;	
+}
+
 Callback* Volume::getVolumeCallback()
 {
  return mVolumeCallback;

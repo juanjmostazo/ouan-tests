@@ -38,8 +38,6 @@
 namespace NxOgre
 {
 
-                                                                                       
-
 #ifdef NXOGRE_SDK
 
 /** \brief
@@ -50,6 +48,12 @@ class NxOgrePublicClass PhysXCallback : public PointerClass<Classes::_PhysXCallb
 {
   
   public: // Functions
+
+    /**
+   * OUAN HACK
+   */
+
+
   
    PhysXCallback(Scene*);
   

@@ -74,6 +74,8 @@ GLUTBody* GLUTRenderSystem::createBody(NxOgre::Shape* shape, NxOgre::Vec3 positi
  prototype->mColourBlue = colour.z;
  prototype->mShadows = shadows;
  prototype->mVisualShape = glut_shape;
+ //OUAN Hack to get shape name
+ prototype->mName = description.mName;
 
  // Create the body using again the NxOgre_New macro. Passing on the prototype we just created and a copy
  // of the scene pointer. we are using.

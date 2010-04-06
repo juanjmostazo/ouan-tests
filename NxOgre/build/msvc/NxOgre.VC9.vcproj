@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9,00"
+	Version="9.00"
 	Name="NxOgre"
 	ProjectGUID="{A633A666-D959-4D20-B2D4-6C2239FE48EB}"
 	RootNamespace="NxOgre"
