@@ -103,9 +103,9 @@ Controller*  ControllerManager::createCapsuleController(const ControllerDescript
  return controller;
 }
 */
-Controller*  ControllerManager::createCapsuleController(const ControllerDescription& description, const Vec2& size, Scene* scene, PointRenderable* renderable, String name, double objectMass)
+Controller*  ControllerManager::createCapsuleController(const ControllerDescription& description, const Vec2& size, Scene* scene, PointRenderable* renderable, String name, double objectMass, double initialYaw)
 {
-	Controller* controller = new Controller(description, size, renderable, scene, this, name, objectMass);
+	Controller* controller = new Controller(description, size, renderable, scene, this, name, objectMass, initialYaw);
 	mControllers.insert(controller);
 	return controller;
 }

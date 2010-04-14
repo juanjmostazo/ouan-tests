@@ -173,12 +173,12 @@ Controller::Controller(const ControllerDescription& desc, const Vec2& size, Poin
  updateRenderable();
 }
 */
-Controller::Controller(const ControllerDescription& desc, const Vec2& size, PointRenderable* renderable, Scene* scene, ControllerManager* manager,  String name , double objectMass)
+Controller::Controller(const ControllerDescription& desc, const Vec2& size, PointRenderable* renderable, Scene* scene, ControllerManager* manager,  String name , double objectMass, double initialYaw)
 : mScene(scene),
 mManager(manager->getControllerManager()),
 mRenderable(renderable),
 mCallback(0),
-mDisplayYaw(0.f)
+mDisplayYaw(initialYaw)
 {
 	if (desc.mCallback)
 		mCallback = new PhysXControllerCallback(desc.mCallback);
