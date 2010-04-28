@@ -130,7 +130,6 @@ void Application::createSceneSet1()
 	Ogre::SceneNode* pTest1SceneNode = m_sceneManager->getRootSceneNode()->createChildSceneNode();
 	pTest1SceneNode->attachObject(pTest1);
 	pTest1SceneNode->setPosition(Ogre::Vector3(150, DISTANCE_TO_FLOOR, DISTANCE_TO_ANOTHER * sNumber * -1));
-	
 	pTest1->prepare();
 	pTest1->start();
 
