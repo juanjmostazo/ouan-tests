@@ -1,7 +1,11 @@
 #ifndef __APPLICATION__H__
 #define __APPLICATION__H__
 
+#include <Ogre.h>
 #include "SimpleInputManager.h"
+#include "OrbitCameraController.h"
+
+#include "ParticleUniverseSystemManager.h"
 
 namespace Ogre
 {

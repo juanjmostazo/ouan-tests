@@ -1,7 +1,4 @@
-	#include "Application.h"
-
-#include "OrbitCameraController.h"
-#include <Ogre.h>
+#include "Application.h"
 
 #define DISTANCE_TO_FLOOR 20
 #define DISTANCE_TO_ANOTHER 600
@@ -79,8 +76,8 @@ void Application::initialise()
 	loadResources();
 
 	createSceneSet1();
-	createSceneSet2();
-	createSceneSet3();
+	//createSceneSet2();
+	//createSceneSet3();
 
 	createCamera();
 }
@@ -119,10 +116,25 @@ void Application::createSceneSet1()
 	groundSceneNode->setPosition(Ogre::Vector3(0, 0, DISTANCE_TO_ANOTHER * sNumber * -1));
 	groundSceneNode->setScale( ROW_WIDTH, 1, ROW_HEIGHT );
 
+	/*
 	Ogre::ParticleSystem* pTest1 = m_sceneManager->createParticleSystem("pFireworks", "Examples/Fireworks");
 	Ogre::SceneNode* pTest1SceneNode = m_sceneManager->getRootSceneNode()->createChildSceneNode();
 	pTest1SceneNode->attachObject(pTest1);
 	pTest1SceneNode->setPosition(Ogre::Vector3(150, DISTANCE_TO_FLOOR, DISTANCE_TO_ANOTHER * sNumber * -1));
+	*/
+
+	Ogre::LogManager::getSingleton().logMessage("DEBUG INFO INIT...");
+
+	ParticleUniverse::ParticleSystem * pTest1 = 
+		ParticleUniverse::ParticleSystemManager::getSingleton().createParticleSystem("PUMediaPack/Explosion", m_sceneManager);
+	Ogre::SceneNode* pTest1SceneNode = m_sceneManager->getRootSceneNode()->createChildSceneNode();
+	pTest1SceneNode->attachObject(pTest1);
+	pTest1SceneNode->setPosition(Ogre::Vector3(150, DISTANCE_TO_FLOOR, DISTANCE_TO_ANOTHER * sNumber * -1));
+	
+	pTest1->prepare();
+	pTest1->start();
+
+	Ogre::LogManager::getSingleton().logMessage("DEBUG INFO END");
 
 	Ogre::ParticleSystem* pTest2 = m_sceneManager->createParticleSystem("pSmoke1", "Examples/Smoke");
 	Ogre::SceneNode* pTest2SceneNode = m_sceneManager->getRootSceneNode()->createChildSceneNode();
