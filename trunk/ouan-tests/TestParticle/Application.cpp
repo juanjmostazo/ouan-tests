@@ -126,7 +126,7 @@ void Application::createSceneSet1()
 	Ogre::LogManager::getSingleton().logMessage("DEBUG INFO INIT...");
 
 	ParticleUniverse::ParticleSystem * pTest1 = 
-		ParticleUniverse::ParticleSystemManager::getSingleton().createParticleSystem("PUMediaPack/Explosion", m_sceneManager);
+		ParticleUniverse::ParticleSystemManager::getSingleton().createParticleSystem("Explosion", "PUMediaPack/Explosion", m_sceneManager);
 	Ogre::SceneNode* pTest1SceneNode = m_sceneManager->getRootSceneNode()->createChildSceneNode();
 	pTest1SceneNode->attachObject(pTest1);
 	pTest1SceneNode->setPosition(Ogre::Vector3(150, DISTANCE_TO_FLOOR, DISTANCE_TO_ANOTHER * sNumber * -1));
@@ -238,6 +238,15 @@ bool Application::keyPressed( const OIS::KeyEvent& e )
 	if ( e.key == OIS::KC_ESCAPE )
 	{
 		m_exitRequested = true;
+	}
+
+	if ( e.key == OIS::KC_E)
+	{
+		ParticleUniverse::ParticleSystem * explosion = 
+			ParticleUniverse::ParticleSystemManager::getSingleton().getParticleSystem("Explosion");
+
+		explosion->stop();
+		explosion->start();
 	}
 
 	return true;
