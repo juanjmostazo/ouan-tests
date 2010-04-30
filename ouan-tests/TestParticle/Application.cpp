@@ -123,17 +123,11 @@ void Application::createSceneSet1()
 	pTest1SceneNode->setPosition(Ogre::Vector3(150, DISTANCE_TO_FLOOR, DISTANCE_TO_ANOTHER * sNumber * -1));
 	*/
 
-	Ogre::LogManager::getSingleton().logMessage("DEBUG INFO INIT...");
-
 	ParticleUniverse::ParticleSystem * pTest1 = 
-		ParticleUniverse::ParticleSystemManager::getSingleton().createParticleSystem("Explosion", "PUMediaPack/Explosion", m_sceneManager);
+		ParticleUniverse::ParticleSystemManager::getSingleton().createParticleSystem("pTest1", "PUMediaPack/Teleport", m_sceneManager);
 	Ogre::SceneNode* pTest1SceneNode = m_sceneManager->getRootSceneNode()->createChildSceneNode();
 	pTest1SceneNode->attachObject(pTest1);
 	pTest1SceneNode->setPosition(Ogre::Vector3(150, DISTANCE_TO_FLOOR, DISTANCE_TO_ANOTHER * sNumber * -1));
-	pTest1->prepare();
-	pTest1->start();
-
-	Ogre::LogManager::getSingleton().logMessage("DEBUG INFO END");
 
 	Ogre::ParticleSystem* pTest2 = m_sceneManager->createParticleSystem("pSmoke1", "Examples/Smoke");
 	Ogre::SceneNode* pTest2SceneNode = m_sceneManager->getRootSceneNode()->createChildSceneNode();
@@ -226,12 +220,10 @@ void Application::go()
 	}
 }
 
-
 void Application::updateLogic( const float elapsedSeconds )
 {
 
 }
-
 
 bool Application::keyPressed( const OIS::KeyEvent& e )
 {
@@ -242,11 +234,12 @@ bool Application::keyPressed( const OIS::KeyEvent& e )
 
 	if ( e.key == OIS::KC_E)
 	{
-		ParticleUniverse::ParticleSystem * explosion = 
-			ParticleUniverse::ParticleSystemManager::getSingleton().getParticleSystem("Explosion");
+		ParticleUniverse::ParticleSystem * pTest1 = 
+			ParticleUniverse::ParticleSystemManager::getSingleton().getParticleSystem("pTest1");
 
-		explosion->stop();
-		explosion->start();
+		pTest1->stop();
+		pTest1->prepare();
+		pTest1->start();
 	}
 
 	return true;
