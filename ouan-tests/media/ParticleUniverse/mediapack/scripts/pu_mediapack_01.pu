@@ -145,6 +145,7 @@ system PUMediaPack/Teleport
 //-----------------------------------------------------------------------------------------------------------------------
 system PUMediaPack/Atomicity
 {
+	scale 											0.2 0.2 0.2
     // ---- Sphere streaks ----
     technique
     {
@@ -312,6 +313,7 @@ system PUMediaPack/LineStreak
 //-----------------------------------------------------------------------------------------------------------------------
 system PUMediaPack/SpiralStars
 {
+	scale 											0.1 0.1 0.1
     technique
     {
         material                                    PUMediaPack/Flare_05

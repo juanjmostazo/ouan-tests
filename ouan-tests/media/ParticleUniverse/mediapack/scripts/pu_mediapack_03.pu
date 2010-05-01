@@ -159,7 +159,7 @@ system PUMediaPack/Woosh
 {
     technique
     {
-        position                                    0 -400 0
+        position                                    0 -100 0
         visual_particle_quota                       1
         default_particle_width                      10
         default_particle_height                     10
