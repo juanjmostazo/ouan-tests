@@ -78,6 +78,8 @@ void Application::initialise()
 	createScene();
 
 	createCamera();
+
+	createSkyX();
 }
 
 void Application::loadResources()
@@ -124,6 +126,22 @@ void Application::createScene()
 	pTest3SceneNode->attachObject(pTest3);
 	pTest3SceneNode->setPosition(Ogre::Vector3(-350, DISTANCE_TO_FLOOR, DISTANCE_TO_ANOTHER * sNumber * -1));
 }
+
+void Application::createSkyX()
+{
+	// Create SkyX
+	mSkyX = new SkyX::SkyX(m_sceneManager, m_camera);
+	mSkyX->create();
+
+	// Volumetric clouds
+	mSkyX->getVCloudsManager()->create();
+
+	// A little change to default atmosphere settings :)
+	//SkyX::AtmosphereManager::Options atOpt = mSkyX->getAtmosphereManager()->getOptions();
+	//atOpt.RayleighMultiplier = 0.0045f;
+	//mSkyX->getAtmosphereManager()->setOptions(atOpt);
+}
+
 void Application::go()
 {
 	Ogre::Timer loopTimer;
@@ -135,12 +153,10 @@ void Application::go()
 		
 		SimpleInputManager::capture();
 
-		// Update logic stuff
 		float elapsedSeconds = loopTimer.getMicroseconds() * 1.0 / 1000000;
-		updateLogic( elapsedSeconds );
+		updateLogic(elapsedSeconds);
+		mSkyX->update(elapsedSeconds);
 
-		// Update graphics stuff
-		
 		bool windowClosed = m_window->isClosed();
 		continueRunning &= ! windowClosed;
 
