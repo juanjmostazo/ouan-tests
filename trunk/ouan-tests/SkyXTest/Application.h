@@ -39,6 +39,7 @@ private:
 	void loadResources();
 	void createScene();
 	void createCamera();
+	void createSkyX();
 
 	void updateLogic( const float elapsedSeconds );
 
@@ -47,6 +48,8 @@ private:
 	Ogre::SceneManager* m_sceneManager;
 	Ogre::Camera* m_camera;
 	Ogre::Viewport* m_viewport;
+
+	SkyX::SkyX* mSkyX;
 
 	OrbitCameraController* m_cameraController;
 
