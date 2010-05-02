@@ -2,9 +2,10 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9,00"
-	Name="HydraXCaelumTest"
-	ProjectGUID="{384F8D88-435A-4D1D-BFE6-3A89917C3785}"
-	RootNamespace="HydraXCaelumTest"
+	Name="SkyXTest"
+	ProjectGUID="{17681C76-AAF7-4652-B5D5-003056C6D299}"
+	RootNamespace="SkyXTest"
+	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
 	>
 	<Platforms>
@@ -20,7 +21,7 @@
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="1"
-			CharacterSet="2"
+			CharacterSet="1"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -40,10 +41,12 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;C:\Desarrollo\Hydrax-v0.5.1\Hydrax\src&quot;;"
+				AdditionalIncludeDirectories="C:\Desarrollo\SkyX\Code"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
+				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				DebugInformationFormat="4"
 			/>
@@ -58,9 +61,11 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="OgreMain_d.lib OIS_d.lib HydraX.lib"
-				AdditionalLibraryDirectories="&quot;lib\$(ConfigurationName)&quot;"
+				AdditionalDependencies="OgreMain_d.lib OIS_d.lib SkyX.lib"
+				LinkIncremental="2"
+				AdditionalLibraryDirectories="C:\Desarrollo\SkyX\Code\SkyX\bin"
 				GenerateDebugInformation="true"
+				SubSystem="2"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -90,7 +95,7 @@
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="1"
-			CharacterSet="2"
+			CharacterSet="1"
 			WholeProgramOptimization="1"
 			>
 			<Tool
@@ -112,10 +117,10 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="&quot;C:\projects\Hydrax-v0.5.1\Hydrax\src&quot;"
-				PreprocessorDefinitions="USE_FIXED_FPS"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
+				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				DebugInformationFormat="3"
 			/>
@@ -130,9 +135,9 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="OgreMain.lib OIS.lib HydraX.lib"
-				AdditionalLibraryDirectories="lib\$(ConfigurationName)"
+				LinkIncremental="1"
 				GenerateDebugInformation="true"
+				SubSystem="2"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
 				TargetMachine="1"
@@ -177,6 +182,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\OrbitCameraController.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\SimpleInputManager.cpp"
 				>
 			</File>
@@ -188,6 +197,10 @@
 			>
 			<File
 				RelativePath=".\Application.h"
+				>
+			</File>
+			<File
+				RelativePath=".\OrbitCameraController.h"
 				>
 			</File>
 			<File
