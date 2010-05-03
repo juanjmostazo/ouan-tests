@@ -88,7 +88,6 @@ class NxOgreCCExportClass ControllerDescription
   ControllerCallback*               mCallback;
   
   Enums::ControllerInteractionFlag  mInteractionFlag;
-  
 };
 
 class NxOgreCCExportClass Controller
@@ -149,7 +148,7 @@ class NxOgreCCExportClass Controller
   
   //Controller(const ControllerDescription&, const Vec2&, PointRenderable*, Scene*, ControllerManager*);
   
-  Controller(const ControllerDescription&, const Vec2&, PointRenderable*, Scene*, ControllerManager*, String name, double, double);
+  Controller(const ControllerDescription&, const Vec2&, PointRenderable*, Scene*, ControllerManager*, String name, double, double, double, double, double);
 
  ~Controller();
   
@@ -169,7 +168,5 @@ class NxOgreCCExportClass Controller
 };
 
 }
-
-                                                                                       
 
 #endif
