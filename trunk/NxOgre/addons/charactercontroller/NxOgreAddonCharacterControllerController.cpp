@@ -173,7 +173,16 @@ Controller::Controller(const ControllerDescription& desc, const Vec2& size, Poin
  updateRenderable();
 }
 */
-Controller::Controller(const ControllerDescription& desc, const Vec2& size, PointRenderable* renderable, Scene* scene, ControllerManager* manager,  String name , double objectMass, double initialYaw)
+Controller::Controller(const ControllerDescription& desc, 
+					   const Vec2& size, PointRenderable* renderable, 
+					   Scene* scene, 
+					   ControllerManager* manager,  
+					   String name, 
+					   double objectMass, 
+					   double initialYaw,
+					   double slopeLimit,
+					   double stepOffset,
+					   double skinWidth)
 : mScene(scene),
 mManager(manager->getControllerManager()),
 mRenderable(renderable),
@@ -181,28 +190,28 @@ mCallback(0),
 mDisplayYaw(initialYaw)
 {
 	if (desc.mCallback)
+	{
 		mCallback = new PhysXControllerCallback(desc.mCallback);
+	}
 
 	NxCapsuleControllerDesc controller_desc;
 	controller_desc.callback = mCallback;
 	controller_desc.interactionFlag = NxCCTInteractionFlag(int(desc.mInteractionFlag));
 	controller_desc.position = desc.mPosition.as<NxExtendedVec3>();
-	controller_desc.skinWidth = desc.mSkinWidth;
 	controller_desc.radius = size.x;
 	controller_desc.height = size.y;
 	controller_desc.userData = this;
-	controller_desc.slopeLimit = desc.mSlopeLimit;
-	controller_desc.stepOffset = desc.mStepOffset;
 	controller_desc.upDirection = NxHeightFieldAxis(int(desc.mUpDirection));
-	
+	controller_desc.slopeLimit = slopeLimit >= 0 ? slopeLimit : desc.mSlopeLimit;
+	controller_desc.stepOffset = stepOffset >= 0 ? stepOffset : desc.mStepOffset;
+	controller_desc.skinWidth = skinWidth >= 0 ? skinWidth : desc.mSkinWidth;
+
 	mController = mManager->createController(scene->getScene(), controller_desc);
 	mController->getActor()->setName(name.c_str());
 	mController->getActor()->setMass(objectMass);
 
-
+	/////////////////////////////////////////////////////////////
 	//OUAN HACK to set shapes names and NxOgre Shape to user data
-
-	int i;
 
 	NxShape* const* physx_shapes = mController->getActor()->getShapes();
 	int nbShapes = mController->getActor()->getNbShapes();
@@ -211,16 +220,14 @@ mDisplayYaw(initialYaw)
 	pCapsule = new NxOgre::Capsule(size.x,size.y);
 	pCapsule->setName(name);
 
-	for(i=0;i<nbShapes;i++)
+	for(int i=0;i<nbShapes;i++)
 	{
 		NxShape* physx_shape = physx_shapes[i*sizeof(NxShape)];
 		physx_shape->setName(name.c_str());
 
-		//TODO UPDATE THIS IF  MORE SHAPES ARE ADDED PER CHARACTER, OnLY WORKS FOR 1 CAPSULE NOW
+		//TODO UPDATE THIS IF  MORE SHAPES ARE ADDED PER CHARACTER, ONLY WORKS FOR 1 CAPSULE NOW
 		physx_shape->userData=(void*) NxOgre_New(PhysXPointer)(pCapsule, pCapsule->getClassType(), mController->getActor());
 	}
-
-
 
 	updateRenderable();
 }
@@ -230,8 +237,9 @@ Controller::~Controller()
  mManager->releaseController(*mController);
  
  if (mCallback)
+ {
   delete mCallback;
- 
+ }
 }
 /*
 void Controller::move(const Vec3& displacement, unsigned int activeGroups, float minDistance, unsigned int& collisionFlags, Real sharpness)

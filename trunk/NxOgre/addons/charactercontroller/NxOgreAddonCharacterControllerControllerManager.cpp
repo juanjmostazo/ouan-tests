@@ -74,7 +74,6 @@ class ControllerAllocator : public NxUserAllocator
   
 };
 
-
 ControllerManager::ControllerManager()
 {
  mAllocator = new ControllerAllocator();
@@ -103,9 +102,19 @@ Controller*  ControllerManager::createCapsuleController(const ControllerDescript
  return controller;
 }
 */
-Controller*  ControllerManager::createCapsuleController(const ControllerDescription& description, const Vec2& size, Scene* scene, PointRenderable* renderable, String name, double objectMass, double initialYaw)
+Controller*  ControllerManager::createCapsuleController(
+	const ControllerDescription& description, 
+	const Vec2& size, 
+	Scene* scene, 
+	PointRenderable* renderable, 
+	String name, 
+	double objectMass, 
+	double initialYaw,
+	double slopeLimit,
+	double stepOffset,
+	double skinWidth)
 {
-	Controller* controller = new Controller(description, size, renderable, scene, this, name, objectMass, initialYaw);
+	Controller* controller = new Controller(description, size, renderable, scene, this, name, objectMass, initialYaw, slopeLimit, stepOffset, skinWidth);
 	mControllers.insert(controller);
 	return controller;
 }
