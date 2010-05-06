@@ -249,6 +249,7 @@ alias                                           $PUMediaPack/LightningBolt/Point
 
 system PUMediaPack/LightningBolt
 {
+	scale 											0.02 0.02 0.02
     // ---- Lightning Smoke ----
     technique
     {
@@ -351,6 +352,7 @@ system PUMediaPack/LightningBolt
 //-----------------------------------------------------------------------------------------------------------------------
 system PUMediaPack/PsychoBurn
 {
+	scale 											0.05 0.05 0.05
     // Streaks
     technique
     {
