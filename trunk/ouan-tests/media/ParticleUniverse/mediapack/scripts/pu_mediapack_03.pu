@@ -196,6 +196,7 @@ system PUMediaPack/Woosh
 //-----------------------------------------------------------------------------------------------------------------------
 system PUMediaPack/DirtExplosion
 {
+	scale 											0.1 0.1 0.1
     technique
     {
         visual_particle_quota                       30
