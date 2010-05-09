@@ -38,6 +38,7 @@ VolumeRenderable::VolumeRenderable(size_t nSlices, float size, const String &tex
 	
 	initialise();
 }
+
 VolumeRenderable::~VolumeRenderable()
 {
 	// Remove private material
@@ -45,7 +46,6 @@ VolumeRenderable::~VolumeRenderable()
     // need to release IndexData and vertexData created for renderable
     delete mRenderOp.indexData;
     delete mRenderOp.vertexData;
-
 }
 
 void VolumeRenderable::_notifyCurrentCamera( Camera* cam )
@@ -77,8 +77,6 @@ void VolumeRenderable::_notifyCurrentCamera( Camera* cam )
 	rotMat.setTrans(Vector3(0.5f, 0.5f, 0.5f));
 	mUnit->setTextureTransform(rotMat);
 }
-
-
 
 void VolumeRenderable::getWorldTransforms( Matrix4* xform ) const
 {
@@ -139,6 +137,7 @@ void VolumeRenderable::initialise()
 			vertices[x*4*elemsize+y*elemsize+8] = zcoord*sqrtf(3.0f);
 		} 
 	}
+
 	unsigned short *faces = new unsigned short[mSlices*6];
 	for(x=0; x<mSlices; x++) 
 	{
@@ -225,6 +224,7 @@ Ogre::Real VolumeRenderable::getBoundingRadius() const
 {
 	return mRadius;
 }
+
 Ogre::Real VolumeRenderable::getSquaredViewDepth(const Ogre::Camera* cam) const
 {
 	Ogre::Vector3 min, max, mid, dist;

@@ -13,6 +13,7 @@ Application::Application()
 , m_headAnim( false )
 , m_numQuadRends ( 1 )
 , m_quadSpeedScale ( 0.1f )
+, m_unique_id ( 0 )
 {
 
 }
@@ -110,8 +111,8 @@ void Application::createCamera()
 
 void Application::createScene()
 {
-	createLight();
-	createGround();
+	//createLight();
+	
 	if (m_headAnim) 
 	{
 		createOgreHead();
@@ -143,40 +144,47 @@ void Application::createScene()
 	float scale = 2.5f;
 	float vcut = 29.0f;
 
+	Ogre::SceneNode* parent = m_sceneManager->getRootSceneNode()->createChildSceneNode();
+	parent->setPosition(0, 0, 0);
+
 	m_quadRends[indexQuadRends++] = createVolumeEffect(
+		parent,
 		ptex,
-		Ogre::Vector3(0, height, -gap),
+		Ogre::Vector3(0, 0, -gap),
 		Ogre::Vector2(volume_slices, volume_size),
 		Ogre::Vector3(quads_radius, quads_number, quads_size),
 		Ogre::Vector3(global_real, global_imag, global_theta),
 		Ogre::Vector2(scale, vcut));
 
 	m_quadRends[indexQuadRends++] = createVolumeEffect(
+		parent,
 		ptex,
-		Ogre::Vector3(gap, height, 0),
+		Ogre::Vector3(gap, 0, 0),
 		Ogre::Vector2(volume_slices, volume_size),
 		Ogre::Vector3(quads_radius, quads_number, quads_size),
 		Ogre::Vector3(global_real, global_imag, global_theta),
 		Ogre::Vector2(scale, vcut));
 
 	m_quadRends[indexQuadRends++] = createVolumeEffect(
+		parent,
 		ptex,
-		Ogre::Vector3(0, height, gap),
+		Ogre::Vector3(0, 0, gap),
 		Ogre::Vector2(volume_slices, volume_size),
 		Ogre::Vector3(quads_radius, quads_number, quads_size),
 		Ogre::Vector3(global_real, global_imag, global_theta),
 		Ogre::Vector2(scale, vcut));
 
 	m_quadRends[indexQuadRends++] = createVolumeEffect(
+		parent,
 		ptex,
-		Ogre::Vector3(-gap, height, 0),
+		Ogre::Vector3(-gap, 0, 0),
 		Ogre::Vector2(volume_slices, volume_size),
 		Ogre::Vector3(quads_radius, quads_number, quads_size),
 		Ogre::Vector3(global_real, global_imag, global_theta),
 		Ogre::Vector2(scale, vcut));
 }
 
-Ogre::SimpleRenderable* Application::createVolumeEffect(Ogre::TexturePtr ptex, Ogre::Vector3 globalPos, Ogre::Vector2 volumeParams, Ogre::Vector3 quadParams, Ogre::Vector3 juliaParams, Ogre::Vector2 otherParams)
+Ogre::SimpleRenderable* Application::createVolumeEffect(Ogre::SceneNode* parent, Ogre::TexturePtr ptex, Ogre::Vector3 pos, Ogre::Vector2 volumeParams, Ogre::Vector3 quadParams, Ogre::Vector3 juliaParams, Ogre::Vector2 otherParams)
 {
 	float global_real = juliaParams.x;
 	float global_imag = juliaParams.y;
@@ -193,8 +201,8 @@ Ogre::SimpleRenderable* Application::createVolumeEffect(Ogre::TexturePtr ptex, O
 	float quads_number = quadParams.y;
 	float quads_size = quadParams.z;
 
-	Ogre::SceneNode* snode = m_sceneManager->getRootSceneNode()->createChildSceneNode();
-	snode->setPosition(globalPos);
+	Ogre::SceneNode* snode = parent->createChildSceneNode();
+	snode->setPosition(pos);
 	
 	Ogre::SimpleRenderable* vrend = new VolumeRenderable(volume_slices, volume_size, ptex->getName());
     snode->attachObject( vrend );
@@ -202,6 +210,11 @@ Ogre::SimpleRenderable* Application::createVolumeEffect(Ogre::TexturePtr ptex, O
 	Ogre::SimpleRenderable* trend = new ThingRenderable(quads_radius, quads_number, quads_size);
 	trend->setMaterial("Examples/VTDarkStuff");
 	snode->attachObject(trend);
+
+	Ogre::Entity* cloudGroundEntity = m_sceneManager->createEntity( "Ground_" + Ogre::StringConverter::toString(Ogre::Real(m_unique_id++)), "ground.mesh" );
+	Ogre::SceneNode* groundSceneNode = snode->createChildSceneNode();
+	groundSceneNode->attachObject( cloudGroundEntity );
+	groundSceneNode->setScale(volume_size/4, 1, volume_size/4);
 
 	Julia julia(global_real, global_imag, global_theta);
 
@@ -262,15 +275,6 @@ void Application::createLight()
 	l->setSpecularColour(0.9, 0.9, 1);
     l->setPosition(-100,80,50);
 	m_sceneManager->getRootSceneNode()->attachObject(l);
-}
-
-void Application::createGround()
-{
-	Ogre::Entity* groundEntity = m_sceneManager->createEntity( "Ground", "ground.mesh" );
-	Ogre::SceneNode* groundSceneNode = m_sceneManager->getRootSceneNode()->createChildSceneNode();
-	groundSceneNode->attachObject( groundEntity );
-	groundSceneNode->setPosition(Ogre::Vector3(0, 0, 0));
-	groundSceneNode->setScale( 500, 1, 500 );
 }
 
 void Application::createOgreHead()
