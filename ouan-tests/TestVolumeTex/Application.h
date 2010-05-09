@@ -47,12 +47,12 @@ private:
 	void createScene();
 
 	void createLight();
-	void createGround();
 	void createOgreHead();
 
 	Ogre::SimpleRenderable* createVolumeEffect(
+		Ogre::SceneNode* parent,
 		Ogre::TexturePtr ptex, 
-		Ogre::Vector3 globalPos,
+		Ogre::Vector3 pos,
 		Ogre::Vector2 volumeParams,
 		Ogre::Vector3 quadParams, 
 		Ogre::Vector3 juliaParams, 
@@ -77,6 +77,8 @@ private:
 	int m_numQuadRends;
 	Ogre::SimpleRenderable** m_quadRends;
 	float m_quadSpeedScale;
+
+	int m_unique_id;
 };
 
 #endif

@@ -27,6 +27,7 @@ ThingRenderable::ThingRenderable(float radius, size_t count, float qsize):
 	initialise();
 	fillBuffer();
 }
+
 ThingRenderable::~ThingRenderable()
 {
     // need to release IndexData and vertexData created for renderable
@@ -44,11 +45,13 @@ void ThingRenderable::addTime(float t)
 	}
 	fillBuffer();
 }
+
 // Generate float between -1 and 1
 float randFloat()
 {
 	return ((float)rand()/RAND_MAX)*2.0f-1.0f;
 }
+
 void ThingRenderable::initialise()
 {
 	// Fill array with randomly oriented quads
@@ -106,12 +109,10 @@ void ThingRenderable::initialise()
 	decl->addElement(0, offset, VET_FLOAT3, VES_POSITION);
 	offset += VertexElement::getTypeSize(VET_FLOAT3);
 
-	vbuf = 
-	HardwareBufferManager::getSingleton().createVertexBuffer(
+	vbuf = HardwareBufferManager::getSingleton().createVertexBuffer(
 		offset, nvertices, HardwareBuffer::HBU_DYNAMIC_WRITE_ONLY);
 
 	bind->setBinding(0, vbuf);
-
 	//vbuf->writeData(0, vbuf->getSizeInBytes(), vertices, true);
 	
 	HardwareIndexBufferSharedPtr ibuf = HardwareBufferManager::getSingleton().
@@ -167,10 +168,12 @@ void ThingRenderable::fillBuffer()
 	}
 	vbuf->unlock();
 }
+
 Ogre::Real ThingRenderable::getBoundingRadius() const
 {
 	return mRadius;
 }
+
 Ogre::Real ThingRenderable::getSquaredViewDepth(const Ogre::Camera* cam) const
 {
 	Ogre::Vector3 min, max, mid, dist;
