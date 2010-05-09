@@ -50,8 +50,13 @@ private:
 	void createGround();
 	void createOgreHead();
 
-	void createDynaTex();
-	void createVolumeEffect();
+	Ogre::SimpleRenderable* createVolumeEffect(
+		Ogre::TexturePtr ptex, 
+		Ogre::Vector3 globalPos,
+		Ogre::Vector2 volumeParams,
+		Ogre::Vector3 quadParams, 
+		Ogre::Vector3 juliaParams, 
+		Ogre::Vector2 otherParams);
 
 	void createCamera();
 
@@ -66,11 +71,12 @@ private:
 	Ogre::AnimationState* mOgreHeadAnimState;
 	OrbitCameraController* m_cameraController;
 
-	Ogre::TexturePtr ptex;
-	Ogre::SimpleRenderable* vrend;
-	Ogre::SimpleRenderable* trend;
-
 	bool m_exitRequested;
+	bool m_headAnim;
+
+	int m_numQuadRends;
+	Ogre::SimpleRenderable** m_quadRends;
+	float m_quadSpeedScale;
 };
 
 #endif
