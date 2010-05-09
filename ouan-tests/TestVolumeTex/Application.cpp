@@ -10,6 +10,9 @@ Application::Application()
 , m_viewport( NULL )
 , m_cameraController( NULL )
 , m_exitRequested( false )
+, m_headAnim( false )
+, m_numQuadRends ( 1 )
+, m_quadSpeedScale ( 0.1f )
 {
 
 }
@@ -19,9 +22,9 @@ Application::~Application()
 	delete m_cameraController;
 	SimpleInputManager::finalise();
 
-	ptex.setNull();
-	delete vrend;
-	delete trend;
+	//ptex.setNull();
+	//delete vrend;
+	//delete trend;
 
 	delete m_root;
 }
@@ -109,10 +112,145 @@ void Application::createScene()
 {
 	createLight();
 	createGround();
-	createOgreHead();
+	if (m_headAnim) 
+	{
+		createOgreHead();
+	}
 
-	createDynaTex();
-	createVolumeEffect();
+	//////////////////////////////////////////////////////////////////////////////////////
+
+	Ogre::TexturePtr ptex = Ogre::TextureManager::getSingleton().createManual(
+			"DynaTexTest","General", Ogre::TEX_TYPE_3D, 64, 64, 64, 0, Ogre::PF_A8R8G8B8);
+
+	int indexQuadRends = 0;
+	m_numQuadRends = 4;
+	m_quadRends = (Ogre::SimpleRenderable**) malloc(sizeof(Ogre::SimpleRenderable*) * m_numQuadRends);
+	
+	float gap = 75;
+	float height = 100;
+
+	float volume_slices = 32;
+	float volume_size = 750.f;
+
+	float quads_radius = 90.0f;
+	float quads_number = 128;
+	float quads_size = 1.5f;
+
+	float global_real = 0.5f;
+	float global_imag = 0.5f;
+	float global_theta = 0.2f;
+
+	float scale = 2.5f;
+	float vcut = 29.0f;
+
+	m_quadRends[indexQuadRends++] = createVolumeEffect(
+		ptex,
+		Ogre::Vector3(0, height, -gap),
+		Ogre::Vector2(volume_slices, volume_size),
+		Ogre::Vector3(quads_radius, quads_number, quads_size),
+		Ogre::Vector3(global_real, global_imag, global_theta),
+		Ogre::Vector2(scale, vcut));
+
+	m_quadRends[indexQuadRends++] = createVolumeEffect(
+		ptex,
+		Ogre::Vector3(gap, height, 0),
+		Ogre::Vector2(volume_slices, volume_size),
+		Ogre::Vector3(quads_radius, quads_number, quads_size),
+		Ogre::Vector3(global_real, global_imag, global_theta),
+		Ogre::Vector2(scale, vcut));
+
+	m_quadRends[indexQuadRends++] = createVolumeEffect(
+		ptex,
+		Ogre::Vector3(0, height, gap),
+		Ogre::Vector2(volume_slices, volume_size),
+		Ogre::Vector3(quads_radius, quads_number, quads_size),
+		Ogre::Vector3(global_real, global_imag, global_theta),
+		Ogre::Vector2(scale, vcut));
+
+	m_quadRends[indexQuadRends++] = createVolumeEffect(
+		ptex,
+		Ogre::Vector3(-gap, height, 0),
+		Ogre::Vector2(volume_slices, volume_size),
+		Ogre::Vector3(quads_radius, quads_number, quads_size),
+		Ogre::Vector3(global_real, global_imag, global_theta),
+		Ogre::Vector2(scale, vcut));
+}
+
+Ogre::SimpleRenderable* Application::createVolumeEffect(Ogre::TexturePtr ptex, Ogre::Vector3 globalPos, Ogre::Vector2 volumeParams, Ogre::Vector3 quadParams, Ogre::Vector3 juliaParams, Ogre::Vector2 otherParams)
+{
+	float global_real = juliaParams.x;
+	float global_imag = juliaParams.y;
+	float global_theta = juliaParams.z;
+
+	const float scale = otherParams.x;
+	const float vcut = otherParams.y;
+	const float vscale = 1.0f/vcut;
+
+	float volume_slices = volumeParams.x;
+	float volume_size = volumeParams.y;
+
+	float quads_radius = quadParams.x;
+	float quads_number = quadParams.y;
+	float quads_size = quadParams.z;
+
+	Ogre::SceneNode* snode = m_sceneManager->getRootSceneNode()->createChildSceneNode();
+	snode->setPosition(globalPos);
+	
+	Ogre::SimpleRenderable* vrend = new VolumeRenderable(volume_slices, volume_size, ptex->getName());
+    snode->attachObject( vrend );
+	
+	Ogre::SimpleRenderable* trend = new ThingRenderable(quads_radius, quads_number, quads_size);
+	trend->setMaterial("Examples/VTDarkStuff");
+	snode->attachObject(trend);
+
+	Julia julia(global_real, global_imag, global_theta);
+
+	Ogre::HardwarePixelBufferSharedPtr buffer = ptex->getBuffer(0, 0);
+	std::stringstream d;
+	d << "HardwarePixelBuffer " << buffer->getWidth() << " " << buffer->getHeight() << " " << buffer->getDepth();
+	Ogre::LogManager::getSingleton().logMessage(d.str());
+	
+	buffer->lock(Ogre::HardwareBuffer::HBL_NORMAL);
+	const Ogre::PixelBox &pb = buffer->getCurrentLock();
+	d.str("");
+	d << "PixelBox " << pb.getWidth() << " " << pb.getHeight() << " " << pb.getDepth() << " " << pb.rowPitch << " " << pb.slicePitch << " " << pb.data << " " << Ogre::PixelUtil::getFormatName(pb.format);
+	Ogre::LogManager::getSingleton().logMessage(d.str());
+	
+	unsigned int* pbptr = static_cast<unsigned int*>(pb.data);
+	for(size_t z=pb.front; z<pb.back; z++) 
+    {
+        for(size_t y=pb.top; y<pb.bottom; y++)
+        {
+            for(size_t x=pb.left; x<pb.right; x++)
+            {
+                if(z==pb.front || z==(pb.back-1) || y==pb.top|| y==(pb.bottom-1) || x==pb.left || x==(pb.right-1))
+				{
+					pbptr[x] = 0; // On border, must be zero
+                } 
+				else
+				{
+					float val = julia.eval(((float)x/pb.getWidth()-0.5f) * scale, 
+							((float)y/pb.getHeight()-0.5f) * scale, 
+							((float)z/pb.getDepth()-0.5f) * scale);
+
+					if(val > vcut)
+					{
+						val = vcut;
+					}
+					
+					Ogre::PixelUtil::packColour((float)x/pb.getWidth(), (float)y/pb.getHeight(), (float)z/pb.getDepth(), (1.0f-(val*vscale))*0.7f, Ogre::PF_A8R8G8B8, &pbptr[x]);
+				}	
+            }
+
+            pbptr += pb.rowPitch;
+        }
+
+        pbptr += pb.getSliceSkip();
+    }
+
+	buffer->unlock();
+
+	return trend;
 }
 
 void Application::createLight()
@@ -165,84 +303,6 @@ void Application::createOgreHead()
     mOgreHeadAnimState->setEnabled(true);
 }
 
-void Application::createDynaTex()
-{
-	float height = 100;
-
-	ptex = Ogre::TextureManager::getSingleton().createManual(
-			"DynaTexTest","General", Ogre::TEX_TYPE_3D, 64, 64, 64, 0, Ogre::PF_A8R8G8B8);
-
-	Ogre::SceneNode* snode = m_sceneManager->getRootSceneNode()->createChildSceneNode();
-	snode->setPosition(Ogre::Vector3(0,height,0));
-		
-    vrend = new VolumeRenderable(32, 750.0f, "DynaTexTest");
-    snode->attachObject( vrend );
-	
-	trend = new ThingRenderable(90.0f, 32, 7.5f);
-	trend->setMaterial("Examples/VTDarkStuff");
-	snode->attachObject(trend);
-}
-
-void Application::createVolumeEffect()
-{
-	float global_real = 0.4f;
-	float global_imag = 0.6f;
-	float global_theta = 0.0f;
-
-	Julia julia(global_real, global_imag, global_theta);
-	//const float scale = 2.5;
-	//const float vcut = 29.0f;
-	//const float vscale = 1.0f/vcut;
-	const float scale = 1;
-	const float vcut = 29.0f;
-	const float vscale = 1.0f/vcut;
-	
-	Ogre::HardwarePixelBufferSharedPtr buffer = ptex->getBuffer(0, 0);
-	std::stringstream d;
-	d << "HardwarePixelBuffer " << buffer->getWidth() << " " << buffer->getHeight() << " " << buffer->getDepth();
-	Ogre::LogManager::getSingleton().logMessage(d.str());
-	
-	buffer->lock(Ogre::HardwareBuffer::HBL_NORMAL);
-	const Ogre::PixelBox &pb = buffer->getCurrentLock();
-	d.str("");
-	d << "PixelBox " << pb.getWidth() << " " << pb.getHeight() << " " << pb.getDepth() << " " << pb.rowPitch << " " << pb.slicePitch << " " << pb.data << " " << Ogre::PixelUtil::getFormatName(pb.format);
-	Ogre::LogManager::getSingleton().logMessage(d.str());
-	
-	unsigned int* pbptr = static_cast<unsigned int*>(pb.data);
-	for(size_t z=pb.front; z<pb.back; z++) 
-    {
-        for(size_t y=pb.top; y<pb.bottom; y++)
-        {
-            for(size_t x=pb.left; x<pb.right; x++)
-            {
-                if(z==pb.front || z==(pb.back-1) || y==pb.top|| y==(pb.bottom-1) || x==pb.left || x==(pb.right-1))
-				{
-					pbptr[x] = 0; // On border, must be zero
-                } 
-				else
-				{
-					float val = julia.eval(((float)x/pb.getWidth()-0.5f) * scale, 
-							((float)y/pb.getHeight()-0.5f) * scale, 
-							((float)z/pb.getDepth()-0.5f) * scale);
-
-					if(val > vcut)
-					{
-						val = vcut;
-					}
-					
-					Ogre::PixelUtil::packColour((float)x/pb.getWidth(), (float)y/pb.getHeight(), (float)z/pb.getDepth(), (1.0f-(val*vscale))*0.7f, Ogre::PF_A8R8G8B8, &pbptr[x]);
-				}	
-            }
-
-            pbptr += pb.rowPitch;
-        }
-
-        pbptr += pb.getSliceSkip();
-    }
-
-	buffer->unlock();
-}
-
 void Application::go()
 {
 	Ogre::Timer loopTimer;
@@ -273,8 +333,15 @@ void Application::go()
 
 void Application::updateLogic( const float elapsedSeconds )
 {
-	mOgreHeadAnimState->addTime(elapsedSeconds);
-	static_cast<ThingRenderable*>(trend)->addTime(elapsedSeconds * 0.1f);
+	if (m_headAnim)
+	{
+		mOgreHeadAnimState->addTime(elapsedSeconds);
+	}
+	
+	for (int i=0; i<m_numQuadRends; i++)
+	{
+		static_cast<ThingRenderable*>(m_quadRends[i])->addTime(elapsedSeconds * m_quadSpeedScale);
+	}
 }
 
 bool Application::keyPressed( const OIS::KeyEvent& e )
