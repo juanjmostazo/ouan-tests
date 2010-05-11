@@ -122,7 +122,7 @@ void Application::createScene()
 
 	Ogre::TexturePtr ptex = Ogre::TextureManager::getSingleton().createManual(
 			"DynaTexTest","General", Ogre::TEX_TYPE_3D, 64, 64, 64, 0, Ogre::PF_A8R8G8B8);
-
+	
 	int indexQuadRends = 0;
 	m_numQuadRends = 4;
 	m_quadRends = (Ogre::SimpleRenderable**) malloc(sizeof(Ogre::SimpleRenderable*) * m_numQuadRends);
@@ -134,8 +134,8 @@ void Application::createScene()
 	float volume_size = 750.f;
 
 	float quads_radius = 90.0f;
-	float quads_number = 128;
-	float quads_size = 1.5f;
+	float quads_number = 32;
+	float quads_size = 0.5f;
 
 	float global_real = 0.5f;
 	float global_imag = 0.5f;
