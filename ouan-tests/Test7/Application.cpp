@@ -14,7 +14,7 @@ Application::Application()
 , m_idleAnimation( NULL )
 , m_runAnimation( NULL )
 , m_movingDirection( 0 )
-, m_cameraController( NULL )
+, m_cameraController( NULL )	
 , m_exitRequested( false )
 {
 
@@ -163,13 +163,13 @@ void Application::updateAnimations( const float elapsedSeconds )
 
 	if ( moving )
 	{
-		m_idleAnimation->setWeight( 0 );
-		m_runAnimation->setWeight( 1 );
+		m_idleAnimation->setWeight( 0.2 );
+		m_runAnimation->setWeight( 0.8 );
 	}
 	else
 	{
-		m_idleAnimation->setWeight( 1 );
-		m_runAnimation->setWeight( 0 );
+		m_idleAnimation->setWeight( 0.8 );
+		m_runAnimation->setWeight( 0.2 );
 	}
 
 	m_idleAnimation->addTime( elapsedSeconds );
