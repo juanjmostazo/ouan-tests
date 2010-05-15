@@ -26,11 +26,7 @@ material FreddyMaterial
 			{
 				texture Freddy_normals.png
 				mipmap_bias -2
-			}
-			
-			
-			
-			
+			}										
 		}
 	}
 
