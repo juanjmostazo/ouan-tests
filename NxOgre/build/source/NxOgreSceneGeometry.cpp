@@ -55,7 +55,11 @@ SceneGeometry::SceneGeometry(RigidBodyPrototype* prototype, Scene* scene)
 SceneGeometry::~SceneGeometry(void)
 {
  destroy();
- mShapes.destroyAll();
+ //mShapes.destroyAll();
+ for (unsigned int i=0; i<mShapes.size(); i++)
+ {
+   mShapes.remove(i);
+ }
 }
 
 unsigned int SceneGeometry::getClassType() const
