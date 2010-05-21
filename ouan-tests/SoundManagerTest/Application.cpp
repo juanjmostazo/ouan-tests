@@ -188,16 +188,16 @@ void Application::moveCamera()
 void Application::getInput()
 {
 	if(m_keyboard->isKeyDown(OIS::KC_A))
-		m_TranslateVector.x = m_MoveScale;
-
-	if(m_keyboard->isKeyDown(OIS::KC_D))
 		m_TranslateVector.x = -m_MoveScale;
 
+	if(m_keyboard->isKeyDown(OIS::KC_D))
+		m_TranslateVector.x = m_MoveScale;
+
 	if(m_keyboard->isKeyDown(OIS::KC_W))
-		m_TranslateVector.z = m_MoveScale;
+		m_TranslateVector.z = -m_MoveScale;
 
 	if(m_keyboard->isKeyDown(OIS::KC_S))
-		m_TranslateVector.z = -m_MoveScale;
+		m_TranslateVector.z = m_MoveScale;
 	
 	if(m_keyboard->isKeyDown(OIS::KC_Q))
 		m_TranslateVector.y = -m_MoveScale;
