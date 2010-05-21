@@ -77,7 +77,9 @@ double Channel::getTime() const
 void Channel::set3DAttributes(const Ogre::Vector3& position, const Ogre::Vector3& velocity/* =Ogre::Vector3::ZERO */)
 {
 	FMOD_VECTOR pos = FMODHelper::toFMODVec(position);
-	FMOD_VECTOR vel = FMODHelper::toFMODVec(velocity);
+	//FMOD_VECTOR vel = FMODHelper::toFMODVec(velocity);
+	FMOD_VECTOR vel;
+	vel.x=vel.y=vel.z=0;
 	if (mChannel)
 		mChannel->set3DAttributes(&pos,&vel);
 }
@@ -197,7 +199,7 @@ bool ChannelGroup::setPaused(bool val)
 }
 FMOD::Channel* ChannelGroup::getChannel(int index)
 {
-	if (index>=0 && index<mChannels.size())
+	if (index>=0 && (unsigned int)index<mChannels.size())
 	 return mChannels[index]->getChannel();
 	return NULL;
 }
@@ -344,16 +346,22 @@ bool SoundSubsystem::init(TSoundSubsystemConfigData& desc)
 	}
 	return rc;
 }
-void SoundSubsystem::set3DMinMaxDistance(const std::string& channelID,	
+void SoundSubsystem::set3DMinMaxDistance(const std::string& channelGroupID,	
 									   double minDistance,
 									   double maxDistance)
 {
-	if(mChannelGroupMap.find( channelID ) != mChannelGroupMap.end())
+	if(mChannelGroupMap.find(channelGroupID) != mChannelGroupMap.end())
 	{
-		mChannelGroupMap[channelID]->set3DMinMaxDistance(minDistance,
+		mChannelGroupMap[channelGroupID]->set3DMinMaxDistance(minDistance,
 			maxDistance);
 
 	}
+}
+void SoundSubsystem::set3DMinMaxDistance(int channelIndex, double minDistance, double maxDistance)
+{
+	FMOD::Channel* ch;
+	if(ch=mChannelGroupMap[SM_CHANNEL_MASTER_GROUP]->getChannel(channelIndex))
+		ch->set3DMinMaxDistance(minDistance,maxDistance);			
 }
 
 

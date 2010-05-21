@@ -170,7 +170,8 @@ namespace OUAN
 		void cleanUp();
 		//virtual bool init(OUAN::ConfigurationPtr config);
 
-		virtual void set3DMinMaxDistance(const std::string& channelId, double minDistance, double maxDistance);
+		virtual void set3DMinMaxDistance(const std::string& channelGroupId, double minDistance, double maxDistance);
+		virtual void set3DMinMaxDistance(int channelId, double minDistance, double maxDistance);
 
 		//virtual bool loadSounds(const std::string& soundListFile);
 		

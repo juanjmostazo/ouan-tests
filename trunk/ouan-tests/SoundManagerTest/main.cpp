@@ -110,8 +110,8 @@ public:
 	{
 		checkCameraHeight();
 		Application::updateLogic(elapsedTime);
-		mSubsystem->set3DAttributes(m_camera->getParentSceneNode()->getPosition(),Ogre::Vector3::ZERO,
-			m_camera->getParentSceneNode()->getOrientation()*Ogre::Vector3::UNIT_Z,Ogre::Vector3::UNIT_Y);
+		mSubsystem->set3DAttributes(m_camera->getPosition(),Ogre::Vector3::ZERO,
+			m_camera->getOrientation()*Ogre::Vector3::UNIT_Z,Ogre::Vector3::UNIT_Y);
 		mSubsystem->update(elapsedTime);
 		mKeyBuffer-=elapsedTime;
 	}
@@ -142,7 +142,7 @@ public:
 		m_camera->setPosition(Ogre::Vector3(0,10,500));
 		m_camera->lookAt(Ogre::Vector3::ZERO);
 		m_camera->setNearClipDistance(5);
-		m_sceneManager->getRootSceneNode()->createChildSceneNode()->attachObject(m_camera);
+		//m_sceneManager->getRootSceneNode()->createChildSceneNode()->attachObject(m_camera);
 		m_camera->setAspectRatio(Ogre::Real(m_viewport->getActualWidth())/Ogre::Real(m_viewport->getActualHeight()));
 
 		//create our "guinea-pig" entities
@@ -153,6 +153,12 @@ public:
 		entity->getParentSceneNode()->setPosition(Ogre::Vector3::ZERO);
 		entity->getParentSceneNode()->scale(50,50,50);
 
+		mSubsystem->addSound("Fire",SOUND_BASE_PATH+"wimm.mp3",SM_CHANNEL_MUSIC_GROUP,
+			SOUND_FLAG_LOOP|SOUND_FLAG_HARDWARE|SOUND_FLAG_3D|SOUND_FLAG_STREAM);
+		//mSubsystem->playMusic("Fire",gChannelIndex);
+		mSubsystem->play3DSound("Fire",entity->getParentSceneNode()->getPosition(),gChannelIndex);
+		mSubsystem->set3DMinMaxDistance(gChannelIndex,0,1200);
+
 		//...and a plane on top of which it'll stand
 		Ogre::Plane plane(Ogre::Vector3::UNIT_Y,0);
 		Ogre::MeshManager::getSingleton().createPlane("Ground",Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME, plane,
@@ -162,8 +168,6 @@ public:
 		entity->setMaterialName("Examples/Rockwall");
 		entity->setCastShadows(false);
 
-		mSubsystem->addSound("Fire",SOUND_BASE_PATH+"Fire.mp3",SM_CHANNEL_MUSIC_GROUP,SOUND_FLAG_LOOP|SOUND_FLAG_HARDWARE|SOUND_FLAG_STREAM);
-		mSubsystem->playMusic("Fire",gChannelIndex);
 		//mSubsystem->playSound(mIndex,sn,&mChannel);
 
 		Ogre::Entity* sphere = m_sceneManager->createEntity("Sphere1","sphere.mesh");
