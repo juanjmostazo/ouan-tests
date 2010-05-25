@@ -39,7 +39,7 @@
            more professional and gain some minor speed increase and and some gain of some memory.
     \default 1 (yes)
 */
-#define NxOgreMemoryDebugger 1
+#define NxOgreMemoryDebugger 0
 
 /** \brief Reserve a size of memory for the MemoryDebugger in bytes. The value set can gain a slightly faster startup, but
            a very high value could waste memory.
