@@ -164,11 +164,23 @@ bool Application::createCharacter()
 	m_runAnimation->setEnabled( true );
 
 	NxOgre::ControllerDescription desc;
-	desc.mPosition.set(45, 75, 10);
+	//desc.mPosition.set(45, 75, 10);
+	desc.mPosition.set(0, 0, 0);
 	desc.mCallback = this;
 
 	m_NXOgreControllerRenderable = m_NXOgreRenderSystem->createPointRenderable(m_character);
-	m_NXOgreController = m_NXOgreControllerManager->createCapsuleController(desc, NxOgre::Vec2(1,3), m_NXOgreScene, m_NXOgreControllerRenderable );
+	m_NXOgreController = m_NXOgreControllerManager->createCapsuleController(
+		desc, 
+		//NxOgre::Vec2(1,3), 
+		NxOgre::Vec2(2,4),
+		m_NXOgreScene, 
+		m_NXOgreControllerRenderable,
+		"testName",
+		10,
+		0,
+		0,
+		0,
+		0);
 	
 	return true;
 }
@@ -301,7 +313,8 @@ void Application::updateLogic( const float elapsedSeconds )
 
 	m_movingDirection = 0;
 	
-	Ogre::Vector3 displacement(0, -9.8f, 0);
+	//Ogre::Vector3 displacement(0, -9.8f, 0);
+	Ogre::Vector3 displacement(0, 0, 0);
 
 	if ( m_keyboard->isKeyDown( OIS::KC_LEFT ) || m_keyboard->isKeyDown( OIS::KC_A ))
 	{
