@@ -1,0 +1,17 @@
+material tripollo_changeworld
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture terrain.png
+			}
+		}
+
+	}
+}
+
+
