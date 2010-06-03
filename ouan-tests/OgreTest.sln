@@ -44,13 +44,12 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SkyXTest", "SkyXTest\SkyXTest.vcproj", "{17681C76-AAF7-4652-B5D5-003056C6D299}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VideoTest", "VideoTest\VideoTest.vcproj", "{74C088E8-9708-444F-92E2-4E6CF4234C23}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestVolumeTex", "TestVolumeTex\TestVolumeTex.vcproj", "{91B56793-41C3-47FB-9E6B-148B14EE621F}"
-
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestProject", "ChangeWorld\TestProject.vcproj", "{C48CF30B-77E4-4C22-BF3A-13BFAA46A06D}"
+EndProject
 Global
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
 		DebugStatic|Win32 = DebugStatic|Win32
@@ -376,8 +375,26 @@ Global
 		{91B56793-41C3-47FB-9E6B-148B14EE621F}.Release|Win32.Build.0 = Release|Win32
 		{91B56793-41C3-47FB-9E6B-148B14EE621F}.ReleaseStatic|Win32.ActiveCfg = Release|Win32
 		{91B56793-41C3-47FB-9E6B-148B14EE621F}.ReleaseStatic|Win32.Build.0 = Release|Win32
+		{C48CF30B-77E4-4C22-BF3A-13BFAA46A06D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C48CF30B-77E4-4C22-BF3A-13BFAA46A06D}.Debug|Win32.Build.0 = Debug|Win32
+		{C48CF30B-77E4-4C22-BF3A-13BFAA46A06D}.DebugStatic|Win32.ActiveCfg = Debug|Win32
+		{C48CF30B-77E4-4C22-BF3A-13BFAA46A06D}.DebugStatic|Win32.Build.0 = Debug|Win32
+		{C48CF30B-77E4-4C22-BF3A-13BFAA46A06D}.Minimal|Win32.ActiveCfg = Release|Win32
+		{C48CF30B-77E4-4C22-BF3A-13BFAA46A06D}.Minimal|Win32.Build.0 = Release|Win32
+		{C48CF30B-77E4-4C22-BF3A-13BFAA46A06D}.MinimalDebug|Win32.ActiveCfg = Debug|Win32
+		{C48CF30B-77E4-4C22-BF3A-13BFAA46A06D}.MinimalDebug|Win32.Build.0 = Debug|Win32
+		{C48CF30B-77E4-4C22-BF3A-13BFAA46A06D}.MinimalStatic|Win32.ActiveCfg = Release|Win32
+		{C48CF30B-77E4-4C22-BF3A-13BFAA46A06D}.MinimalStatic|Win32.Build.0 = Release|Win32
+		{C48CF30B-77E4-4C22-BF3A-13BFAA46A06D}.Release|Win32.ActiveCfg = Release|Win32
+		{C48CF30B-77E4-4C22-BF3A-13BFAA46A06D}.Release|Win32.Build.0 = Release|Win32
+		{C48CF30B-77E4-4C22-BF3A-13BFAA46A06D}.ReleaseStatic|Win32.ActiveCfg = Release|Win32
+		{C48CF30B-77E4-4C22-BF3A-13BFAA46A06D}.ReleaseStatic|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
 	EndGlobalSection
 EndGlobal
