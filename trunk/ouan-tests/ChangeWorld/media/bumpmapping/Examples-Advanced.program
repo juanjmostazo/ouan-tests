@@ -1,0 +1,138 @@
+// -------------------------------
+// Cel Shading Section
+// -------------------------------
+vertex_program Ogre/CelShadingVP cg
+{
+	source Example_CelShading.cg
+	entry_point main_vp
+	profiles vs_1_1 arbvp1
+
+	default_params
+	{
+		param_named_auto lightPosition light_position_object_space 0
+		param_named_auto eyePosition camera_position_object_space
+		param_named_auto worldViewProj worldviewproj_matrix
+		param_named shininess float 10 
+	}
+}
+
+fragment_program Ogre/CelShadingFP cg
+{
+	source Example_CelShading.cg
+	entry_point main_fp
+	profiles ps_1_1 arbfp1 fp20
+}
+
+//------------------------
+// Bump mapping section
+//------------------------
+
+// Bump map vertex program, support for this is required
+vertex_program Examples/BumpMapVP cg
+{
+	source Example_BumpMapping.cg
+	entry_point main_vp
+	profiles vs_1_1 arbvp1
+}
+
+// Bump map vertex program, with tangent parity support for this is required
+vertex_program Examples/BumpMapVPTangentParity cg
+{
+	source Example_BumpMapping.cg
+	entry_point main_vp
+	profiles vs_1_1 arbvp1
+	compile_arguments -DTANGENTS_HAVE_PARITY=1
+}
+
+// Bump map fragment program, support for this is optional
+fragment_program Examples/BumpMapFP cg
+{
+	source Example_BumpMapping.cg
+	entry_point main_fp
+	profiles ps_2_0 arbfp1 fp20
+}
+
+// Bump map vertex program shadow receiver
+vertex_program Examples/BumpMapVPShadowRcv cg
+{
+	source Example_BumpMapping.cg
+	entry_point main_shadowreceiver_vp
+	profiles vs_1_1 arbvp1
+}
+// Bump map fragment program shadow receiver, support for this is optional
+fragment_program Examples/BumpMapFPShadowRcv cg
+{
+	source Example_BumpMapping.cg
+	entry_point main_shadowreceiver_fp
+	profiles ps_2_0 arbfp1 fp20
+}
+
+
+// Bump map with specular vertex program, support for this is required
+vertex_program Examples/BumpMapVPSpecular cg
+{
+	source Example_BumpMapping.cg
+	entry_point specular_vp
+	profiles vs_1_1 arbvp1
+}
+
+// Bump map fragment program, support for this is optional
+fragment_program Examples/BumpMapFPSpecular cg
+{
+	source Example_BumpMapping.cg
+	entry_point specular_fp
+	profiles ps_2_0 arbfp1 fp20
+}
+
+//---------------------------
+// Projective texture section
+//---------------------------
+
+
+vertex_program Examples/TexProjectionVP cg
+{
+	source Example_Projection.cg
+	entry_point generalPurposeProjection_vp
+	profiles vs_1_1 arbvp1
+}
+
+fragment_program Examples/TexProjectionFP cg
+{
+	source Example_Projection.cg
+	entry_point generalPurposeProjection_fp
+	// sorry, ps_1_1 can't do this, fp20 can though
+	profiles ps_2_0 arbfp1 fp20
+}
+
+//----------------------------
+// Distortion effects
+//----------------------------
+
+vertex_program Examples/FresnelRefractReflectVP cg
+{
+	source Example_Fresnel.cg
+	entry_point main_vp
+	profiles vs_1_1 arbvp1
+}
+vertex_program Examples/FresnelRefractReflectVPold cg
+{
+	source Example_Fresnel.cg
+	entry_point main_vp_old
+	profiles vs_1_1 arbvp1
+}
+
+fragment_program Examples/FresnelRefractReflectFP cg
+{
+	source Example_Fresnel.cg
+	entry_point main_fp
+	// sorry, ps_1_1 and fp20 can't do this
+	profiles ps_2_0 arbfp1
+}
+
+fragment_program Examples/FresnelRefractReflectPS asm
+{
+	source Example_FresnelPS.asm
+	// sorry, only for ps_1_4 :)
+	syntax ps_1_4
+
+}

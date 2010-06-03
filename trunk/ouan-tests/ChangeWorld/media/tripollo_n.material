@@ -1,0 +1,6 @@
+import Examples/BumpMapping/MultiLightTangentParity from Examples-Advanced.material
+material tripollo_n: Examples/BumpMapping/MultiLightTangentParity 
+{
+	set_texture_alias normalmap NMStripes.png
+	set_texture_alias decalmap tripollo_n.dds		
+}
