@@ -30,8 +30,6 @@
 
 #include "NxControllerManager.h"
 
-                                                                                       
-
 namespace NxOgre
 {
 
@@ -86,27 +84,12 @@ ControllerManager::~ControllerManager()
  NxReleaseControllerManager(mManager);
  delete mAllocator;
 }
-/*
-Controller*  ControllerManager::createBoxController(const ControllerDescription& description, const Vec3& size, Scene* scene, PointRenderable* renderable)
-{
- Controller* controller = new Controller(description, size, renderable, scene, this);
- mControllers.insert(controller);
- return controller;
-}
-*/
-/*
-Controller*  ControllerManager::createCapsuleController(const ControllerDescription& description, const Vec2& size, Scene* scene, PointRenderable* renderable)
-{
- Controller* controller = new Controller(description, size, renderable, scene, this);
- mControllers.insert(controller);
- return controller;
-}
-*/
+
 Controller*  ControllerManager::createCapsuleController(
 	const ControllerDescription& description, 
 	const Vec2& size, 
 	Scene* scene, 
-	PointRenderable* renderable, 
+	//PointRenderable* renderable, 
 	String name, 
 	double objectMass, 
 	double initialYaw,
@@ -114,7 +97,7 @@ Controller*  ControllerManager::createCapsuleController(
 	double stepOffset,
 	double skinWidth)
 {
-	Controller* controller = new Controller(description, size, renderable, scene, this, name, objectMass, initialYaw, slopeLimit, stepOffset, skinWidth);
+	Controller* controller = new Controller(description, size,/* renderable,*/ scene, this, name, objectMass, initialYaw, slopeLimit, stepOffset, skinWidth);
 	mControllers.insert(controller);
 	return controller;
 }

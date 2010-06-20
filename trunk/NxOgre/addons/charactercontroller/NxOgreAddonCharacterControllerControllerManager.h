@@ -45,11 +45,17 @@ class NxOgreCCExportClass ControllerManager
   
  ~ControllerManager();
   
-  //Controller*  createBoxController(const ControllerDescription& description, const Vec3& size, Scene* scene, PointRenderable* renderable = 0);
-  
-  //Controller*  createCapsuleController(const ControllerDescription& description, const Vec2& size, Scene* scene, PointRenderable* renderable = 0);
-  
- Controller*  createCapsuleController(const ControllerDescription&, const Vec2&, Scene*, PointRenderable*, String, double, double, double, double, double);
+ Controller*  createCapsuleController(
+	 const ControllerDescription&, 
+	 const Vec2&, 
+	 Scene*,
+	 //PointRenderable*,
+	 String, 
+	 double, 
+	 double, 
+	 double, 
+	 double, 
+	 double);
 
   void         destroyController(Controller*);
   
