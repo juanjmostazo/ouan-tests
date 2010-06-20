@@ -49,11 +49,9 @@ class PhysXControllerCallback : public NxUserControllerHitReport
  //OUAN HACK
  String getShapeName(NxController * pController)
  {
-
 	NxShape* const* physx_shapes = pController->getActor()->getShapes();
 	return NxOgre::String(physx_shapes[0]->getName());
  }
-
 
  NxControllerAction  onShapeHit(const NxControllerShapeHit& hit)
  {
@@ -75,7 +73,6 @@ class PhysXControllerCallback : public NxUserControllerHitReport
 
  NxControllerAction  onControllerHit(const NxControllersHit& hit)
  {
-
 	ControllerControllerHit out;
 
 	out.mControllerName=getShapeName(hit.controller);
@@ -89,7 +86,6 @@ class PhysXControllerCallback : public NxUserControllerHitReport
  }
  
  ControllerCallback* mCallback;
- 
 };
 
 ControllerDescription::ControllerDescription(void)
@@ -118,63 +114,10 @@ bool  ControllerDescription::valid(void)
   return false;
  return true;
 }
-/*
-Controller::Controller(const ControllerDescription& desc, const Vec3& size, PointRenderable* renderable, Scene* scene, ControllerManager* manager)
-: mScene(scene),
-  mManager(manager->getControllerManager()),
-  mRenderable(renderable),
-  mCallback(0),
-  mDisplayYaw(0.f)
-{
- if (desc.mCallback)
-  mCallback = new PhysXControllerCallback(desc.mCallback);
 
- NxBoxControllerDesc controller_desc;
- controller_desc.callback = mCallback;
- controller_desc.interactionFlag = NxCCTInteractionFlag(int(desc.mInteractionFlag));
- controller_desc.position = desc.mPosition.as<NxExtendedVec3>();
- controller_desc.skinWidth = desc.mSkinWidth;
- controller_desc.extents = size.as<NxVec3>() * 0.5;
- controller_desc.userData = this;
- controller_desc.slopeLimit = desc.mSlopeLimit;
- controller_desc.stepOffset = desc.mStepOffset;
- controller_desc.upDirection = NxHeightFieldAxis(int(desc.mUpDirection));
- 
- mController = mManager->createController(scene->getScene(), controller_desc);
-
- updateRenderable();
-}
-*/
-/*
-Controller::Controller(const ControllerDescription& desc, const Vec2& size, PointRenderable* renderable, Scene* scene, ControllerManager* manager)
-: mScene(scene),
-  mManager(manager->getControllerManager()),
-  mRenderable(renderable),
-  mCallback(0),
-  mDisplayYaw(0.f)
-{
- if (desc.mCallback)
-  mCallback = new PhysXControllerCallback(desc.mCallback);
- 
- NxCapsuleControllerDesc controller_desc;
- controller_desc.callback = mCallback;
- controller_desc.interactionFlag = NxCCTInteractionFlag(int(desc.mInteractionFlag));
- controller_desc.position = desc.mPosition.as<NxExtendedVec3>();
- controller_desc.skinWidth = desc.mSkinWidth;
- controller_desc.radius = size.x;
- controller_desc.height = size.y;
- controller_desc.userData = this;
- controller_desc.slopeLimit = desc.mSlopeLimit;
- controller_desc.stepOffset = desc.mStepOffset;
- controller_desc.upDirection = NxHeightFieldAxis(int(desc.mUpDirection));
- 
- mController = mManager->createController(scene->getScene(), controller_desc);
- 
- updateRenderable();
-}
-*/
 Controller::Controller(const ControllerDescription& desc, 
-					   const Vec2& size, PointRenderable* renderable, 
+					   const Vec2& size, 
+					   //PointRenderable* renderable, 
 					   Scene* scene, 
 					   ControllerManager* manager,  
 					   String name, 
@@ -185,7 +128,7 @@ Controller::Controller(const ControllerDescription& desc,
 					   double skinWidth)
 : mScene(scene),
 mManager(manager->getControllerManager()),
-mRenderable(renderable),
+//mRenderable(renderable),
 mCallback(0),
 mDisplayYaw(initialYaw)
 {
@@ -229,7 +172,7 @@ mDisplayYaw(initialYaw)
 		physx_shape->userData=(void*) NxOgre_New(PhysXPointer)(pCapsule, pCapsule->getClassType(), mController->getActor());
 	}
 
-	updateRenderable();
+	//updateRenderable();
 }
 
 Controller::~Controller()
@@ -241,24 +184,19 @@ Controller::~Controller()
   delete mCallback;
  }
 }
-/*
-void Controller::move(const Vec3& displacement, unsigned int activeGroups, float minDistance, unsigned int& collisionFlags, Real sharpness)
-{
- mController->move(displacement.as<NxVec3>(), activeGroups, minDistance, collisionFlags, sharpness);
- updateRenderable();
-}
-*/
+
 void Controller::move(const Vec3& displacement, unsigned int activeGroups, float minDistance, unsigned int& collisionFlags, Real sharpness) 
 {    
 	mController->move(displacement.as<NxVec3>(), activeGroups, minDistance,collisionFlags, sharpness); 
 	mManager->updateControllers(); 
-	updateRenderable(); 
+	//updateRenderable(); 
 } 
 
 void Controller::setDisplayYaw(const float yaw)
 {
  mDisplayYaw = yaw;
- updateRenderable();
+ mOrientation = Quat(NxQuat(yaw, NxVec3(0,1,0)));
+ //updateRenderable();
 }
 
 float Controller::getDisplayYaw() const
@@ -266,10 +204,15 @@ float Controller::getDisplayYaw() const
  return mDisplayYaw;
 }
 
+Quat Controller::getOrientation() const
+{
+ return mOrientation;
+}
+
 void Controller::setPosition(const Vec3& position)
 {
  mController->setPosition(position.as<NxExtendedVec3>());
- updateRenderable();
+ //updateRenderable();
 }
 
 Vec3 Controller::getPosition() const
@@ -306,40 +249,40 @@ Enums::ControllerType Controller::getType()
 {
  return Enums::ControllerType(int(mController->getType()));
 }
-
+/*
 PointRenderable* Controller::getRenderable()
 {
  return mRenderable;
 }
-
+*//*
 void Controller::setRenderable(PointRenderable* renderable)
 {
  mRenderable = renderable;
 }
-
+*//*
 void Controller::clearRenderable()
 {
  mRenderable = 0;
 }
-
+*//*
+void Controller::updateRenderable()
+{
+	if (mRenderable)
+	{
+		printf("Rendering...\n");
+		mRenderable->render(Vec3(mController->getPosition()),  Quat(NxQuat(mDisplayYaw, NxVec3(0,1,0))));
+	}
+}
+*/
 NxShape * const * Controller::getShapes()
 {
 	return mController->getActor()->getShapes();
 }
+
 int Controller::getNbShapes()
 {
 	return mController->getActor()->getNbShapes();
 }
 
-void Controller::updateRenderable()
-{
- if (mRenderable)
- {
-  printf("Rendering...\n");
-  mRenderable->render(Vec3(mController->getPosition()),  Quat(NxQuat(mDisplayYaw, NxVec3(0,1,0))));
- }
 }
-
-}
-
-                                                                                       
+                                                                  

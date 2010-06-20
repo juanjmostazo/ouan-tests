@@ -92,7 +92,6 @@ class NxOgreCCExportClass ControllerDescription
 
 class NxOgreCCExportClass Controller
 {
- 
  public:
   
   friend class ControllerManager;
@@ -107,6 +106,8 @@ class NxOgreCCExportClass Controller
   // Get the display yaw.
   float  getDisplayYaw() const;
   
+  Quat   getOrientation() const;
+
   void   setPosition(const Vec3&);
   
   Vec3   getPosition() const;
@@ -127,28 +128,34 @@ class NxOgreCCExportClass Controller
   
   Enums::ControllerType getType();
   
-  PointRenderable* getRenderable();
+  //PointRenderable* getRenderable();
   
   // Note: this will not delete the existing renderable before replaced.
   // use the appropriate destroy function to do so.
-  void setRenderable(PointRenderable*);
+  //void setRenderable(PointRenderable*);
   
   // Note: This will just release the renderable from use, but not actually delete it from memory.
   // use the appropriate destroy function to do so.
-
-  void clearRenderable();
+  //void clearRenderable();
   
   // Update's the point renderable.
   // This is automatically called on a move or a teleport.
-  void updateRenderable();
+  // void updateRenderable();
   
  protected:
   
-  //Controller(const ControllerDescription&, const Vec3&, PointRenderable*, Scene*, ControllerManager*);
-  
-  //Controller(const ControllerDescription&, const Vec2&, PointRenderable*, Scene*, ControllerManager*);
-  
-  Controller(const ControllerDescription&, const Vec2&, PointRenderable*, Scene*, ControllerManager*, String name, double, double, double, double, double);
+  Controller(
+	  const ControllerDescription&, 
+	  const Vec2&,
+	  //PointRenderable*,
+	  Scene*, 
+	  ControllerManager*, 
+	  String name, 
+	  double, 
+	  double, 
+	  double, 
+	  double, 
+	  double);
 
  ~Controller();
   
@@ -160,7 +167,9 @@ class NxOgreCCExportClass Controller
   
   float               mDisplayYaw;
   
-  PointRenderable*    mRenderable;
+  Quat                mOrientation;
+
+  //PointRenderable*    mRenderable;
   
   NxControllerManager*  mManager;
 
